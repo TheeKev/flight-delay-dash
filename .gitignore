@@ -1,0 +1,11 @@
+# ignore large raw data
+data/
+Outputs/*.csv
+
+# keep model
+!Outputs/*.pkl
+
+# python stuff
+__pycache__/
+*.pyc
+.venv/
