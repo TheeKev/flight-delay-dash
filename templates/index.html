@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>US Flight Delay Network</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f1117;
+      color: #e2e8f0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 12px 24px;
+      background: #1a1d2e;
+      border-bottom: 1px solid #2d3748;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header h1 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #63b3ed;
+    }
+
+    #summary-bar {
+      display: flex;
+      gap: 32px;
+      font-size: 13px;
+      color: #a0aec0;
+    }
+
+    #summary-bar span strong {
+      color: #e2e8f0;
+    }
+
+    .main {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    /* ── Left panel: network graph ───────────── */
+    #graph-panel {
+      flex: 1;
+      position: relative;
+      background: #0f1117;
+    }
+
+    #graph-panel svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* ── Right panel: info + bar chart ──────── */
+    #info-panel {
+      width: 320px;
+      background: #1a1d2e;
+      border-left: 1px solid #2d3748;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    #airport-card {
+      background: #242740;
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    #airport-card h2 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #63b3ed;
+      margin-bottom: 4px;
+    }
+
+    #airport-city {
+      font-size: 13px;
+      color: #a0aec0;
+      margin-bottom: 12px;
+    }
+
+    .stat-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      padding: 4px 0;
+      border-bottom: 1px solid #2d374820;
+    }
+
+    .stat-label { color: #a0aec0; }
+    .stat-value { color: #e2e8f0; font-weight: 600; }
+    .stat-value.bad  { color: #fc8181; }
+    .stat-value.good { color: #68d391; }
+
+    #barchart-section h3 {
+      font-size: 13px;
+      font-weight: 600;
+      color: #a0aec0;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+
+    #barchart svg {
+      width: 100%;
+    }
+
+    #propagation-section h3 {
+      font-size: 13px;
+      font-weight: 600;
+      color: #a0aec0;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+
+    #prop-list {
+      list-style: none;
+      font-size: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    #prop-list li {
+      display: flex;
+      justify-content: space-between;
+      padding: 4px 8px;
+      background: #242740;
+      border-radius: 4px;
+    }
+
+    #prop-list .corr {
+      color: #f6ad55;
+      font-weight: 600;
+    }
+
+    /* ── Legend ─────────────────────────────── */
+    #legend {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      background: #1a1d2e;
+      border: 1px solid #2d3748;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 11px;
+    }
+
+    #legend h4 {
+      color: #a0aec0;
+      margin-bottom: 6px;
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 4px;
+    }
+
+    .legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    /* ── Tooltip ─────────────────────────────── */
+    #tooltip {
+      position: absolute;
+      pointer-events: none;
+      background: #1a1d2e;
+      border: 1px solid #4a5568;
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-size: 12px;
+      opacity: 0;
+      transition: opacity 0.15s;
+      z-index: 10;
+    }
+
+    #tooltip strong { color: #63b3ed; }
+
+    /* ── Node/edge styles ────────────────────── */
+    .node circle {
+      cursor: pointer;
+      stroke-width: 1.5;
+      transition: stroke 0.2s;
+    }
+
+    .node:hover circle { stroke: #fff; stroke-width: 2.5; }
+
+    .link {
+      stroke: #2d374880;
+      stroke-width: 0.5;
+      fill: none;
+    }
+
+    .link.highlighted {
+      stroke: #f6ad55;
+      stroke-width: 2;
+      stroke-opacity: 1;
+    }
+
+    .node.propagated circle {
+      stroke: #f6ad55;
+      stroke-width: 2.5;
+    }
+
+    #instructions {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      font-size: 11px;
+      color: #4a5568;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>✈ US Flight Delay Network · 2015–2019, 2022–2024</h1>
+  <div id="summary-bar">
+    <span><strong id="s-airports">—</strong> airports</span>
+    <span><strong id="s-routes">—</strong> routes</span>
+    <span><strong id="s-flights">—</strong> flights</span>
+    <span>Model: <strong id="s-model">—</strong></span>
+  </div>
+</header>
+
+<div class="main">
+  <div id="graph-panel">
+    <svg id="network"></svg>
+    <div id="legend">
+      <h4>Delay Rate</h4>
+      <div class="legend-item"><div class="legend-dot" style="background:#68d391"></div> &lt;15% on-time</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#f6ad55"></div> 15–25%</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#fc8181"></div> &gt;25%</div>
+    </div>
+    <div id="instructions">Click an airport to explore. Click again to deselect.</div>
+    <div id="tooltip"></div>
+  </div>
+
+  <div id="info-panel">
+    <div id="airport-card">
+      <h2 id="ap-code">—</h2>
+      <div id="airport-city">Select an airport</div>
+      <div class="stat-row">
+        <span class="stat-label">Total flights</span>
+        <span class="stat-value" id="ap-flights">—</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Delay rate</span>
+        <span class="stat-value" id="ap-pct">—</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Avg arrival delay</span>
+        <span class="stat-value" id="ap-delay">—</span>
+      </div>
+    </div>
+
+    <div id="barchart-section">
+      <h3>Delay Causes (avg minutes when delayed)</h3>
+      <div id="barchart"></div>
+    </div>
+
+    <div id="propagation-section">
+      <h3>Correlated Delay Airports</h3>
+      <ul id="prop-list"><li style="color:#4a5568">Select a hub airport</li></ul>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── Color scale ──────────────────────────────────────────────────────────────
+const delayColor = d3.scaleThreshold()
+  .domain([0.15, 0.25])
+  .range(["#68d391", "#f6ad55", "#fc8181"]);
+
+const nodeSizeScale = d3.scaleSqrt().range([3, 20]);
+
+// ── State ────────────────────────────────────────────────────────────────────
+let selected = null;
+let networkData = null;
+let breakdownData = null;
+let propagationData = null;
+
+// ── Load everything ──────────────────────────────────────────────────────────
+Promise.all([
+  fetch("/api/summary").then(r => r.json()),
+  fetch("/api/network").then(r => r.json()),
+  fetch("/api/breakdown").then(r => r.json()).catch(() => ({})),
+  fetch("/api/propagation/ATL").then(r => r.json()).catch(() => ({}))
+]).then(([summary, network, breakdown, _]) => {
+
+  // fill summary bar
+  document.getElementById("s-airports").textContent =
+    summary.total_airports.toLocaleString();
+  document.getElementById("s-routes").textContent =
+    summary.total_routes.toLocaleString();
+  document.getElementById("s-flights").textContent =
+    summary.total_flights.toLocaleString();
+  document.getElementById("s-model").textContent =
+    `GB AUC ${summary.model.match(/[\d.]+/)[0]}`;
+
+  networkData = network;
+  breakdownData = breakdown;
+
+  nodeSizeScale.domain([
+    d3.min(network.nodes, d => d.total_flights),
+    d3.max(network.nodes, d => d.total_flights)
+  ]);
+
+  drawNetwork(network);
+});
+
+// ── Draw force-directed graph ─────────────────────────────────────────────────
+function drawNetwork(data) {
+  const svg = d3.select("#network");
+  const W = svg.node().clientWidth || 900;
+  const H = svg.node().clientHeight || 700;
+
+  svg.attr("viewBox", `0 0 ${W} ${H}`);
+
+  // Filter to airports with coordinates (have map pins)
+  const nodeMap = new Map(data.nodes.map(d => [d.id, d]));
+  const validNodes = data.nodes.filter(d => d.lat && d.lon);
+  const validIds = new Set(validNodes.map(d => d.id));
+  const validEdges = data.edges.filter(
+    e => validIds.has(e.source) && validIds.has(e.target)
+  );
+
+  // Zoom + pan
+  const g = svg.append("g");
+  svg.call(d3.zoom()
+    .scaleExtent([0.3, 6])
+    .on("zoom", e => g.attr("transform", e.transform))
+  );
+
+  // Simulation
+  const simulation = d3.forceSimulation(validNodes)
+    .force("link", d3.forceLink(validEdges)
+      .id(d => d.id)
+      .distance(d => 60 / Math.log(d.flight_count + 2))
+      .strength(0.3))
+    .force("charge", d3.forceManyBody().strength(-80))
+    .force("center", d3.forceCenter(W / 2, H / 2))
+    .force("collision", d3.forceCollide().radius(d =>
+      nodeSizeScale(d.total_flights) + 2))
+    .alphaDecay(0.015);
+
+  // Edges
+  const link = g.append("g").attr("class", "links")
+    .selectAll("line")
+    .data(validEdges)
+    .join("line")
+    .attr("class", "link")
+    .attr("stroke-width", d => Math.max(0.3,
+      Math.log(d.flight_count) / 5));
+
+  // Nodes
+  const node = g.append("g").attr("class", "nodes")
+    .selectAll("g")
+    .data(validNodes)
+    .join("g")
+    .attr("class", "node")
+    .call(drag(simulation));
+
+  node.append("circle")
+    .attr("r", d => nodeSizeScale(d.total_flights))
+    .attr("fill", d => delayColor(d.pct_delayed))
+    .attr("stroke", d => d3.color(delayColor(d.pct_delayed)).darker(0.8))
+    .attr("fill-opacity", 0.85);
+
+  // Labels for large airports only
+  node.filter(d => d.total_flights > 10000)
+    .append("text")
+    .text(d => d.id)
+    .attr("dy", d => nodeSizeScale(d.total_flights) + 10)
+    .attr("text-anchor", "middle")
+    .attr("font-size", "8px")
+    .attr("fill", "#94a3b8")
+    .attr("pointer-events", "none");
+
+  // Tooltip
+  const tooltip = d3.select("#tooltip");
+  node.on("mouseover", (event, d) => {
+    tooltip
+      .style("opacity", 1)
+      .style("left", (event.offsetX + 14) + "px")
+      .style("top", (event.offsetY - 28) + "px")
+      .html(`<strong>${d.id}</strong><br>
+        ${(d.pct_delayed * 100).toFixed(1)}% delayed<br>
+        Avg delay: ${d.avg_arr_delay.toFixed(1)} min`);
+  })
+  .on("mousemove", event => {
+    tooltip
+      .style("left", (event.offsetX + 14) + "px")
+      .style("top", (event.offsetY - 28) + "px");
+  })
+  .on("mouseout", () => tooltip.style("opacity", 0));
+
+  // Click to select
+  node.on("click", (event, d) => {
+    event.stopPropagation();
+    if (selected === d.id) {
+      selected = null;
+      clearSelection(node, link);
+      resetPanel();
+    } else {
+      selected = d.id;
+      selectAirport(d, node, link);
+    }
+  });
+
+  svg.on("click", () => {
+    selected = null;
+    clearSelection(node, link);
+    resetPanel();
+  });
+
+  // Tick
+  simulation.on("tick", () => {
+    link
+      .attr("x1", d => d.source.x)
+      .attr("y1", d => d.source.y)
+      .attr("x2", d => d.target.x)
+      .attr("y2", d => d.target.y);
+    node.attr("transform", d => `translate(${d.x},${d.y})`);
+  });
+}
+
+// ── Select airport ────────────────────────────────────────────────────────────
+function selectAirport(d, node, link) {
+  // Update top card
+  document.getElementById("ap-code").textContent = d.id;
+  document.getElementById("airport-city").textContent =
+    `${(d.pct_delayed * 100).toFixed(1)}% delay rate`;
+
+  const flightsEl = document.getElementById("ap-flights");
+  flightsEl.textContent = d.total_flights.toLocaleString();
+
+  const pctEl = document.getElementById("ap-pct");
+  pctEl.textContent = (d.pct_delayed * 100).toFixed(1) + "%";
+  pctEl.className = "stat-value " +
+    (d.pct_delayed > 0.25 ? "bad" : d.pct_delayed < 0.15 ? "good" : "");
+
+  const delayEl = document.getElementById("ap-delay");
+  delayEl.textContent = d.avg_arr_delay.toFixed(1) + " min";
+  delayEl.className = "stat-value " +
+    (d.avg_arr_delay > 10 ? "bad" : d.avg_arr_delay < 0 ? "good" : "");
+
+  // Bar chart
+  drawBarChart(d.id);
+
+  // Propagation
+  loadPropagation(d.id, node, link);
+}
+
+// ── Bar chart ─────────────────────────────────────────────────────────────────
+function drawBarChart(code) {
+  const container = document.getElementById("barchart");
+  container.innerHTML = "";
+
+  if (!breakdownData[code]) {
+    container.innerHTML =
+      '<p style="color:#4a5568;font-size:12px">No delay breakdown available</p>';
+    return;
+  }
+
+  const bd = breakdownData[code];
+  const data = [
+    { label: "Carrier",       value: bd.carrier },
+    { label: "Late Aircraft", value: bd.late_aircraft },
+    { label: "NAS",           value: bd.nas },
+    { label: "Weather",       value: bd.weather },
+    { label: "Security",      value: bd.security }
+  ].sort((a, b) => b.value - a.value);
+
+  const W = 280, H = data.length * 30 + 10;
+  const margin = { left: 90, right: 50, top: 4, bottom: 4 };
+
+  const svg = d3.select(container)
+    .append("svg")
+    .attr("width", W)
+    .attr("height", H);
+
+  const xMax = d3.max(data, d => d.value);
+  const x = d3.scaleLinear()
+    .domain([0, xMax])
+    .range([0, W - margin.left - margin.right]);
+
+  const barColor = d3.scaleOrdinal()
+    .domain(data.map(d => d.label))
+    .range(["#63b3ed", "#f6ad55", "#68d391", "#fc8181", "#b794f4"]);
+
+  const bars = svg.append("g")
+    .attr("transform", `translate(${margin.left},${margin.top})`);
+
+  data.forEach((d, i) => {
+    const y = i * 30;
+
+    bars.append("text")
+      .attr("x", -6)
+      .attr("y", y + 14)
+      .attr("text-anchor", "end")
+      .attr("font-size", "11px")
+      .attr("fill", "#a0aec0")
+      .text(d.label);
+
+    bars.append("rect")
+      .attr("x", 0)
+      .attr("y", y + 2)
+      .attr("height", 18)
+      .attr("width", 0)
+      .attr("rx", 3)
+      .attr("fill", barColor(d.label))
+      .attr("fill-opacity", 0.85)
+      .transition().duration(500)
+      .attr("width", x(d.value));
+
+    bars.append("text")
+      .attr("x", x(d.value) + 4)
+      .attr("y", y + 14)
+      .attr("font-size", "11px")
+      .attr("fill", "#e2e8f0")
+      .text(d.value.toFixed(1) + " min");
+  });
+}
+
+// ── Propagation ───────────────────────────────────────────────────────────────
+function loadPropagation(code, node, link) {
+  fetch(`/api/propagation/${code}`)
+    .then(r => r.json())
+    .then(data => {
+      const connected = data.connected || [];
+      const connectedIds = new Set(connected.map(c => c.airport));
+
+      // Highlight nodes
+      node.classed("propagated", d => connectedIds.has(d.id));
+
+      // Highlight links
+      link.classed("highlighted", d => {
+        const src = d.source.id || d.source;
+        const tgt = d.target.id || d.target;
+        return (src === code && connectedIds.has(tgt)) ||
+               (tgt === code && connectedIds.has(src));
+      });
+
+      // Propagation list
+      const list = document.getElementById("prop-list");
+      if (connected.length === 0) {
+        list.innerHTML =
+          '<li style="color:#4a5568">No propagation data for this airport</li>';
+        return;
+      }
+
+      list.innerHTML = connected.slice(0, 10).map(c => `
+        <li>
+          <span>${c.airport}</span>
+          <span class="corr">r=${c.correlation.toFixed(2)}</span>
+        </li>
+      `).join("");
+    })
+    .catch(() => {
+      document.getElementById("prop-list").innerHTML =
+        '<li style="color:#4a5568">Not a tracked hub</li>';
+    });
+}
+
+// ── Clear selection ───────────────────────────────────────────────────────────
+function clearSelection(node, link) {
+  node.classed("propagated", false);
+  link.classed("highlighted", false);
+}
+
+function resetPanel() {
+  document.getElementById("ap-code").textContent = "—";
+  document.getElementById("airport-city").textContent = "Select an airport";
+  document.getElementById("ap-flights").textContent = "—";
+  document.getElementById("ap-pct").textContent = "—";
+  document.getElementById("ap-delay").textContent = "—";
+  document.getElementById("barchart").innerHTML = "";
+  document.getElementById("prop-list").innerHTML =
+    '<li style="color:#4a5568">Select a hub airport</li>';
+}
+
+// ── Drag ──────────────────────────────────────────────────────────────────────
+function drag(simulation) {
+  return d3.drag()
+    .on("start", (event, d) => {
+      if (!event.active) simulation.alphaTarget(0.3).restart();
+      d.fx = d.x; d.fy = d.y;
+    })
+    .on("drag", (event, d) => {
+      d.fx = event.x; d.fy = event.y;
+    })
+    .on("end", (event, d) => {
+      if (!event.active) simulation.alphaTarget(0);
+      d.fx = null; d.fy = null;
+    });
+}
+</script>
+</body>
+</html>

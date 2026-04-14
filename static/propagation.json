@@ -1,0 +1,1242 @@
+{
+  "ATL": [
+    {
+      "airport": "MCI",
+      "correlation": 0.5539
+    },
+    {
+      "airport": "RDU",
+      "correlation": 0.5427
+    },
+    {
+      "airport": "PIT",
+      "correlation": 0.5203
+    },
+    {
+      "airport": "BNA",
+      "correlation": 0.5189
+    },
+    {
+      "airport": "XNA",
+      "correlation": 0.496
+    },
+    {
+      "airport": "STL",
+      "correlation": 0.4789
+    },
+    {
+      "airport": "CMH",
+      "correlation": 0.4729
+    },
+    {
+      "airport": "DTW",
+      "correlation": 0.4729
+    },
+    {
+      "airport": "SAV",
+      "correlation": 0.4636
+    },
+    {
+      "airport": "ORD",
+      "correlation": 0.4592
+    },
+    {
+      "airport": "GSO",
+      "correlation": 0.459
+    },
+    {
+      "airport": "GSP",
+      "correlation": 0.4572
+    },
+    {
+      "airport": "BWI",
+      "correlation": 0.4553
+    },
+    {
+      "airport": "SDF",
+      "correlation": 0.4524
+    },
+    {
+      "airport": "MKE",
+      "correlation": 0.4511
+    }
+  ],
+  "ORD": [
+    {
+      "airport": "MSN",
+      "correlation": 0.6221
+    },
+    {
+      "airport": "LEX",
+      "correlation": 0.5881
+    },
+    {
+      "airport": "DTW",
+      "correlation": 0.5835
+    },
+    {
+      "airport": "MKE",
+      "correlation": 0.5822
+    },
+    {
+      "airport": "STL",
+      "correlation": 0.5658
+    },
+    {
+      "airport": "BNA",
+      "correlation": 0.5482
+    },
+    {
+      "airport": "BOI",
+      "correlation": 0.5416
+    },
+    {
+      "airport": "GRR",
+      "correlation": 0.5406
+    },
+    {
+      "airport": "DAY",
+      "correlation": 0.5158
+    },
+    {
+      "airport": "GRB",
+      "correlation": 0.5118
+    },
+    {
+      "airport": "SDF",
+      "correlation": 0.5006
+    },
+    {
+      "airport": "MCI",
+      "correlation": 0.4995
+    },
+    {
+      "airport": "CID",
+      "correlation": 0.4913
+    },
+    {
+      "airport": "IND",
+      "correlation": 0.4913
+    },
+    {
+      "airport": "CLE",
+      "correlation": 0.4789
+    }
+  ],
+  "DFW": [
+    {
+      "airport": "LAS",
+      "correlation": 0.6834
+    },
+    {
+      "airport": "SNA",
+      "correlation": 0.5894
+    },
+    {
+      "airport": "AUS",
+      "correlation": 0.5871
+    },
+    {
+      "airport": "MCI",
+      "correlation": 0.5648
+    },
+    {
+      "airport": "DAL",
+      "correlation": 0.553
+    },
+    {
+      "airport": "TUL",
+      "correlation": 0.553
+    },
+    {
+      "airport": "DEN",
+      "correlation": 0.5368
+    },
+    {
+      "airport": "SMF",
+      "correlation": 0.5303
+    },
+    {
+      "airport": "SLC",
+      "correlation": 0.5195
+    },
+    {
+      "airport": "ELP",
+      "correlation": 0.5167
+    },
+    {
+      "airport": "PDX",
+      "correlation": 0.5167
+    },
+    {
+      "airport": "IAH",
+      "correlation": 0.5157
+    },
+    {
+      "airport": "OAK",
+      "correlation": 0.5157
+    },
+    {
+      "airport": "OMA",
+      "correlation": 0.5157
+    },
+    {
+      "airport": "PSP",
+      "correlation": 0.5106
+    }
+  ],
+  "DEN": [
+    {
+      "airport": "AUS",
+      "correlation": 0.6247
+    },
+    {
+      "airport": "MCI",
+      "correlation": 0.5782
+    },
+    {
+      "airport": "IAH",
+      "correlation": 0.578
+    },
+    {
+      "airport": "SNA",
+      "correlation": 0.5602
+    },
+    {
+      "airport": "HOU",
+      "correlation": 0.5526
+    },
+    {
+      "airport": "DFW",
+      "correlation": 0.5368
+    },
+    {
+      "airport": "LAS",
+      "correlation": 0.5315
+    },
+    {
+      "airport": "RNO",
+      "correlation": 0.5261
+    },
+    {
+      "airport": "SMF",
+      "correlation": 0.5261
+    },
+    {
+      "airport": "DAL",
+      "correlation": 0.5164
+    },
+    {
+      "airport": "LBB",
+      "correlation": 0.5061
+    },
+    {
+      "airport": "SLC",
+      "correlation": 0.4984
+    },
+    {
+      "airport": "SFO",
+      "correlation": 0.4946
+    },
+    {
+      "airport": "MSY",
+      "correlation": 0.483
+    },
+    {
+      "airport": "OMA",
+      "correlation": 0.4768
+    }
+  ],
+  "LAX": [
+    {
+      "airport": "SAN",
+      "correlation": 0.7606
+    },
+    {
+      "airport": "SFO",
+      "correlation": 0.7092
+    },
+    {
+      "airport": "LAS",
+      "correlation": 0.6835
+    },
+    {
+      "airport": "SMF",
+      "correlation": 0.6765
+    },
+    {
+      "airport": "OAK",
+      "correlation": 0.6261
+    },
+    {
+      "airport": "SNA",
+      "correlation": 0.6132
+    },
+    {
+      "airport": "ONT",
+      "correlation": 0.5741
+    },
+    {
+      "airport": "SEA",
+      "correlation": 0.5689
+    },
+    {
+      "airport": "PSP",
+      "correlation": 0.5469
+    },
+    {
+      "airport": "SJC",
+      "correlation": 0.5438
+    },
+    {
+      "airport": "PHX",
+      "correlation": 0.5337
+    },
+    {
+      "airport": "RNO",
+      "correlation": 0.5243
+    },
+    {
+      "airport": "ABQ",
+      "correlation": 0.5053
+    },
+    {
+      "airport": "EUG",
+      "correlation": 0.5043
+    },
+    {
+      "airport": "FAT",
+      "correlation": 0.4751
+    }
+  ],
+  "PHX": [
+    {
+      "airport": "ONT",
+      "correlation": 0.7331
+    },
+    {
+      "airport": "SMF",
+      "correlation": 0.6814
+    },
+    {
+      "airport": "FAT",
+      "correlation": 0.6374
+    },
+    {
+      "airport": "SNA",
+      "correlation": 0.6206
+    },
+    {
+      "airport": "SAN",
+      "correlation": 0.5613
+    },
+    {
+      "airport": "ABQ",
+      "correlation": 0.5554
+    },
+    {
+      "airport": "BOI",
+      "correlation": 0.5547
+    },
+    {
+      "airport": "BUR",
+      "correlation": 0.5395
+    },
+    {
+      "airport": "LAX",
+      "correlation": 0.5337
+    },
+    {
+      "airport": "SBA",
+      "correlation": 0.5326
+    },
+    {
+      "airport": "DAL",
+      "correlation": 0.5295
+    },
+    {
+      "airport": "SAT",
+      "correlation": 0.5295
+    },
+    {
+      "airport": "OAK",
+      "correlation": 0.5181
+    },
+    {
+      "airport": "OKC",
+      "correlation": 0.5168
+    },
+    {
+      "airport": "LAS",
+      "correlation": 0.5144
+    }
+  ],
+  "CLT": [
+    {
+      "airport": "EGE",
+      "correlation": 0.4675
+    },
+    {
+      "airport": "PBI",
+      "correlation": 0.443
+    },
+    {
+      "airport": "STL",
+      "correlation": 0.439
+    },
+    {
+      "airport": "RDU",
+      "correlation": 0.4024
+    },
+    {
+      "airport": "EWR",
+      "correlation": 0.3945
+    },
+    {
+      "airport": "BWI",
+      "correlation": 0.3895
+    },
+    {
+      "airport": "BNA",
+      "correlation": 0.3888
+    },
+    {
+      "airport": "CID",
+      "correlation": 0.3888
+    },
+    {
+      "airport": "ORF",
+      "correlation": 0.3757
+    },
+    {
+      "airport": "XNA",
+      "correlation": 0.3757
+    },
+    {
+      "airport": "OMA",
+      "correlation": 0.3632
+    },
+    {
+      "airport": "MCO",
+      "correlation": 0.3572
+    },
+    {
+      "airport": "JFK",
+      "correlation": 0.3567
+    },
+    {
+      "airport": "PIA",
+      "correlation": 0.351
+    },
+    {
+      "airport": "SBA",
+      "correlation": 0.3507
+    }
+  ],
+  "LAS": [
+    {
+      "airport": "SNA",
+      "correlation": 0.6989
+    },
+    {
+      "airport": "LAX",
+      "correlation": 0.6835
+    },
+    {
+      "airport": "DFW",
+      "correlation": 0.6834
+    },
+    {
+      "airport": "SFO",
+      "correlation": 0.6809
+    },
+    {
+      "airport": "SJC",
+      "correlation": 0.6383
+    },
+    {
+      "airport": "OAK",
+      "correlation": 0.6326
+    },
+    {
+      "airport": "RNO",
+      "correlation": 0.6255
+    },
+    {
+      "airport": "SMF",
+      "correlation": 0.6255
+    },
+    {
+      "airport": "MCI",
+      "correlation": 0.6203
+    },
+    {
+      "airport": "SAN",
+      "correlation": 0.6079
+    },
+    {
+      "airport": "SEA",
+      "correlation": 0.6001
+    },
+    {
+      "airport": "PSP",
+      "correlation": 0.5761
+    },
+    {
+      "airport": "SLC",
+      "correlation": 0.5622
+    },
+    {
+      "airport": "PDX",
+      "correlation": 0.5601
+    },
+    {
+      "airport": "SAT",
+      "correlation": 0.5588
+    }
+  ],
+  "SFO": [
+    {
+      "airport": "LAX",
+      "correlation": 0.7092
+    },
+    {
+      "airport": "LAS",
+      "correlation": 0.6809
+    },
+    {
+      "airport": "SAN",
+      "correlation": 0.6654
+    },
+    {
+      "airport": "OAK",
+      "correlation": 0.6256
+    },
+    {
+      "airport": "SNA",
+      "correlation": 0.6206
+    },
+    {
+      "airport": "EUG",
+      "correlation": 0.5519
+    },
+    {
+      "airport": "JAC",
+      "correlation": 0.5499
+    },
+    {
+      "airport": "MCI",
+      "correlation": 0.5424
+    },
+    {
+      "airport": "BUR",
+      "correlation": 0.5395
+    },
+    {
+      "airport": "SLC",
+      "correlation": 0.5326
+    },
+    {
+      "airport": "RNO",
+      "correlation": 0.5241
+    },
+    {
+      "airport": "SMF",
+      "correlation": 0.5241
+    },
+    {
+      "airport": "ONT",
+      "correlation": 0.5181
+    },
+    {
+      "airport": "PDX",
+      "correlation": 0.5093
+    },
+    {
+      "airport": "SJC",
+      "correlation": 0.4949
+    }
+  ],
+  "LGA": [
+    {
+      "airport": "DCA",
+      "correlation": 0.5525
+    },
+    {
+      "airport": "IND",
+      "correlation": 0.5482
+    },
+    {
+      "airport": "BNA",
+      "correlation": 0.4913
+    },
+    {
+      "airport": "RIC",
+      "correlation": 0.4799
+    },
+    {
+      "airport": "ORD",
+      "correlation": 0.4789
+    },
+    {
+      "airport": "STL",
+      "correlation": 0.4578
+    },
+    {
+      "airport": "SDF",
+      "correlation": 0.4452
+    },
+    {
+      "airport": "GRR",
+      "correlation": 0.431
+    },
+    {
+      "airport": "IAD",
+      "correlation": 0.419
+    },
+    {
+      "airport": "TPA",
+      "correlation": 0.419
+    },
+    {
+      "airport": "BOI",
+      "correlation": 0.4182
+    },
+    {
+      "airport": "MKE",
+      "correlation": 0.4
+    },
+    {
+      "airport": "SYR",
+      "correlation": 0.4
+    },
+    {
+      "airport": "MCI",
+      "correlation": 0.3945
+    },
+    {
+      "airport": "RDU",
+      "correlation": 0.3927
+    }
+  ],
+  "MCO": [
+    {
+      "airport": "IAD",
+      "correlation": 0.4726
+    },
+    {
+      "airport": "FLL",
+      "correlation": 0.4687
+    },
+    {
+      "airport": "RDU",
+      "correlation": 0.4334
+    },
+    {
+      "airport": "IND",
+      "correlation": 0.4199
+    },
+    {
+      "airport": "TPA",
+      "correlation": 0.4069
+    },
+    {
+      "airport": "XNA",
+      "correlation": 0.4069
+    },
+    {
+      "airport": "JFK",
+      "correlation": 0.3835
+    },
+    {
+      "airport": "RIC",
+      "correlation": 0.3677
+    },
+    {
+      "airport": "CLT",
+      "correlation": 0.3572
+    },
+    {
+      "airport": "CHS",
+      "correlation": 0.3535
+    },
+    {
+      "airport": "EWR",
+      "correlation": 0.3527
+    },
+    {
+      "airport": "PSP",
+      "correlation": 0.3527
+    },
+    {
+      "airport": "LGA",
+      "correlation": 0.3421
+    },
+    {
+      "airport": "CVG",
+      "correlation": 0.3412
+    },
+    {
+      "airport": "JAX",
+      "correlation": 0.3381
+    }
+  ],
+  "IAH": [
+    {
+      "airport": "DEN",
+      "correlation": 0.578
+    },
+    {
+      "airport": "AUS",
+      "correlation": 0.5595
+    },
+    {
+      "airport": "MSY",
+      "correlation": 0.548
+    },
+    {
+      "airport": "LAS",
+      "correlation": 0.5339
+    },
+    {
+      "airport": "DFW",
+      "correlation": 0.5157
+    },
+    {
+      "airport": "SMF",
+      "correlation": 0.5129
+    },
+    {
+      "airport": "SAT",
+      "correlation": 0.4873
+    },
+    {
+      "airport": "LAX",
+      "correlation": 0.47
+    },
+    {
+      "airport": "CID",
+      "correlation": 0.4644
+    },
+    {
+      "airport": "HOU",
+      "correlation": 0.4598
+    },
+    {
+      "airport": "MCI",
+      "correlation": 0.458
+    },
+    {
+      "airport": "TPA",
+      "correlation": 0.4449
+    },
+    {
+      "airport": "SNA",
+      "correlation": 0.4447
+    },
+    {
+      "airport": "ECP",
+      "correlation": 0.4329
+    },
+    {
+      "airport": "SJC",
+      "correlation": 0.4319
+    }
+  ],
+  "SEA": [
+    {
+      "airport": "LAS",
+      "correlation": 0.6001
+    },
+    {
+      "airport": "SJC",
+      "correlation": 0.5703
+    },
+    {
+      "airport": "LAX",
+      "correlation": 0.5689
+    },
+    {
+      "airport": "SAT",
+      "correlation": 0.5006
+    },
+    {
+      "airport": "AUS",
+      "correlation": 0.4982
+    },
+    {
+      "airport": "SMF",
+      "correlation": 0.4982
+    },
+    {
+      "airport": "OAK",
+      "correlation": 0.4934
+    },
+    {
+      "airport": "SNA",
+      "correlation": 0.491
+    },
+    {
+      "airport": "PDX",
+      "correlation": 0.4832
+    },
+    {
+      "airport": "SAN",
+      "correlation": 0.4832
+    },
+    {
+      "airport": "GEG",
+      "correlation": 0.4687
+    },
+    {
+      "airport": "BUR",
+      "correlation": 0.4618
+    },
+    {
+      "airport": "PSP",
+      "correlation": 0.4539
+    },
+    {
+      "airport": "RNO",
+      "correlation": 0.4467
+    },
+    {
+      "airport": "SFO",
+      "correlation": 0.4358
+    }
+  ],
+  "DTW": [
+    {
+      "airport": "MKE",
+      "correlation": 0.7587
+    },
+    {
+      "airport": "GRR",
+      "correlation": 0.6182
+    },
+    {
+      "airport": "DAY",
+      "correlation": 0.6054
+    },
+    {
+      "airport": "AZO",
+      "correlation": 0.5835
+    },
+    {
+      "airport": "ORD",
+      "correlation": 0.5835
+    },
+    {
+      "airport": "DCA",
+      "correlation": 0.5486
+    },
+    {
+      "airport": "SDF",
+      "correlation": 0.5374
+    },
+    {
+      "airport": "CLE",
+      "correlation": 0.5252
+    },
+    {
+      "airport": "LEX",
+      "correlation": 0.5237
+    },
+    {
+      "airport": "IND",
+      "correlation": 0.4916
+    },
+    {
+      "airport": "SBN",
+      "correlation": 0.4916
+    },
+    {
+      "airport": "AVL",
+      "correlation": 0.4879
+    },
+    {
+      "airport": "LAN",
+      "correlation": 0.4879
+    },
+    {
+      "airport": "CMH",
+      "correlation": 0.4784
+    },
+    {
+      "airport": "ATL",
+      "correlation": 0.4729
+    }
+  ],
+  "BOS": [
+    {
+      "airport": "RSW",
+      "correlation": 0.5325
+    },
+    {
+      "airport": "RDU",
+      "correlation": 0.491
+    },
+    {
+      "airport": "STL",
+      "correlation": 0.4832
+    },
+    {
+      "airport": "HPN",
+      "correlation": 0.4799
+    },
+    {
+      "airport": "TPA",
+      "correlation": 0.4568
+    },
+    {
+      "airport": "EWR",
+      "correlation": 0.4539
+    },
+    {
+      "airport": "FLL",
+      "correlation": 0.4396
+    },
+    {
+      "airport": "BNA",
+      "correlation": 0.4196
+    },
+    {
+      "airport": "CLE",
+      "correlation": 0.4182
+    },
+    {
+      "airport": "JAX",
+      "correlation": 0.4179
+    },
+    {
+      "airport": "BUF",
+      "correlation": 0.4163
+    },
+    {
+      "airport": "RIC",
+      "correlation": 0.4156
+    },
+    {
+      "airport": "CVG",
+      "correlation": 0.4034
+    },
+    {
+      "airport": "IAD",
+      "correlation": 0.4034
+    },
+    {
+      "airport": "ISP",
+      "correlation": 0.3769
+    }
+  ],
+  "MSP": [
+    {
+      "airport": "SAN",
+      "correlation": 0.5124
+    },
+    {
+      "airport": "BOI",
+      "correlation": 0.491
+    },
+    {
+      "airport": "ONT",
+      "correlation": 0.4845
+    },
+    {
+      "airport": "CID",
+      "correlation": 0.4715
+    },
+    {
+      "airport": "PDX",
+      "correlation": 0.4646
+    },
+    {
+      "airport": "SNA",
+      "correlation": 0.4645
+    },
+    {
+      "airport": "SJC",
+      "correlation": 0.4485
+    },
+    {
+      "airport": "BIS",
+      "correlation": 0.4352
+    },
+    {
+      "airport": "OAK",
+      "correlation": 0.4352
+    },
+    {
+      "airport": "OMA",
+      "correlation": 0.4352
+    },
+    {
+      "airport": "MCI",
+      "correlation": 0.4346
+    },
+    {
+      "airport": "BWI",
+      "correlation": 0.433
+    },
+    {
+      "airport": "FAR",
+      "correlation": 0.4212
+    },
+    {
+      "airport": "ABQ",
+      "correlation": 0.4179
+    },
+    {
+      "airport": "TUS",
+      "correlation": 0.4168
+    }
+  ],
+  "EWR": [
+    {
+      "airport": "LEX",
+      "correlation": 0.5394
+    },
+    {
+      "airport": "RSW",
+      "correlation": 0.5114
+    },
+    {
+      "airport": "TPA",
+      "correlation": 0.4868
+    },
+    {
+      "airport": "RDU",
+      "correlation": 0.4687
+    },
+    {
+      "airport": "ORD",
+      "correlation": 0.4607
+    },
+    {
+      "airport": "STL",
+      "correlation": 0.4584
+    },
+    {
+      "airport": "BOS",
+      "correlation": 0.4539
+    },
+    {
+      "airport": "SDF",
+      "correlation": 0.4537
+    },
+    {
+      "airport": "BNA",
+      "correlation": 0.4511
+    },
+    {
+      "airport": "IND",
+      "correlation": 0.4511
+    },
+    {
+      "airport": "PHL",
+      "correlation": 0.4342
+    },
+    {
+      "airport": "DTW",
+      "correlation": 0.4326
+    },
+    {
+      "airport": "PBI",
+      "correlation": 0.4235
+    },
+    {
+      "airport": "DAY",
+      "correlation": 0.4179
+    },
+    {
+      "airport": "BDL",
+      "correlation": 0.415
+    }
+  ],
+  "JFK": [
+    {
+      "airport": "RDU",
+      "correlation": 0.459
+    },
+    {
+      "airport": "BUF",
+      "correlation": 0.4377
+    },
+    {
+      "airport": "IAD",
+      "correlation": 0.4261
+    },
+    {
+      "airport": "SRQ",
+      "correlation": 0.4165
+    },
+    {
+      "airport": "MCO",
+      "correlation": 0.3835
+    },
+    {
+      "airport": "PBI",
+      "correlation": 0.3835
+    },
+    {
+      "airport": "BOS",
+      "correlation": 0.3764
+    },
+    {
+      "airport": "TPA",
+      "correlation": 0.3718
+    },
+    {
+      "airport": "SAV",
+      "correlation": 0.3652
+    },
+    {
+      "airport": "CLT",
+      "correlation": 0.3567
+    },
+    {
+      "airport": "ISP",
+      "correlation": 0.3545
+    },
+    {
+      "airport": "STT",
+      "correlation": 0.3526
+    },
+    {
+      "airport": "BTV",
+      "correlation": 0.348
+    },
+    {
+      "airport": "SJU",
+      "correlation": 0.3372
+    },
+    {
+      "airport": "ACY",
+      "correlation": 0.3348
+    }
+  ],
+  "DCA": [
+    {
+      "airport": "IND",
+      "correlation": 0.5773
+    },
+    {
+      "airport": "LGA",
+      "correlation": 0.5525
+    },
+    {
+      "airport": "DTW",
+      "correlation": 0.5486
+    },
+    {
+      "airport": "GRR",
+      "correlation": 0.518
+    },
+    {
+      "airport": "CHS",
+      "correlation": 0.5164
+    },
+    {
+      "airport": "CLE",
+      "correlation": 0.4828
+    },
+    {
+      "airport": "MKE",
+      "correlation": 0.4732
+    },
+    {
+      "airport": "SDF",
+      "correlation": 0.4728
+    },
+    {
+      "airport": "SAV",
+      "correlation": 0.4549
+    },
+    {
+      "airport": "TPA",
+      "correlation": 0.441
+    },
+    {
+      "airport": "BUF",
+      "correlation": 0.4396
+    },
+    {
+      "airport": "RIC",
+      "correlation": 0.4254
+    },
+    {
+      "airport": "CMH",
+      "correlation": 0.4239
+    },
+    {
+      "airport": "MHT",
+      "correlation": 0.4215
+    },
+    {
+      "airport": "ORD",
+      "correlation": 0.4132
+    }
+  ],
+  "SLC": [
+    {
+      "airport": "DAL",
+      "correlation": 0.678
+    },
+    {
+      "airport": "SNA",
+      "correlation": 0.5828
+    },
+    {
+      "airport": "SJC",
+      "correlation": 0.5669
+    },
+    {
+      "airport": "LAS",
+      "correlation": 0.5622
+    },
+    {
+      "airport": "OAK",
+      "correlation": 0.5555
+    },
+    {
+      "airport": "OMA",
+      "correlation": 0.5555
+    },
+    {
+      "airport": "MCI",
+      "correlation": 0.5523
+    },
+    {
+      "airport": "RNO",
+      "correlation": 0.5518
+    },
+    {
+      "airport": "PDX",
+      "correlation": 0.5351
+    },
+    {
+      "airport": "SFO",
+      "correlation": 0.5326
+    },
+    {
+      "airport": "DFW",
+      "correlation": 0.5195
+    },
+    {
+      "airport": "ONT",
+      "correlation": 0.5055
+    },
+    {
+      "airport": "SMF",
+      "correlation": 0.5032
+    },
+    {
+      "airport": "DEN",
+      "correlation": 0.4984
+    },
+    {
+      "airport": "SAT",
+      "correlation": 0.4909
+    }
+  ]
+}

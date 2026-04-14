@@ -1,0 +1,3002 @@
+[
+  {
+    "id": "ATL",
+    "total_flights": 90745,
+    "pct_delayed": 0.1586,
+    "avg_arr_delay": 2.7,
+    "lat": 33.6407,
+    "lon": -84.4277
+  },
+  {
+    "id": "ORD",
+    "total_flights": 64046,
+    "pct_delayed": 0.2864,
+    "avg_arr_delay": 12.95,
+    "lat": 41.9742,
+    "lon": -87.9073
+  },
+  {
+    "id": "DFW",
+    "total_flights": 63436,
+    "pct_delayed": 0.2296,
+    "avg_arr_delay": 9.27,
+    "lat": 32.8998,
+    "lon": -97.0403
+  },
+  {
+    "id": "DEN",
+    "total_flights": 56880,
+    "pct_delayed": 0.2561,
+    "avg_arr_delay": 9.14,
+    "lat": 39.8561,
+    "lon": -104.6737
+  },
+  {
+    "id": "LAX",
+    "total_flights": 50866,
+    "pct_delayed": 0.2019,
+    "avg_arr_delay": 4.62,
+    "lat": 33.9425,
+    "lon": -118.4081
+  },
+  {
+    "id": "PHX",
+    "total_flights": 41957,
+    "pct_delayed": 0.1865,
+    "avg_arr_delay": 3.78,
+    "lat": 33.4373,
+    "lon": -112.0078
+  },
+  {
+    "id": "CLT",
+    "total_flights": 41728,
+    "pct_delayed": 0.1904,
+    "avg_arr_delay": 4.41,
+    "lat": 35.214,
+    "lon": -80.9431
+  },
+  {
+    "id": "LAS",
+    "total_flights": 39001,
+    "pct_delayed": 0.228,
+    "avg_arr_delay": 8.16,
+    "lat": 36.084,
+    "lon": -115.1537
+  },
+  {
+    "id": "SFO",
+    "total_flights": 36348,
+    "pct_delayed": 0.2421,
+    "avg_arr_delay": 9.42,
+    "lat": 37.6213,
+    "lon": -122.379
+  },
+  {
+    "id": "LGA",
+    "total_flights": 35733,
+    "pct_delayed": 0.2262,
+    "avg_arr_delay": 4.25,
+    "lat": 40.7772,
+    "lon": -73.8726
+  },
+  {
+    "id": "MCO",
+    "total_flights": 34779,
+    "pct_delayed": 0.2151,
+    "avg_arr_delay": 8.54,
+    "lat": 28.4312,
+    "lon": -81.3081
+  },
+  {
+    "id": "IAH",
+    "total_flights": 34115,
+    "pct_delayed": 0.1844,
+    "avg_arr_delay": 6.15,
+    "lat": 29.9902,
+    "lon": -95.3368
+  },
+  {
+    "id": "SEA",
+    "total_flights": 32737,
+    "pct_delayed": 0.1816,
+    "avg_arr_delay": 2.89,
+    "lat": 47.4502,
+    "lon": -122.3088
+  },
+  {
+    "id": "DTW",
+    "total_flights": 32296,
+    "pct_delayed": 0.2315,
+    "avg_arr_delay": 6.08,
+    "lat": 42.2124,
+    "lon": -83.3534
+  },
+  {
+    "id": "BOS",
+    "total_flights": 31236,
+    "pct_delayed": 0.2247,
+    "avg_arr_delay": 5.86,
+    "lat": 42.3656,
+    "lon": -71.0096
+  },
+  {
+    "id": "MSP",
+    "total_flights": 30955,
+    "pct_delayed": 0.2127,
+    "avg_arr_delay": 4.15,
+    "lat": 44.8848,
+    "lon": -93.2223
+  },
+  {
+    "id": "EWR",
+    "total_flights": 29662,
+    "pct_delayed": 0.2306,
+    "avg_arr_delay": 4.94,
+    "lat": 40.6895,
+    "lon": -74.1745
+  },
+  {
+    "id": "JFK",
+    "total_flights": 28804,
+    "pct_delayed": 0.216,
+    "avg_arr_delay": 2.05,
+    "lat": 40.6413,
+    "lon": -73.7781
+  },
+  {
+    "id": "DCA",
+    "total_flights": 28318,
+    "pct_delayed": 0.2024,
+    "avg_arr_delay": 4.83,
+    "lat": 38.8512,
+    "lon": -77.0402
+  },
+  {
+    "id": "SLC",
+    "total_flights": 28000,
+    "pct_delayed": 0.1765,
+    "avg_arr_delay": 3.49,
+    "lat": 40.7884,
+    "lon": -111.9778
+  },
+  {
+    "id": "MIA",
+    "total_flights": 23668,
+    "pct_delayed": 0.2312,
+    "avg_arr_delay": 8.75,
+    "lat": 25.7959,
+    "lon": -80.287
+  },
+  {
+    "id": "FLL",
+    "total_flights": 23342,
+    "pct_delayed": 0.2349,
+    "avg_arr_delay": 8.53,
+    "lat": 26.0726,
+    "lon": -80.1527
+  },
+  {
+    "id": "BWI",
+    "total_flights": 21944,
+    "pct_delayed": 0.196,
+    "avg_arr_delay": 3.26,
+    "lat": 39.1754,
+    "lon": -76.6684
+  },
+  {
+    "id": "PHL",
+    "total_flights": 20629,
+    "pct_delayed": 0.2008,
+    "avg_arr_delay": 3.58,
+    "lat": 39.8729,
+    "lon": -75.2437
+  },
+  {
+    "id": "SAN",
+    "total_flights": 19718,
+    "pct_delayed": 0.1838,
+    "avg_arr_delay": 3.79,
+    "lat": 32.7338,
+    "lon": -117.1933
+  },
+  {
+    "id": "TPA",
+    "total_flights": 18859,
+    "pct_delayed": 0.1769,
+    "avg_arr_delay": 4.47,
+    "lat": 27.9755,
+    "lon": -82.5332
+  },
+  {
+    "id": "MDW",
+    "total_flights": 18485,
+    "pct_delayed": 0.2379,
+    "avg_arr_delay": 5.98,
+    "lat": 41.7868,
+    "lon": -87.7522
+  },
+  {
+    "id": "DAL",
+    "total_flights": 17104,
+    "pct_delayed": 0.1926,
+    "avg_arr_delay": 4.17,
+    "lat": 32.8471,
+    "lon": -96.8518
+  },
+  {
+    "id": "BNA",
+    "total_flights": 16733,
+    "pct_delayed": 0.2048,
+    "avg_arr_delay": 7.11,
+    "lat": 36.1245,
+    "lon": -86.6782
+  },
+  {
+    "id": "AUS",
+    "total_flights": 15427,
+    "pct_delayed": 0.2022,
+    "avg_arr_delay": 7.34,
+    "lat": 30.1975,
+    "lon": -97.6664
+  },
+  {
+    "id": "STL",
+    "total_flights": 14218,
+    "pct_delayed": 0.1944,
+    "avg_arr_delay": 4.56,
+    "lat": 38.7487,
+    "lon": -90.37
+  },
+  {
+    "id": "HOU",
+    "total_flights": 13587,
+    "pct_delayed": 0.1854,
+    "avg_arr_delay": 4.71,
+    "lat": 29.6454,
+    "lon": -95.2789
+  },
+  {
+    "id": "PDX",
+    "total_flights": 13391,
+    "pct_delayed": 0.1662,
+    "avg_arr_delay": 2.6,
+    "lat": 45.5898,
+    "lon": -122.5951
+  },
+  {
+    "id": "HNL",
+    "total_flights": 12592,
+    "pct_delayed": 0.1433,
+    "avg_arr_delay": 1.88,
+    "lat": 21.3187,
+    "lon": -157.9224
+  },
+  {
+    "id": "SJC",
+    "total_flights": 11924,
+    "pct_delayed": 0.161,
+    "avg_arr_delay": 1.95,
+    "lat": 37.3626,
+    "lon": -121.929
+  },
+  {
+    "id": "MSY",
+    "total_flights": 11595,
+    "pct_delayed": 0.1688,
+    "avg_arr_delay": 3.96,
+    "lat": 29.9934,
+    "lon": -90.258
+  },
+  {
+    "id": "OAK",
+    "total_flights": 11581,
+    "pct_delayed": 0.1897,
+    "avg_arr_delay": 3.87,
+    "lat": 37.7213,
+    "lon": -122.2208
+  },
+  {
+    "id": "RDU",
+    "total_flights": 11429,
+    "pct_delayed": 0.1886,
+    "avg_arr_delay": 5.51,
+    "lat": 35.8776,
+    "lon": -78.7875
+  },
+  {
+    "id": "IAD",
+    "total_flights": 11224,
+    "pct_delayed": 0.2039,
+    "avg_arr_delay": 5.17,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "SMF",
+    "total_flights": 11216,
+    "pct_delayed": 0.1715,
+    "avg_arr_delay": 3.4,
+    "lat": 38.6954,
+    "lon": -121.5908
+  },
+  {
+    "id": "MCI",
+    "total_flights": 11182,
+    "pct_delayed": 0.1796,
+    "avg_arr_delay": 4.0,
+    "lat": 39.2976,
+    "lon": -94.7139
+  },
+  {
+    "id": "SNA",
+    "total_flights": 10750,
+    "pct_delayed": 0.165,
+    "avg_arr_delay": 2.22,
+    "lat": 33.6757,
+    "lon": -117.8682
+  },
+  {
+    "id": "RSW",
+    "total_flights": 10289,
+    "pct_delayed": 0.2006,
+    "avg_arr_delay": 6.68,
+    "lat": 26.5362,
+    "lon": -81.7552
+  },
+  {
+    "id": "CLE",
+    "total_flights": 9490,
+    "pct_delayed": 0.2202,
+    "avg_arr_delay": 6.88,
+    "lat": 41.4117,
+    "lon": -81.8498
+  },
+  {
+    "id": "IND",
+    "total_flights": 8901,
+    "pct_delayed": 0.1963,
+    "avg_arr_delay": 4.1,
+    "lat": 39.7173,
+    "lon": -86.2944
+  },
+  {
+    "id": "PIT",
+    "total_flights": 8680,
+    "pct_delayed": 0.1886,
+    "avg_arr_delay": 2.0,
+    "lat": 40.4915,
+    "lon": -80.2329
+  },
+  {
+    "id": "SAT",
+    "total_flights": 8498,
+    "pct_delayed": 0.1599,
+    "avg_arr_delay": 2.15,
+    "lat": 29.5337,
+    "lon": -98.4698
+  },
+  {
+    "id": "CMH",
+    "total_flights": 8185,
+    "pct_delayed": 0.2183,
+    "avg_arr_delay": 4.86,
+    "lat": 39.998,
+    "lon": -82.8919
+  },
+  {
+    "id": "PBI",
+    "total_flights": 7649,
+    "pct_delayed": 0.2287,
+    "avg_arr_delay": 9.53,
+    "lat": 26.6832,
+    "lon": -80.0956
+  },
+  {
+    "id": "CVG",
+    "total_flights": 7486,
+    "pct_delayed": 0.2026,
+    "avg_arr_delay": 4.58,
+    "lat": 39.0533,
+    "lon": -84.663
+  },
+  {
+    "id": "MKE",
+    "total_flights": 7345,
+    "pct_delayed": 0.232,
+    "avg_arr_delay": 8.72,
+    "lat": 42.9472,
+    "lon": -87.8966
+  },
+  {
+    "id": "SJU",
+    "total_flights": 7338,
+    "pct_delayed": 0.2415,
+    "avg_arr_delay": 11.78,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "BUR",
+    "total_flights": 6400,
+    "pct_delayed": 0.1922,
+    "avg_arr_delay": 5.16,
+    "lat": 34.2007,
+    "lon": -118.3592
+  },
+  {
+    "id": "OGG",
+    "total_flights": 6310,
+    "pct_delayed": 0.1607,
+    "avg_arr_delay": 1.49,
+    "lat": 20.8986,
+    "lon": -156.4305
+  },
+  {
+    "id": "JAX",
+    "total_flights": 6127,
+    "pct_delayed": 0.179,
+    "avg_arr_delay": 6.14,
+    "lat": 30.4941,
+    "lon": -81.6879
+  },
+  {
+    "id": "BDL",
+    "total_flights": 5527,
+    "pct_delayed": 0.1896,
+    "avg_arr_delay": 3.23,
+    "lat": 41.9389,
+    "lon": -72.6832
+  },
+  {
+    "id": "ONT",
+    "total_flights": 5262,
+    "pct_delayed": 0.1729,
+    "avg_arr_delay": 4.39,
+    "lat": 34.056,
+    "lon": -117.6012
+  },
+  {
+    "id": "OMA",
+    "total_flights": 5129,
+    "pct_delayed": 0.1983,
+    "avg_arr_delay": 6.01,
+    "lat": 41.3032,
+    "lon": -95.8941
+  },
+  {
+    "id": "ABQ",
+    "total_flights": 4883,
+    "pct_delayed": 0.1833,
+    "avg_arr_delay": 4.09,
+    "lat": 35.0402,
+    "lon": -106.609
+  },
+  {
+    "id": "OKC",
+    "total_flights": 4692,
+    "pct_delayed": 0.1688,
+    "avg_arr_delay": 3.36,
+    "lat": 35.3931,
+    "lon": -97.6007
+  },
+  {
+    "id": "MEM",
+    "total_flights": 4595,
+    "pct_delayed": 0.178,
+    "avg_arr_delay": 4.39,
+    "lat": 35.0424,
+    "lon": -89.9767
+  },
+  {
+    "id": "BUF",
+    "total_flights": 4551,
+    "pct_delayed": 0.2197,
+    "avg_arr_delay": 8.28,
+    "lat": 42.9405,
+    "lon": -78.7322
+  },
+  {
+    "id": "TUS",
+    "total_flights": 4464,
+    "pct_delayed": 0.1691,
+    "avg_arr_delay": 3.47,
+    "lat": 32.1161,
+    "lon": -110.941
+  },
+  {
+    "id": "RIC",
+    "total_flights": 4462,
+    "pct_delayed": 0.2225,
+    "avg_arr_delay": 9.09,
+    "lat": 37.5052,
+    "lon": -77.3197
+  },
+  {
+    "id": "BOI",
+    "total_flights": 4344,
+    "pct_delayed": 0.2026,
+    "avg_arr_delay": 6.71,
+    "lat": 43.5644,
+    "lon": -116.2228
+  },
+  {
+    "id": "CHS",
+    "total_flights": 4236,
+    "pct_delayed": 0.1778,
+    "avg_arr_delay": 3.71,
+    "lat": 32.8986,
+    "lon": -80.0405
+  },
+  {
+    "id": "RNO",
+    "total_flights": 4005,
+    "pct_delayed": 0.1993,
+    "avg_arr_delay": 7.35,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "SDF",
+    "total_flights": 3970,
+    "pct_delayed": 0.206,
+    "avg_arr_delay": 6.58,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "ORF",
+    "total_flights": 3831,
+    "pct_delayed": 0.1924,
+    "avg_arr_delay": 5.69,
+    "lat": 36.8976,
+    "lon": -76.0132
+  },
+  {
+    "id": "TUL",
+    "total_flights": 3822,
+    "pct_delayed": 0.1502,
+    "avg_arr_delay": 1.52,
+    "lat": 36.1984,
+    "lon": -95.8881
+  },
+  {
+    "id": "ANC",
+    "total_flights": 3792,
+    "pct_delayed": 0.1543,
+    "avg_arr_delay": 0.92,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "LGB",
+    "total_flights": 3594,
+    "pct_delayed": 0.2028,
+    "avg_arr_delay": 6.28,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "PSP",
+    "total_flights": 3535,
+    "pct_delayed": 0.1842,
+    "avg_arr_delay": 6.95,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "GRR",
+    "total_flights": 3528,
+    "pct_delayed": 0.2764,
+    "avg_arr_delay": 12.9,
+    "lat": 42.8808,
+    "lon": -85.5228
+  },
+  {
+    "id": "ELP",
+    "total_flights": 3527,
+    "pct_delayed": 0.1698,
+    "avg_arr_delay": 3.57,
+    "lat": 31.8072,
+    "lon": -106.3779
+  },
+  {
+    "id": "BHM",
+    "total_flights": 3503,
+    "pct_delayed": 0.1733,
+    "avg_arr_delay": 4.08,
+    "lat": 33.5629,
+    "lon": -86.7535
+  },
+  {
+    "id": "KOA",
+    "total_flights": 3435,
+    "pct_delayed": 0.1476,
+    "avg_arr_delay": 2.6,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "PVD",
+    "total_flights": 3321,
+    "pct_delayed": 0.1945,
+    "avg_arr_delay": 3.72,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "LIH",
+    "total_flights": 3253,
+    "pct_delayed": 0.1423,
+    "avg_arr_delay": 2.08,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "GEG",
+    "total_flights": 3141,
+    "pct_delayed": 0.1805,
+    "avg_arr_delay": 5.87,
+    "lat": 47.6199,
+    "lon": -117.5339
+  },
+  {
+    "id": "DSM",
+    "total_flights": 3040,
+    "pct_delayed": 0.2431,
+    "avg_arr_delay": 12.51,
+    "lat": 41.534,
+    "lon": -93.6631
+  },
+  {
+    "id": "SAV",
+    "total_flights": 2731,
+    "pct_delayed": 0.1677,
+    "avg_arr_delay": 3.52,
+    "lat": 32.1276,
+    "lon": -81.2021
+  },
+  {
+    "id": "TYS",
+    "total_flights": 2660,
+    "pct_delayed": 0.2158,
+    "avg_arr_delay": 9.05,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "GSP",
+    "total_flights": 2574,
+    "pct_delayed": 0.1507,
+    "avg_arr_delay": 1.66,
+    "lat": 34.8957,
+    "lon": -82.2189
+  },
+  {
+    "id": "ROC",
+    "total_flights": 2528,
+    "pct_delayed": 0.214,
+    "avg_arr_delay": 5.92,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "LIT",
+    "total_flights": 2494,
+    "pct_delayed": 0.18,
+    "avg_arr_delay": 5.09,
+    "lat": 34.7294,
+    "lon": -92.2243
+  },
+  {
+    "id": "HPN",
+    "total_flights": 2435,
+    "pct_delayed": 0.255,
+    "avg_arr_delay": 12.02,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "MSN",
+    "total_flights": 2417,
+    "pct_delayed": 0.2338,
+    "avg_arr_delay": 9.99,
+    "lat": 43.1399,
+    "lon": -89.3375
+  },
+  {
+    "id": "ALB",
+    "total_flights": 2407,
+    "pct_delayed": 0.2115,
+    "avg_arr_delay": 5.56,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "SYR",
+    "total_flights": 2398,
+    "pct_delayed": 0.2327,
+    "avg_arr_delay": 7.99,
+    "lat": 43.1112,
+    "lon": -76.1063
+  },
+  {
+    "id": "XNA",
+    "total_flights": 2346,
+    "pct_delayed": 0.2327,
+    "avg_arr_delay": 12.33,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "GSO",
+    "total_flights": 2329,
+    "pct_delayed": 0.1825,
+    "avg_arr_delay": 2.73,
+    "lat": 36.0978,
+    "lon": -79.9373
+  },
+  {
+    "id": "COS",
+    "total_flights": 2315,
+    "pct_delayed": 0.2281,
+    "avg_arr_delay": 12.41,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "SRQ",
+    "total_flights": 2313,
+    "pct_delayed": 0.23,
+    "avg_arr_delay": 13.21,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "FAT",
+    "total_flights": 2295,
+    "pct_delayed": 0.2261,
+    "avg_arr_delay": 11.34,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "ASE",
+    "total_flights": 2184,
+    "pct_delayed": 0.3759,
+    "avg_arr_delay": 27.7,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "ICT",
+    "total_flights": 2156,
+    "pct_delayed": 0.1865,
+    "avg_arr_delay": 8.41,
+    "lat": 37.6499,
+    "lon": -97.4331
+  },
+  {
+    "id": "DAY",
+    "total_flights": 2149,
+    "pct_delayed": 0.2262,
+    "avg_arr_delay": 7.49,
+    "lat": 39.9024,
+    "lon": -84.2194
+  },
+  {
+    "id": "PNS",
+    "total_flights": 2078,
+    "pct_delayed": 0.1526,
+    "avg_arr_delay": 4.81,
+    "lat": 30.4734,
+    "lon": -87.1866
+  },
+  {
+    "id": "MAF",
+    "total_flights": 1926,
+    "pct_delayed": 0.1708,
+    "avg_arr_delay": 5.63,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "LEX",
+    "total_flights": 1712,
+    "pct_delayed": 0.2202,
+    "avg_arr_delay": 8.16,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "JAN",
+    "total_flights": 1652,
+    "pct_delayed": 0.1519,
+    "avg_arr_delay": 1.15,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "BZN",
+    "total_flights": 1605,
+    "pct_delayed": 0.233,
+    "avg_arr_delay": 13.64,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "CID",
+    "total_flights": 1602,
+    "pct_delayed": 0.2715,
+    "avg_arr_delay": 14.53,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "PWM",
+    "total_flights": 1587,
+    "pct_delayed": 0.2111,
+    "avg_arr_delay": 7.76,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "HSV",
+    "total_flights": 1549,
+    "pct_delayed": 0.1549,
+    "avg_arr_delay": 2.58,
+    "lat": 34.6372,
+    "lon": -86.7751
+  },
+  {
+    "id": "ITO",
+    "total_flights": 1544,
+    "pct_delayed": 0.1237,
+    "avg_arr_delay": 3.16,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "SBA",
+    "total_flights": 1521,
+    "pct_delayed": 0.2058,
+    "avg_arr_delay": 6.86,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "FSD",
+    "total_flights": 1515,
+    "pct_delayed": 0.2554,
+    "avg_arr_delay": 16.34,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "BTR",
+    "total_flights": 1512,
+    "pct_delayed": 0.1858,
+    "avg_arr_delay": 7.02,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "SGF",
+    "total_flights": 1482,
+    "pct_delayed": 0.2611,
+    "avg_arr_delay": 15.77,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "MHT",
+    "total_flights": 1461,
+    "pct_delayed": 0.1814,
+    "avg_arr_delay": 2.01,
+    "lat": 42.9326,
+    "lon": -71.4357
+  },
+  {
+    "id": "MYR",
+    "total_flights": 1457,
+    "pct_delayed": 0.162,
+    "avg_arr_delay": 1.45,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "CAE",
+    "total_flights": 1438,
+    "pct_delayed": 0.1773,
+    "avg_arr_delay": 4.44,
+    "lat": 33.9389,
+    "lon": -81.1195
+  },
+  {
+    "id": "CHA",
+    "total_flights": 1409,
+    "pct_delayed": 0.1824,
+    "avg_arr_delay": 6.85,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "BTV",
+    "total_flights": 1394,
+    "pct_delayed": 0.2403,
+    "avg_arr_delay": 10.49,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "EYW",
+    "total_flights": 1390,
+    "pct_delayed": 0.2446,
+    "avg_arr_delay": 13.35,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "SHV",
+    "total_flights": 1357,
+    "pct_delayed": 0.1864,
+    "avg_arr_delay": 9.49,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "AVL",
+    "total_flights": 1331,
+    "pct_delayed": 0.1886,
+    "avg_arr_delay": 7.44,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "LBB",
+    "total_flights": 1324,
+    "pct_delayed": 0.1752,
+    "avg_arr_delay": 6.08,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "VPS",
+    "total_flights": 1305,
+    "pct_delayed": 0.1594,
+    "avg_arr_delay": 9.02,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "SBN",
+    "total_flights": 1286,
+    "pct_delayed": 0.2939,
+    "avg_arr_delay": 16.51,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "CAK",
+    "total_flights": 1275,
+    "pct_delayed": 0.1922,
+    "avg_arr_delay": 7.29,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "FAR",
+    "total_flights": 1250,
+    "pct_delayed": 0.256,
+    "avg_arr_delay": 19.86,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "ISP",
+    "total_flights": 1238,
+    "pct_delayed": 0.1866,
+    "avg_arr_delay": 5.28,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "STT",
+    "total_flights": 1229,
+    "pct_delayed": 0.1961,
+    "avg_arr_delay": 7.16,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "EUG",
+    "total_flights": 1202,
+    "pct_delayed": 0.2296,
+    "avg_arr_delay": 10.31,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "JAC",
+    "total_flights": 1186,
+    "pct_delayed": 0.3255,
+    "avg_arr_delay": 22.33,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "FWA",
+    "total_flights": 1173,
+    "pct_delayed": 0.2899,
+    "avg_arr_delay": 16.02,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "EGE",
+    "total_flights": 1164,
+    "pct_delayed": 0.2895,
+    "avg_arr_delay": 19.64,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "TLH",
+    "total_flights": 1106,
+    "pct_delayed": 0.1618,
+    "avg_arr_delay": 6.1,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "ILM",
+    "total_flights": 1093,
+    "pct_delayed": 0.1491,
+    "avg_arr_delay": 2.6,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "AMA",
+    "total_flights": 1088,
+    "pct_delayed": 0.1728,
+    "avg_arr_delay": 5.07,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "MOB",
+    "total_flights": 1077,
+    "pct_delayed": 0.1513,
+    "avg_arr_delay": 2.56,
+    "lat": 30.6912,
+    "lon": -88.2428
+  },
+  {
+    "id": "ECP",
+    "total_flights": 1050,
+    "pct_delayed": 0.1505,
+    "avg_arr_delay": 2.61,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "SFB",
+    "total_flights": 1033,
+    "pct_delayed": 0.2652,
+    "avg_arr_delay": 14.14,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "SBP",
+    "total_flights": 1025,
+    "pct_delayed": 0.24,
+    "avg_arr_delay": 9.55,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "MDT",
+    "total_flights": 1014,
+    "pct_delayed": 0.213,
+    "avg_arr_delay": 9.93,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "JNU",
+    "total_flights": 992,
+    "pct_delayed": 0.1956,
+    "avg_arr_delay": 5.17,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "CRP",
+    "total_flights": 976,
+    "pct_delayed": 0.166,
+    "avg_arr_delay": 4.44,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "MFR",
+    "total_flights": 963,
+    "pct_delayed": 0.215,
+    "avg_arr_delay": 11.54,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "LFT",
+    "total_flights": 949,
+    "pct_delayed": 0.1855,
+    "avg_arr_delay": 9.12,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "ATW",
+    "total_flights": 943,
+    "pct_delayed": 0.2587,
+    "avg_arr_delay": 13.06,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "RDM",
+    "total_flights": 943,
+    "pct_delayed": 0.2471,
+    "avg_arr_delay": 19.65,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "MLI",
+    "total_flights": 923,
+    "pct_delayed": 0.2644,
+    "avg_arr_delay": 17.41,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "GRB",
+    "total_flights": 919,
+    "pct_delayed": 0.2688,
+    "avg_arr_delay": 16.95,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "PSC",
+    "total_flights": 875,
+    "pct_delayed": 0.1817,
+    "avg_arr_delay": 9.88,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "BIL",
+    "total_flights": 841,
+    "pct_delayed": 0.1629,
+    "avg_arr_delay": 3.51,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "MRY",
+    "total_flights": 839,
+    "pct_delayed": 0.1752,
+    "avg_arr_delay": 6.86,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "ACY",
+    "total_flights": 837,
+    "pct_delayed": 0.1804,
+    "avg_arr_delay": 2.32,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "MFE",
+    "total_flights": 835,
+    "pct_delayed": 0.1557,
+    "avg_arr_delay": 6.6,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "GPT",
+    "total_flights": 831,
+    "pct_delayed": 0.1432,
+    "avg_arr_delay": 4.1,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "PIA",
+    "total_flights": 831,
+    "pct_delayed": 0.2708,
+    "avg_arr_delay": 14.73,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "PIE",
+    "total_flights": 827,
+    "pct_delayed": 0.1608,
+    "avg_arr_delay": 5.43,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "FNT",
+    "total_flights": 824,
+    "pct_delayed": 0.2367,
+    "avg_arr_delay": 6.64,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "AGS",
+    "total_flights": 821,
+    "pct_delayed": 0.2022,
+    "avg_arr_delay": 9.36,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "HRL",
+    "total_flights": 812,
+    "pct_delayed": 0.1268,
+    "avg_arr_delay": 1.36,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "CHO",
+    "total_flights": 797,
+    "pct_delayed": 0.2535,
+    "avg_arr_delay": 15.83,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "GNV",
+    "total_flights": 787,
+    "pct_delayed": 0.1741,
+    "avg_arr_delay": 5.47,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "ABE",
+    "total_flights": 776,
+    "pct_delayed": 0.2088,
+    "avg_arr_delay": 8.53,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "PGD",
+    "total_flights": 756,
+    "pct_delayed": 0.2857,
+    "avg_arr_delay": 16.14,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "EVV",
+    "total_flights": 751,
+    "pct_delayed": 0.1971,
+    "avg_arr_delay": 4.74,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "CRW",
+    "total_flights": 750,
+    "pct_delayed": 0.236,
+    "avg_arr_delay": 9.15,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "BIS",
+    "total_flights": 726,
+    "pct_delayed": 0.2576,
+    "avg_arr_delay": 18.22,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "GJT",
+    "total_flights": 725,
+    "pct_delayed": 0.1448,
+    "avg_arr_delay": 4.46,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "MGM",
+    "total_flights": 716,
+    "pct_delayed": 0.2137,
+    "avg_arr_delay": 11.44,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "RAP",
+    "total_flights": 716,
+    "pct_delayed": 0.2067,
+    "avg_arr_delay": 7.52,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "FAI",
+    "total_flights": 709,
+    "pct_delayed": 0.1721,
+    "avg_arr_delay": 0.66,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "HDN",
+    "total_flights": 696,
+    "pct_delayed": 0.2371,
+    "avg_arr_delay": 6.3,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "AZA",
+    "total_flights": 670,
+    "pct_delayed": 0.2134,
+    "avg_arr_delay": 4.26,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "AEX",
+    "total_flights": 661,
+    "pct_delayed": 0.1694,
+    "avg_arr_delay": 7.66,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "MLU",
+    "total_flights": 657,
+    "pct_delayed": 0.1933,
+    "avg_arr_delay": 8.97,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "MTJ",
+    "total_flights": 645,
+    "pct_delayed": 0.2434,
+    "avg_arr_delay": 9.81,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "LAN",
+    "total_flights": 639,
+    "pct_delayed": 0.2692,
+    "avg_arr_delay": 15.02,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "SGU",
+    "total_flights": 618,
+    "pct_delayed": 0.1472,
+    "avg_arr_delay": 4.96,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "MSO",
+    "total_flights": 615,
+    "pct_delayed": 0.2146,
+    "avg_arr_delay": 10.36,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "IDA",
+    "total_flights": 614,
+    "pct_delayed": 0.1743,
+    "avg_arr_delay": 5.77,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "DAB",
+    "total_flights": 613,
+    "pct_delayed": 0.1305,
+    "avg_arr_delay": 2.82,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "GRK",
+    "total_flights": 587,
+    "pct_delayed": 0.1652,
+    "avg_arr_delay": 6.48,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "TRI",
+    "total_flights": 585,
+    "pct_delayed": 0.159,
+    "avg_arr_delay": 0.22,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "ROA",
+    "total_flights": 582,
+    "pct_delayed": 0.1907,
+    "avg_arr_delay": 7.59,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "TVC",
+    "total_flights": 568,
+    "pct_delayed": 0.294,
+    "avg_arr_delay": 17.46,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "BQN",
+    "total_flights": 567,
+    "pct_delayed": 0.291,
+    "avg_arr_delay": 16.24,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "DRO",
+    "total_flights": 567,
+    "pct_delayed": 0.2451,
+    "avg_arr_delay": 15.58,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "BFL",
+    "total_flights": 560,
+    "pct_delayed": 0.1518,
+    "avg_arr_delay": 4.96,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "TTN",
+    "total_flights": 555,
+    "pct_delayed": 0.2306,
+    "avg_arr_delay": 5.47,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "KTN",
+    "total_flights": 553,
+    "pct_delayed": 0.1808,
+    "avg_arr_delay": 1.68,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "FCA",
+    "total_flights": 549,
+    "pct_delayed": 0.2058,
+    "avg_arr_delay": 5.42,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "MLB",
+    "total_flights": 538,
+    "pct_delayed": 0.1283,
+    "avg_arr_delay": 0.82,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "FAY",
+    "total_flights": 532,
+    "pct_delayed": 0.1485,
+    "avg_arr_delay": 6.24,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "BMI",
+    "total_flights": 510,
+    "pct_delayed": 0.2608,
+    "avg_arr_delay": 14.34,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "AZO",
+    "total_flights": 499,
+    "pct_delayed": 0.2926,
+    "avg_arr_delay": 14.5,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "AVP",
+    "total_flights": 492,
+    "pct_delayed": 0.2297,
+    "avg_arr_delay": 8.96,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "MBS",
+    "total_flights": 482,
+    "pct_delayed": 0.2842,
+    "avg_arr_delay": 18.34,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "DLH",
+    "total_flights": 479,
+    "pct_delayed": 0.2401,
+    "avg_arr_delay": 13.15,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "MOT",
+    "total_flights": 471,
+    "pct_delayed": 0.2442,
+    "avg_arr_delay": 16.46,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "LRD",
+    "total_flights": 467,
+    "pct_delayed": 0.137,
+    "avg_arr_delay": 3.03,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "BLI",
+    "total_flights": 452,
+    "pct_delayed": 0.1372,
+    "avg_arr_delay": -0.58,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "GTF",
+    "total_flights": 438,
+    "pct_delayed": 0.153,
+    "avg_arr_delay": 3.59,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "RST",
+    "total_flights": 437,
+    "pct_delayed": 0.3043,
+    "avg_arr_delay": 17.79,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "OAJ",
+    "total_flights": 433,
+    "pct_delayed": 0.0993,
+    "avg_arr_delay": 0.16,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "LNK",
+    "total_flights": 424,
+    "pct_delayed": 0.2052,
+    "avg_arr_delay": 10.95,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "FSM",
+    "total_flights": 422,
+    "pct_delayed": 0.1422,
+    "avg_arr_delay": 0.09,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "BRO",
+    "total_flights": 414,
+    "pct_delayed": 0.1256,
+    "avg_arr_delay": 1.71,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "BGR",
+    "total_flights": 405,
+    "pct_delayed": 0.2222,
+    "avg_arr_delay": 5.13,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "SUN",
+    "total_flights": 387,
+    "pct_delayed": 0.2016,
+    "avg_arr_delay": 9.73,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "YUM",
+    "total_flights": 383,
+    "pct_delayed": 0.1488,
+    "avg_arr_delay": 3.92,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "STS",
+    "total_flights": 378,
+    "pct_delayed": 0.1693,
+    "avg_arr_delay": 2.59,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "ACV",
+    "total_flights": 370,
+    "pct_delayed": 0.2649,
+    "avg_arr_delay": 11.78,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "CWA",
+    "total_flights": 367,
+    "pct_delayed": 0.2507,
+    "avg_arr_delay": 10.79,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "CLL",
+    "total_flights": 363,
+    "pct_delayed": 0.1625,
+    "avg_arr_delay": 4.41,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "ABI",
+    "total_flights": 358,
+    "pct_delayed": 0.2346,
+    "avg_arr_delay": 14.04,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "HLN",
+    "total_flights": 358,
+    "pct_delayed": 0.148,
+    "avg_arr_delay": 3.6,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "ACT",
+    "total_flights": 355,
+    "pct_delayed": 0.1408,
+    "avg_arr_delay": 0.75,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "LCH",
+    "total_flights": 351,
+    "pct_delayed": 0.1481,
+    "avg_arr_delay": 7.77,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "TYR",
+    "total_flights": 343,
+    "pct_delayed": 0.1749,
+    "avg_arr_delay": 6.15,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "CMI",
+    "total_flights": 327,
+    "pct_delayed": 0.2783,
+    "avg_arr_delay": 10.8,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "SAF",
+    "total_flights": 323,
+    "pct_delayed": 0.2446,
+    "avg_arr_delay": 17.95,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "FLG",
+    "total_flights": 319,
+    "pct_delayed": 0.1787,
+    "avg_arr_delay": 6.04,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "STX",
+    "total_flights": 317,
+    "pct_delayed": 0.2492,
+    "avg_arr_delay": 6.93,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "GFK",
+    "total_flights": 312,
+    "pct_delayed": 0.2115,
+    "avg_arr_delay": 17.04,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "DHN",
+    "total_flights": 310,
+    "pct_delayed": 0.2032,
+    "avg_arr_delay": 10.31,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "SPI",
+    "total_flights": 295,
+    "pct_delayed": 0.2881,
+    "avg_arr_delay": 15.4,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "CPR",
+    "total_flights": 293,
+    "pct_delayed": 0.1706,
+    "avg_arr_delay": 4.66,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "CSG",
+    "total_flights": 290,
+    "pct_delayed": 0.2,
+    "avg_arr_delay": 10.29,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "MHK",
+    "total_flights": 284,
+    "pct_delayed": 0.2077,
+    "avg_arr_delay": 6.02,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "COU",
+    "total_flights": 280,
+    "pct_delayed": 0.3214,
+    "avg_arr_delay": 17.11,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "SIT",
+    "total_flights": 276,
+    "pct_delayed": 0.1341,
+    "avg_arr_delay": 0.71,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "PHF",
+    "total_flights": 275,
+    "pct_delayed": 0.1273,
+    "avg_arr_delay": -1.41,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "ISN",
+    "total_flights": 268,
+    "pct_delayed": 0.153,
+    "avg_arr_delay": -2.07,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "RDD",
+    "total_flights": 267,
+    "pct_delayed": 0.1948,
+    "avg_arr_delay": 3.14,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "SJT",
+    "total_flights": 265,
+    "pct_delayed": 0.1321,
+    "avg_arr_delay": 2.82,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "ELM",
+    "total_flights": 264,
+    "pct_delayed": 0.2197,
+    "avg_arr_delay": 13.02,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "ORH",
+    "total_flights": 264,
+    "pct_delayed": 0.2159,
+    "avg_arr_delay": 9.54,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "TWF",
+    "total_flights": 262,
+    "pct_delayed": 0.1985,
+    "avg_arr_delay": 7.54,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "GTR",
+    "total_flights": 257,
+    "pct_delayed": 0.1673,
+    "avg_arr_delay": 3.41,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "VLD",
+    "total_flights": 255,
+    "pct_delayed": 0.1176,
+    "avg_arr_delay": 8.67,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "LAW",
+    "total_flights": 251,
+    "pct_delayed": 0.1633,
+    "avg_arr_delay": 0.24,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "ABY",
+    "total_flights": 248,
+    "pct_delayed": 0.1331,
+    "avg_arr_delay": 4.25,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "BQK",
+    "total_flights": 240,
+    "pct_delayed": 0.1333,
+    "avg_arr_delay": 2.54,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "LSE",
+    "total_flights": 240,
+    "pct_delayed": 0.2625,
+    "avg_arr_delay": 16.37,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "EWN",
+    "total_flights": 233,
+    "pct_delayed": 0.1545,
+    "avg_arr_delay": 3.52,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "BET",
+    "total_flights": 232,
+    "pct_delayed": 0.1724,
+    "avg_arr_delay": 2.56,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "TXK",
+    "total_flights": 231,
+    "pct_delayed": 0.1645,
+    "avg_arr_delay": 8.54,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "MEI",
+    "total_flights": 229,
+    "pct_delayed": 0.2096,
+    "avg_arr_delay": 20.3,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "GCC",
+    "total_flights": 226,
+    "pct_delayed": 0.1814,
+    "avg_arr_delay": 8.52,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "PSE",
+    "total_flights": 226,
+    "pct_delayed": 0.2389,
+    "avg_arr_delay": 9.3,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "LBE",
+    "total_flights": 218,
+    "pct_delayed": 0.2294,
+    "avg_arr_delay": 4.06,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "SPS",
+    "total_flights": 216,
+    "pct_delayed": 0.1574,
+    "avg_arr_delay": 0.83,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "SWF",
+    "total_flights": 212,
+    "pct_delayed": 0.3443,
+    "avg_arr_delay": 26.23,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "RHI",
+    "total_flights": 210,
+    "pct_delayed": 0.2048,
+    "avg_arr_delay": 5.41,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "ERI",
+    "total_flights": 204,
+    "pct_delayed": 0.2549,
+    "avg_arr_delay": 14.63,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "GUC",
+    "total_flights": 203,
+    "pct_delayed": 0.2414,
+    "avg_arr_delay": 15.17,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "ROW",
+    "total_flights": 199,
+    "pct_delayed": 0.2111,
+    "avg_arr_delay": 24.94,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "SCE",
+    "total_flights": 198,
+    "pct_delayed": 0.2323,
+    "avg_arr_delay": 10.82,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "HIB",
+    "total_flights": 197,
+    "pct_delayed": 0.203,
+    "avg_arr_delay": 7.17,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "SCC",
+    "total_flights": 196,
+    "pct_delayed": 0.1276,
+    "avg_arr_delay": -4.12,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "TOL",
+    "total_flights": 194,
+    "pct_delayed": 0.2938,
+    "avg_arr_delay": 15.62,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "PIH",
+    "total_flights": 193,
+    "pct_delayed": 0.1606,
+    "avg_arr_delay": 15.27,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "BPT",
+    "total_flights": 191,
+    "pct_delayed": 0.2094,
+    "avg_arr_delay": 9.7,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "JMS",
+    "total_flights": 187,
+    "pct_delayed": 0.2299,
+    "avg_arr_delay": 8.17,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "MQT",
+    "total_flights": 184,
+    "pct_delayed": 0.2554,
+    "avg_arr_delay": 14.13,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "GRI",
+    "total_flights": 181,
+    "pct_delayed": 0.2155,
+    "avg_arr_delay": 12.89,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "HYS",
+    "total_flights": 181,
+    "pct_delayed": 0.2376,
+    "avg_arr_delay": 12.84,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "LWS",
+    "total_flights": 181,
+    "pct_delayed": 0.1215,
+    "avg_arr_delay": 11.3,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "PSG",
+    "total_flights": 181,
+    "pct_delayed": 0.1989,
+    "avg_arr_delay": 0.37,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "WRG",
+    "total_flights": 181,
+    "pct_delayed": 0.1823,
+    "avg_arr_delay": 4.63,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "BJI",
+    "total_flights": 180,
+    "pct_delayed": 0.2278,
+    "avg_arr_delay": 17.34,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "OTZ",
+    "total_flights": 178,
+    "pct_delayed": 0.1348,
+    "avg_arr_delay": -2.29,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "ITH",
+    "total_flights": 177,
+    "pct_delayed": 0.2825,
+    "avg_arr_delay": 16.54,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "BRW",
+    "total_flights": 176,
+    "pct_delayed": 0.1364,
+    "avg_arr_delay": 0.02,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "ABR",
+    "total_flights": 175,
+    "pct_delayed": 0.2286,
+    "avg_arr_delay": 12.98,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "OME",
+    "total_flights": 175,
+    "pct_delayed": 0.1429,
+    "avg_arr_delay": -1.22,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "RKS",
+    "total_flights": 175,
+    "pct_delayed": 0.16,
+    "avg_arr_delay": 3.11,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "CIU",
+    "total_flights": 172,
+    "pct_delayed": 0.2442,
+    "avg_arr_delay": 9.73,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "CDV",
+    "total_flights": 171,
+    "pct_delayed": 0.1404,
+    "avg_arr_delay": -4.68,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "CDC",
+    "total_flights": 170,
+    "pct_delayed": 0.1235,
+    "avg_arr_delay": -4.39,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "IMT",
+    "total_flights": 169,
+    "pct_delayed": 0.213,
+    "avg_arr_delay": 40.4,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "BTM",
+    "total_flights": 167,
+    "pct_delayed": 0.0778,
+    "avg_arr_delay": -4.84,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "PIB",
+    "total_flights": 167,
+    "pct_delayed": 0.1497,
+    "avg_arr_delay": 12.86,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "ESC",
+    "total_flights": 163,
+    "pct_delayed": 0.3129,
+    "avg_arr_delay": 40.91,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "PBG",
+    "total_flights": 163,
+    "pct_delayed": 0.2761,
+    "avg_arr_delay": 14.24,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "YAK",
+    "total_flights": 163,
+    "pct_delayed": 0.1227,
+    "avg_arr_delay": -10.94,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "LAR",
+    "total_flights": 160,
+    "pct_delayed": 0.125,
+    "avg_arr_delay": -2.34,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "BRD",
+    "total_flights": 159,
+    "pct_delayed": 0.2579,
+    "avg_arr_delay": 15.53,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "PLN",
+    "total_flights": 158,
+    "pct_delayed": 0.2278,
+    "avg_arr_delay": 21.66,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "ADQ",
+    "total_flights": 149,
+    "pct_delayed": 0.1745,
+    "avg_arr_delay": 0.62,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "GCK",
+    "total_flights": 149,
+    "pct_delayed": 0.1544,
+    "avg_arr_delay": 5.5,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "CMX",
+    "total_flights": 145,
+    "pct_delayed": 0.2759,
+    "avg_arr_delay": 16.87,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "EKO",
+    "total_flights": 144,
+    "pct_delayed": 0.0972,
+    "avg_arr_delay": -2.72,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "INL",
+    "total_flights": 142,
+    "pct_delayed": 0.1338,
+    "avg_arr_delay": -4.73,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "PAH",
+    "total_flights": 142,
+    "pct_delayed": 0.1761,
+    "avg_arr_delay": 6.82,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "SUX",
+    "total_flights": 142,
+    "pct_delayed": 0.3028,
+    "avg_arr_delay": 17.91,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "GUM",
+    "total_flights": 139,
+    "pct_delayed": 0.1079,
+    "avg_arr_delay": -5.63,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "PVU",
+    "total_flights": 139,
+    "pct_delayed": 0.2734,
+    "avg_arr_delay": 12.79,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "BGM",
+    "total_flights": 137,
+    "pct_delayed": 0.2117,
+    "avg_arr_delay": 10.31,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "JLN",
+    "total_flights": 133,
+    "pct_delayed": 0.2481,
+    "avg_arr_delay": 14.57,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "APN",
+    "total_flights": 132,
+    "pct_delayed": 0.3258,
+    "avg_arr_delay": 33.48,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "EAU",
+    "total_flights": 131,
+    "pct_delayed": 0.2366,
+    "avg_arr_delay": 27.27,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "DVL",
+    "total_flights": 127,
+    "pct_delayed": 0.2362,
+    "avg_arr_delay": 11.06,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "GGG",
+    "total_flights": 125,
+    "pct_delayed": 0.144,
+    "avg_arr_delay": 0.83,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "XWA",
+    "total_flights": 124,
+    "pct_delayed": 0.2903,
+    "avg_arr_delay": 28.88,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "PAE",
+    "total_flights": 121,
+    "pct_delayed": 0.1074,
+    "avg_arr_delay": -3.18,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "USA",
+    "total_flights": 121,
+    "pct_delayed": 0.2066,
+    "avg_arr_delay": 4.35,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "COD",
+    "total_flights": 120,
+    "pct_delayed": 0.175,
+    "avg_arr_delay": 2.12,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "HOB",
+    "total_flights": 117,
+    "pct_delayed": 0.094,
+    "avg_arr_delay": 0.3,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "IAG",
+    "total_flights": 117,
+    "pct_delayed": 0.3077,
+    "avg_arr_delay": 26.6,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "MKG",
+    "total_flights": 110,
+    "pct_delayed": 0.2909,
+    "avg_arr_delay": 12.24,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "DBQ",
+    "total_flights": 102,
+    "pct_delayed": 0.3431,
+    "avg_arr_delay": 13.58,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "SWO",
+    "total_flights": 102,
+    "pct_delayed": 0.1765,
+    "avg_arr_delay": 12.52,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "ALO",
+    "total_flights": 98,
+    "pct_delayed": 0.2551,
+    "avg_arr_delay": 11.07,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "PUB",
+    "total_flights": 98,
+    "pct_delayed": 0.1633,
+    "avg_arr_delay": 3.07,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "BLV",
+    "total_flights": 96,
+    "pct_delayed": 0.1875,
+    "avg_arr_delay": 15.48,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "HHH",
+    "total_flights": 93,
+    "pct_delayed": 0.1613,
+    "avg_arr_delay": -0.16,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "VEL",
+    "total_flights": 87,
+    "pct_delayed": 0.2989,
+    "avg_arr_delay": 17.79,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "CLD",
+    "total_flights": 86,
+    "pct_delayed": 0.1279,
+    "avg_arr_delay": 0.92,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "PRC",
+    "total_flights": 84,
+    "pct_delayed": 0.2738,
+    "avg_arr_delay": 13.4,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "RFD",
+    "total_flights": 83,
+    "pct_delayed": 0.3012,
+    "avg_arr_delay": 20.81,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "SLN",
+    "total_flights": 82,
+    "pct_delayed": 0.3293,
+    "avg_arr_delay": 25.28,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "DIK",
+    "total_flights": 79,
+    "pct_delayed": 0.2152,
+    "avg_arr_delay": 11.06,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "CKB",
+    "total_flights": 76,
+    "pct_delayed": 0.3684,
+    "avg_arr_delay": 48.76,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "LBF",
+    "total_flights": 69,
+    "pct_delayed": 0.2609,
+    "avg_arr_delay": 35.26,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "LCK",
+    "total_flights": 68,
+    "pct_delayed": 0.3235,
+    "avg_arr_delay": 13.44,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "SCK",
+    "total_flights": 67,
+    "pct_delayed": 0.4627,
+    "avg_arr_delay": 29.42,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "BFF",
+    "total_flights": 63,
+    "pct_delayed": 0.0794,
+    "avg_arr_delay": -9.14,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "DRT",
+    "total_flights": 63,
+    "pct_delayed": 0.0794,
+    "avg_arr_delay": -11.03,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "MMH",
+    "total_flights": 60,
+    "pct_delayed": 0.2667,
+    "avg_arr_delay": 8.03,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "CYS",
+    "total_flights": 59,
+    "pct_delayed": 0.1525,
+    "avg_arr_delay": -10.27,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "JST",
+    "total_flights": 59,
+    "pct_delayed": 0.2203,
+    "avg_arr_delay": -0.34,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "DEC",
+    "total_flights": 58,
+    "pct_delayed": 0.1207,
+    "avg_arr_delay": 22.36,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "SMX",
+    "total_flights": 58,
+    "pct_delayed": 0.1552,
+    "avg_arr_delay": 7.78,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "CNY",
+    "total_flights": 57,
+    "pct_delayed": 0.1754,
+    "avg_arr_delay": 16.86,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "CGI",
+    "total_flights": 55,
+    "pct_delayed": 0.3273,
+    "avg_arr_delay": 13.69,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "SHR",
+    "total_flights": 53,
+    "pct_delayed": 0.2453,
+    "avg_arr_delay": 9.04,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "LBL",
+    "total_flights": 52,
+    "pct_delayed": 0.0962,
+    "avg_arr_delay": -4.21,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "BIH",
+    "total_flights": 50,
+    "pct_delayed": 0.28,
+    "avg_arr_delay": 5.68,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "HTS",
+    "total_flights": 50,
+    "pct_delayed": 0.34,
+    "avg_arr_delay": 33.46,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "VCT",
+    "total_flights": 49,
+    "pct_delayed": 0.1633,
+    "avg_arr_delay": 22.55,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "SPN",
+    "total_flights": 48,
+    "pct_delayed": 0.0625,
+    "avg_arr_delay": -9.44,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "FOD",
+    "total_flights": 47,
+    "pct_delayed": 0.2553,
+    "avg_arr_delay": 52.72,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "HVN",
+    "total_flights": 47,
+    "pct_delayed": 0.1915,
+    "avg_arr_delay": 8.57,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "OTH",
+    "total_flights": 45,
+    "pct_delayed": 0.2889,
+    "avg_arr_delay": 11.27,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "UIN",
+    "total_flights": 45,
+    "pct_delayed": 0.4222,
+    "avg_arr_delay": 29.0,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "MCW",
+    "total_flights": 43,
+    "pct_delayed": 0.186,
+    "avg_arr_delay": -10.12,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "EAR",
+    "total_flights": 40,
+    "pct_delayed": 0.175,
+    "avg_arr_delay": 10.45,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "PPG",
+    "total_flights": 38,
+    "pct_delayed": 0.2632,
+    "avg_arr_delay": 1.89,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "RIW",
+    "total_flights": 38,
+    "pct_delayed": 0.2368,
+    "avg_arr_delay": 24.24,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "DDC",
+    "total_flights": 37,
+    "pct_delayed": 0.1351,
+    "avg_arr_delay": 11.76,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "SHD",
+    "total_flights": 37,
+    "pct_delayed": 0.1892,
+    "avg_arr_delay": 8.62,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "PSM",
+    "total_flights": 35,
+    "pct_delayed": 0.4,
+    "avg_arr_delay": 46.23,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "PUW",
+    "total_flights": 35,
+    "pct_delayed": 0.2,
+    "avg_arr_delay": 12.31,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "STC",
+    "total_flights": 35,
+    "pct_delayed": 0.3429,
+    "avg_arr_delay": 19.26,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "ALW",
+    "total_flights": 34,
+    "pct_delayed": 0.2647,
+    "avg_arr_delay": 18.15,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "LYH",
+    "total_flights": 33,
+    "pct_delayed": 0.0909,
+    "avg_arr_delay": -1.64,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "CEC",
+    "total_flights": 25,
+    "pct_delayed": 0.36,
+    "avg_arr_delay": 20.24,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "HGR",
+    "total_flights": 25,
+    "pct_delayed": 0.36,
+    "avg_arr_delay": 20.16,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "EAT",
+    "total_flights": 21,
+    "pct_delayed": 0.5238,
+    "avg_arr_delay": 28.33,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "OWB",
+    "total_flights": 19,
+    "pct_delayed": 0.2105,
+    "avg_arr_delay": 12.21,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "YKM",
+    "total_flights": 19,
+    "pct_delayed": 0.1579,
+    "avg_arr_delay": 10.42,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "ART",
+    "total_flights": 18,
+    "pct_delayed": 0.1667,
+    "avg_arr_delay": -5.11,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "ILG",
+    "total_flights": 18,
+    "pct_delayed": 0.5556,
+    "avg_arr_delay": 39.44,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "LWB",
+    "total_flights": 18,
+    "pct_delayed": 0.2778,
+    "avg_arr_delay": 29.28,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "TBN",
+    "total_flights": 17,
+    "pct_delayed": 0.1765,
+    "avg_arr_delay": -12.18,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "OGD",
+    "total_flights": 15,
+    "pct_delayed": 0.2,
+    "avg_arr_delay": 7.67,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "ALS",
+    "total_flights": 13,
+    "pct_delayed": 0.0,
+    "avg_arr_delay": -23.69,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "OGS",
+    "total_flights": 12,
+    "pct_delayed": 0.1667,
+    "avg_arr_delay": -3.58,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "AKN",
+    "total_flights": 11,
+    "pct_delayed": 0.0909,
+    "avg_arr_delay": -11.27,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "DLG",
+    "total_flights": 11,
+    "pct_delayed": 0.4545,
+    "avg_arr_delay": 53.82,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "IFP",
+    "total_flights": 11,
+    "pct_delayed": 0.2727,
+    "avg_arr_delay": 4.36,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "UST",
+    "total_flights": 11,
+    "pct_delayed": 0.1818,
+    "avg_arr_delay": -1.0,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "ADK",
+    "total_flights": 10,
+    "pct_delayed": 0.2,
+    "avg_arr_delay": -4.5,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "PGV",
+    "total_flights": 7,
+    "pct_delayed": 0.0,
+    "avg_arr_delay": -15.0,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "ATY",
+    "total_flights": 1,
+    "pct_delayed": 0.0,
+    "avg_arr_delay": 14.0,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "PIR",
+    "total_flights": 1,
+    "pct_delayed": 0.0,
+    "avg_arr_delay": -9.0,
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": "YNG",
+    "total_flights": 1,
+    "pct_delayed": 0.0,
+    "avg_arr_delay": 9.0,
+    "lat": null,
+    "lon": null
+  }
+]

@@ -1,0 +1,2592 @@
+{
+  "ABE": {
+    "carrier": 36.35,
+    "weather": 12.46,
+    "nas": 21.31,
+    "security": 0.01,
+    "late_aircraft": 25.91
+  },
+  "ABI": {
+    "carrier": 12.4,
+    "weather": 22.32,
+    "nas": 16.07,
+    "security": 0.0,
+    "late_aircraft": 36.2
+  },
+  "ABQ": {
+    "carrier": 18.34,
+    "weather": 4.0,
+    "nas": 13.57,
+    "security": 0.02,
+    "late_aircraft": 27.62
+  },
+  "ABR": {
+    "carrier": 36.9,
+    "weather": 32.15,
+    "nas": 5.92,
+    "security": 0.0,
+    "late_aircraft": 9.0
+  },
+  "ABY": {
+    "carrier": 30.76,
+    "weather": 17.97,
+    "nas": 5.3,
+    "security": 0.0,
+    "late_aircraft": 44.52
+  },
+  "ACT": {
+    "carrier": 23.04,
+    "weather": 3.16,
+    "nas": 3.92,
+    "security": 0.0,
+    "late_aircraft": 36.88
+  },
+  "ACV": {
+    "carrier": 21.68,
+    "weather": 0.86,
+    "nas": 24.91,
+    "security": 0.0,
+    "late_aircraft": 27.21
+  },
+  "ACY": {
+    "carrier": 9.14,
+    "weather": 0.58,
+    "nas": 31.65,
+    "security": 0.38,
+    "late_aircraft": 19.52
+  },
+  "ADK": {
+    "carrier": 0.0,
+    "weather": 0.0,
+    "nas": 9.0,
+    "security": 18.5,
+    "late_aircraft": 0.0
+  },
+  "ADQ": {
+    "carrier": 16.92,
+    "weather": 8.31,
+    "nas": 4.77,
+    "security": 0.0,
+    "late_aircraft": 29.35
+  },
+  "AEX": {
+    "carrier": 37.63,
+    "weather": 4.68,
+    "nas": 24.45,
+    "security": 0.04,
+    "late_aircraft": 31.16
+  },
+  "AGS": {
+    "carrier": 40.62,
+    "weather": 9.69,
+    "nas": 9.39,
+    "security": 0.0,
+    "late_aircraft": 29.15
+  },
+  "AKN": {
+    "carrier": 0.0,
+    "weather": 0.0,
+    "nas": 2.0,
+    "security": 0.0,
+    "late_aircraft": 20.0
+  },
+  "ALB": {
+    "carrier": 25.07,
+    "weather": 6.49,
+    "nas": 17.33,
+    "security": 0.02,
+    "late_aircraft": 26.17
+  },
+  "ALO": {
+    "carrier": 18.2,
+    "weather": 1.2,
+    "nas": 22.56,
+    "security": 0.0,
+    "late_aircraft": 27.12
+  },
+  "ALW": {
+    "carrier": 2.22,
+    "weather": 38.78,
+    "nas": 12.44,
+    "security": 0.0,
+    "late_aircraft": 25.22
+  },
+  "AMA": {
+    "carrier": 9.64,
+    "weather": 5.03,
+    "nas": 16.31,
+    "security": 0.0,
+    "late_aircraft": 42.71
+  },
+  "ANC": {
+    "carrier": 24.76,
+    "weather": 4.44,
+    "nas": 11.82,
+    "security": 0.01,
+    "late_aircraft": 15.34
+  },
+  "APN": {
+    "carrier": 40.65,
+    "weather": 16.49,
+    "nas": 11.95,
+    "security": 0.21,
+    "late_aircraft": 51.12
+  },
+  "ART": {
+    "carrier": 23.67,
+    "weather": 10.33,
+    "nas": 0.0,
+    "security": 0.0,
+    "late_aircraft": 0.0
+  },
+  "ASE": {
+    "carrier": 25.5,
+    "weather": 10.15,
+    "nas": 15.72,
+    "security": 0.33,
+    "late_aircraft": 42.24
+  },
+  "ATL": {
+    "carrier": 25.79,
+    "weather": 6.27,
+    "nas": 11.39,
+    "security": 0.07,
+    "late_aircraft": 18.57
+  },
+  "ATW": {
+    "carrier": 36.82,
+    "weather": 6.46,
+    "nas": 17.86,
+    "security": 0.0,
+    "late_aircraft": 21.15
+  },
+  "AUS": {
+    "carrier": 21.96,
+    "weather": 2.74,
+    "nas": 14.8,
+    "security": 0.16,
+    "late_aircraft": 31.63
+  },
+  "AVL": {
+    "carrier": 37.5,
+    "weather": 9.62,
+    "nas": 17.78,
+    "security": 0.0,
+    "late_aircraft": 26.92
+  },
+  "AVP": {
+    "carrier": 42.12,
+    "weather": 4.44,
+    "nas": 15.95,
+    "security": 0.0,
+    "late_aircraft": 24.32
+  },
+  "AZA": {
+    "carrier": 22.07,
+    "weather": 4.29,
+    "nas": 12.98,
+    "security": 0.57,
+    "late_aircraft": 13.18
+  },
+  "AZO": {
+    "carrier": 26.58,
+    "weather": 5.08,
+    "nas": 16.73,
+    "security": 0.01,
+    "late_aircraft": 30.62
+  },
+  "BDL": {
+    "carrier": 23.87,
+    "weather": 3.91,
+    "nas": 14.26,
+    "security": 0.06,
+    "late_aircraft": 29.84
+  },
+  "BET": {
+    "carrier": 2.35,
+    "weather": 5.9,
+    "nas": 8.68,
+    "security": 6.6,
+    "late_aircraft": 26.35
+  },
+  "BFF": {
+    "carrier": 3.0,
+    "weather": 0.0,
+    "nas": 6.0,
+    "security": 0.0,
+    "late_aircraft": 20.2
+  },
+  "BFL": {
+    "carrier": 22.84,
+    "weather": 6.36,
+    "nas": 13.73,
+    "security": 0.0,
+    "late_aircraft": 48.39
+  },
+  "BGM": {
+    "carrier": 47.07,
+    "weather": 14.66,
+    "nas": 8.62,
+    "security": 0.03,
+    "late_aircraft": 27.14
+  },
+  "BGR": {
+    "carrier": 14.39,
+    "weather": 13.79,
+    "nas": 26.7,
+    "security": 0.0,
+    "late_aircraft": 28.41
+  },
+  "BHM": {
+    "carrier": 21.48,
+    "weather": 5.22,
+    "nas": 13.18,
+    "security": 0.0,
+    "late_aircraft": 30.6
+  },
+  "BIH": {
+    "carrier": 40.64,
+    "weather": 0.0,
+    "nas": 4.93,
+    "security": 0.0,
+    "late_aircraft": 30.93
+  },
+  "BIL": {
+    "carrier": 18.61,
+    "weather": 14.47,
+    "nas": 25.31,
+    "security": 0.0,
+    "late_aircraft": 26.96
+  },
+  "BIS": {
+    "carrier": 47.23,
+    "weather": 9.42,
+    "nas": 11.37,
+    "security": 0.12,
+    "late_aircraft": 35.46
+  },
+  "BJI": {
+    "carrier": 40.51,
+    "weather": 42.85,
+    "nas": 13.05,
+    "security": 0.24,
+    "late_aircraft": 14.76
+  },
+  "BLI": {
+    "carrier": 14.0,
+    "weather": 7.32,
+    "nas": 12.35,
+    "security": 0.82,
+    "late_aircraft": 24.58
+  },
+  "BLV": {
+    "carrier": 24.39,
+    "weather": 52.0,
+    "nas": 17.28,
+    "security": 0.0,
+    "late_aircraft": 42.06
+  },
+  "BMI": {
+    "carrier": 24.16,
+    "weather": 6.62,
+    "nas": 14.07,
+    "security": 0.0,
+    "late_aircraft": 44.22
+  },
+  "BNA": {
+    "carrier": 21.92,
+    "weather": 9.15,
+    "nas": 16.52,
+    "security": 0.02,
+    "late_aircraft": 26.27
+  },
+  "BOI": {
+    "carrier": 19.63,
+    "weather": 3.85,
+    "nas": 17.3,
+    "security": 0.0,
+    "late_aircraft": 26.22
+  },
+  "BOS": {
+    "carrier": 24.03,
+    "weather": 5.34,
+    "nas": 19.5,
+    "security": 0.08,
+    "late_aircraft": 25.12
+  },
+  "BPT": {
+    "carrier": 20.82,
+    "weather": 26.65,
+    "nas": 5.17,
+    "security": 0.0,
+    "late_aircraft": 30.2
+  },
+  "BQK": {
+    "carrier": 29.94,
+    "weather": 18.19,
+    "nas": 15.66,
+    "security": 0.0,
+    "late_aircraft": 28.41
+  },
+  "BQN": {
+    "carrier": 17.01,
+    "weather": 0.4,
+    "nas": 10.18,
+    "security": 0.15,
+    "late_aircraft": 48.41
+  },
+  "BRD": {
+    "carrier": 32.66,
+    "weather": 22.46,
+    "nas": 13.12,
+    "security": 0.22,
+    "late_aircraft": 16.1
+  },
+  "BRO": {
+    "carrier": 38.38,
+    "weather": 9.5,
+    "nas": 8.44,
+    "security": 0.0,
+    "late_aircraft": 31.21
+  },
+  "BRW": {
+    "carrier": 10.83,
+    "weather": 5.08,
+    "nas": 2.58,
+    "security": 1.42,
+    "late_aircraft": 46.21
+  },
+  "BTM": {
+    "carrier": 70.77,
+    "weather": 3.0,
+    "nas": 7.31,
+    "security": 0.0,
+    "late_aircraft": 11.92
+  },
+  "BTR": {
+    "carrier": 34.09,
+    "weather": 4.69,
+    "nas": 11.23,
+    "security": 0.0,
+    "late_aircraft": 32.24
+  },
+  "BTV": {
+    "carrier": 15.6,
+    "weather": 11.97,
+    "nas": 21.55,
+    "security": 0.0,
+    "late_aircraft": 32.34
+  },
+  "BUF": {
+    "carrier": 23.91,
+    "weather": 8.77,
+    "nas": 16.97,
+    "security": 0.02,
+    "late_aircraft": 32.4
+  },
+  "BUR": {
+    "carrier": 11.76,
+    "weather": 1.98,
+    "nas": 16.22,
+    "security": 0.17,
+    "late_aircraft": 30.75
+  },
+  "BWI": {
+    "carrier": 23.13,
+    "weather": 2.37,
+    "nas": 12.09,
+    "security": 0.11,
+    "late_aircraft": 20.75
+  },
+  "BZN": {
+    "carrier": 25.86,
+    "weather": 8.15,
+    "nas": 20.56,
+    "security": 0.0,
+    "late_aircraft": 41.17
+  },
+  "CAE": {
+    "carrier": 27.67,
+    "weather": 0.58,
+    "nas": 12.24,
+    "security": 0.0,
+    "late_aircraft": 36.45
+  },
+  "CAK": {
+    "carrier": 35.21,
+    "weather": 9.8,
+    "nas": 26.37,
+    "security": 0.09,
+    "late_aircraft": 22.44
+  },
+  "CDC": {
+    "carrier": 14.43,
+    "weather": 0.0,
+    "nas": 14.24,
+    "security": 0.0,
+    "late_aircraft": 18.62
+  },
+  "CDV": {
+    "carrier": 2.42,
+    "weather": 3.17,
+    "nas": 12.42,
+    "security": 0.96,
+    "late_aircraft": 44.0
+  },
+  "CEC": {
+    "carrier": 4.89,
+    "weather": 0.0,
+    "nas": 51.44,
+    "security": 0.0,
+    "late_aircraft": 24.78
+  },
+  "CGI": {
+    "carrier": 7.11,
+    "weather": 3.5,
+    "nas": 11.28,
+    "security": 0.0,
+    "late_aircraft": 43.5
+  },
+  "CHA": {
+    "carrier": 23.33,
+    "weather": 3.92,
+    "nas": 16.24,
+    "security": 0.11,
+    "late_aircraft": 39.18
+  },
+  "CHO": {
+    "carrier": 27.39,
+    "weather": 7.27,
+    "nas": 24.72,
+    "security": 0.02,
+    "late_aircraft": 37.06
+  },
+  "CHS": {
+    "carrier": 19.19,
+    "weather": 2.18,
+    "nas": 16.52,
+    "security": 0.03,
+    "late_aircraft": 34.37
+  },
+  "CID": {
+    "carrier": 19.06,
+    "weather": 10.38,
+    "nas": 17.62,
+    "security": 0.0,
+    "late_aircraft": 36.63
+  },
+  "CIU": {
+    "carrier": 17.24,
+    "weather": 12.26,
+    "nas": 7.64,
+    "security": 0.12,
+    "late_aircraft": 31.57
+  },
+  "CKB": {
+    "carrier": 47.0,
+    "weather": 4.36,
+    "nas": 69.04,
+    "security": 0.0,
+    "late_aircraft": 28.86
+  },
+  "CLD": {
+    "carrier": 0.0,
+    "weather": 4.91,
+    "nas": 16.45,
+    "security": 0.0,
+    "late_aircraft": 22.64
+  },
+  "CLE": {
+    "carrier": 20.81,
+    "weather": 7.54,
+    "nas": 20.69,
+    "security": 0.03,
+    "late_aircraft": 26.07
+  },
+  "CLL": {
+    "carrier": 23.71,
+    "weather": 14.75,
+    "nas": 11.59,
+    "security": 0.0,
+    "late_aircraft": 32.47
+  },
+  "CLT": {
+    "carrier": 19.13,
+    "weather": 3.16,
+    "nas": 11.81,
+    "security": 0.21,
+    "late_aircraft": 24.73
+  },
+  "CMH": {
+    "carrier": 19.47,
+    "weather": 4.18,
+    "nas": 21.2,
+    "security": 0.02,
+    "late_aircraft": 20.42
+  },
+  "CMI": {
+    "carrier": 18.77,
+    "weather": 12.49,
+    "nas": 16.89,
+    "security": 0.0,
+    "late_aircraft": 21.3
+  },
+  "CMX": {
+    "carrier": 34.15,
+    "weather": 10.47,
+    "nas": 13.3,
+    "security": 0.0,
+    "late_aircraft": 37.15
+  },
+  "CNY": {
+    "carrier": 143.5,
+    "weather": 0.0,
+    "nas": 3.6,
+    "security": 0.0,
+    "late_aircraft": 28.2
+  },
+  "COD": {
+    "carrier": 15.57,
+    "weather": 8.29,
+    "nas": 21.86,
+    "security": 0.05,
+    "late_aircraft": 11.86
+  },
+  "COS": {
+    "carrier": 39.14,
+    "weather": 7.81,
+    "nas": 18.59,
+    "security": 0.0,
+    "late_aircraft": 24.28
+  },
+  "COU": {
+    "carrier": 13.0,
+    "weather": 10.44,
+    "nas": 21.12,
+    "security": 0.0,
+    "late_aircraft": 33.07
+  },
+  "CPR": {
+    "carrier": 48.28,
+    "weather": 2.1,
+    "nas": 11.72,
+    "security": 0.0,
+    "late_aircraft": 25.28
+  },
+  "CRP": {
+    "carrier": 17.69,
+    "weather": 6.69,
+    "nas": 12.59,
+    "security": 0.0,
+    "late_aircraft": 37.18
+  },
+  "CRW": {
+    "carrier": 25.11,
+    "weather": 10.36,
+    "nas": 16.01,
+    "security": 0.07,
+    "late_aircraft": 28.48
+  },
+  "CSG": {
+    "carrier": 24.19,
+    "weather": 14.21,
+    "nas": 9.14,
+    "security": 0.0,
+    "late_aircraft": 42.12
+  },
+  "CVG": {
+    "carrier": 19.05,
+    "weather": 1.61,
+    "nas": 22.19,
+    "security": 0.06,
+    "late_aircraft": 26.05
+  },
+  "CWA": {
+    "carrier": 21.48,
+    "weather": 1.51,
+    "nas": 21.3,
+    "security": 0.0,
+    "late_aircraft": 36.23
+  },
+  "CYS": {
+    "carrier": 19.22,
+    "weather": 0.0,
+    "nas": 1.89,
+    "security": 0.0,
+    "late_aircraft": 31.33
+  },
+  "DAB": {
+    "carrier": 30.11,
+    "weather": 11.66,
+    "nas": 9.45,
+    "security": 0.0,
+    "late_aircraft": 38.9
+  },
+  "DAL": {
+    "carrier": 16.83,
+    "weather": 3.17,
+    "nas": 9.97,
+    "security": 0.08,
+    "late_aircraft": 22.8
+  },
+  "DAY": {
+    "carrier": 21.98,
+    "weather": 2.21,
+    "nas": 16.84,
+    "security": 0.0,
+    "late_aircraft": 31.3
+  },
+  "DBQ": {
+    "carrier": 0.66,
+    "weather": 8.51,
+    "nas": 13.8,
+    "security": 0.0,
+    "late_aircraft": 30.83
+  },
+  "DCA": {
+    "carrier": 17.68,
+    "weather": 6.72,
+    "nas": 17.01,
+    "security": 0.06,
+    "late_aircraft": 31.42
+  },
+  "DDC": {
+    "carrier": 81.0,
+    "weather": 61.2,
+    "nas": 10.4,
+    "security": 0.0,
+    "late_aircraft": 15.0
+  },
+  "DEC": {
+    "carrier": 176.43,
+    "weather": 25.71,
+    "nas": 3.0,
+    "security": 0.0,
+    "late_aircraft": 139.57
+  },
+  "DEN": {
+    "carrier": 21.81,
+    "weather": 3.3,
+    "nas": 12.76,
+    "security": 0.06,
+    "late_aircraft": 23.31
+  },
+  "DFW": {
+    "carrier": 22.08,
+    "weather": 5.89,
+    "nas": 13.88,
+    "security": 0.07,
+    "late_aircraft": 23.19
+  },
+  "DHN": {
+    "carrier": 36.02,
+    "weather": 2.25,
+    "nas": 12.11,
+    "security": 0.0,
+    "late_aircraft": 38.33
+  },
+  "DIK": {
+    "carrier": 12.0,
+    "weather": 36.35,
+    "nas": 42.18,
+    "security": 0.0,
+    "late_aircraft": 30.82
+  },
+  "DLG": {
+    "carrier": 46.4,
+    "weather": 17.6,
+    "nas": 6.4,
+    "security": 3.4,
+    "late_aircraft": 35.8
+  },
+  "DLH": {
+    "carrier": 30.0,
+    "weather": 16.02,
+    "nas": 11.9,
+    "security": 0.0,
+    "late_aircraft": 27.73
+  },
+  "DRO": {
+    "carrier": 36.49,
+    "weather": 16.68,
+    "nas": 13.32,
+    "security": 0.0,
+    "late_aircraft": 25.28
+  },
+  "DRT": {
+    "carrier": 7.6,
+    "weather": 55.0,
+    "nas": 0.2,
+    "security": 0.0,
+    "late_aircraft": 3.0
+  },
+  "DSM": {
+    "carrier": 25.42,
+    "weather": 12.28,
+    "nas": 20.79,
+    "security": 0.12,
+    "late_aircraft": 28.8
+  },
+  "DTW": {
+    "carrier": 27.86,
+    "weather": 7.84,
+    "nas": 17.69,
+    "security": 0.03,
+    "late_aircraft": 17.65
+  },
+  "DVL": {
+    "carrier": 25.6,
+    "weather": 4.53,
+    "nas": 15.23,
+    "security": 0.0,
+    "late_aircraft": 39.67
+  },
+  "EAR": {
+    "carrier": 113.0,
+    "weather": 0.0,
+    "nas": 5.86,
+    "security": 0.0,
+    "late_aircraft": 41.86
+  },
+  "EAT": {
+    "carrier": 0.27,
+    "weather": 29.0,
+    "nas": 1.45,
+    "security": 0.0,
+    "late_aircraft": 20.45
+  },
+  "EAU": {
+    "carrier": 73.61,
+    "weather": 3.87,
+    "nas": 23.61,
+    "security": 0.0,
+    "late_aircraft": 47.77
+  },
+  "ECP": {
+    "carrier": 18.8,
+    "weather": 9.13,
+    "nas": 9.42,
+    "security": 0.0,
+    "late_aircraft": 39.4
+  },
+  "EGE": {
+    "carrier": 28.72,
+    "weather": 2.44,
+    "nas": 15.64,
+    "security": 0.1,
+    "late_aircraft": 47.99
+  },
+  "EKO": {
+    "carrier": 9.93,
+    "weather": 0.0,
+    "nas": 13.86,
+    "security": 0.0,
+    "late_aircraft": 30.0
+  },
+  "ELM": {
+    "carrier": 55.83,
+    "weather": 3.05,
+    "nas": 18.03,
+    "security": 0.0,
+    "late_aircraft": 24.02
+  },
+  "ELP": {
+    "carrier": 18.42,
+    "weather": 1.33,
+    "nas": 11.18,
+    "security": 0.01,
+    "late_aircraft": 31.4
+  },
+  "ERI": {
+    "carrier": 28.62,
+    "weather": 2.08,
+    "nas": 15.08,
+    "security": 0.0,
+    "late_aircraft": 46.69
+  },
+  "ESC": {
+    "carrier": 63.69,
+    "weather": 24.24,
+    "nas": 10.27,
+    "security": 0.0,
+    "late_aircraft": 58.78
+  },
+  "EUG": {
+    "carrier": 17.7,
+    "weather": 7.29,
+    "nas": 21.2,
+    "security": 0.0,
+    "late_aircraft": 31.51
+  },
+  "EVV": {
+    "carrier": 12.66,
+    "weather": 3.1,
+    "nas": 18.67,
+    "security": 0.0,
+    "late_aircraft": 37.74
+  },
+  "EWN": {
+    "carrier": 36.19,
+    "weather": 8.94,
+    "nas": 7.78,
+    "security": 0.0,
+    "late_aircraft": 34.11
+  },
+  "EWR": {
+    "carrier": 23.03,
+    "weather": 1.53,
+    "nas": 14.04,
+    "security": 0.05,
+    "late_aircraft": 28.63
+  },
+  "EYW": {
+    "carrier": 21.68,
+    "weather": 1.53,
+    "nas": 13.85,
+    "security": 0.59,
+    "late_aircraft": 42.74
+  },
+  "FAI": {
+    "carrier": 21.4,
+    "weather": 3.37,
+    "nas": 11.3,
+    "security": 0.06,
+    "late_aircraft": 24.77
+  },
+  "FAR": {
+    "carrier": 36.79,
+    "weather": 24.82,
+    "nas": 16.63,
+    "security": 0.0,
+    "late_aircraft": 33.06
+  },
+  "FAT": {
+    "carrier": 28.82,
+    "weather": 3.85,
+    "nas": 14.81,
+    "security": 0.17,
+    "late_aircraft": 31.98
+  },
+  "FAY": {
+    "carrier": 57.28,
+    "weather": 4.01,
+    "nas": 8.03,
+    "security": 0.0,
+    "late_aircraft": 33.24
+  },
+  "FCA": {
+    "carrier": 25.56,
+    "weather": 3.6,
+    "nas": 10.94,
+    "security": 0.0,
+    "late_aircraft": 30.84
+  },
+  "FLG": {
+    "carrier": 34.54,
+    "weather": 12.58,
+    "nas": 12.46,
+    "security": 0.0,
+    "late_aircraft": 19.47
+  },
+  "FLL": {
+    "carrier": 23.0,
+    "weather": 1.41,
+    "nas": 17.24,
+    "security": 0.59,
+    "late_aircraft": 22.97
+  },
+  "FNT": {
+    "carrier": 16.06,
+    "weather": 3.94,
+    "nas": 21.74,
+    "security": 0.05,
+    "late_aircraft": 29.11
+  },
+  "FOD": {
+    "carrier": 234.5,
+    "weather": 12.0,
+    "nas": 2.92,
+    "security": 0.0,
+    "late_aircraft": 14.42
+  },
+  "FSD": {
+    "carrier": 24.83,
+    "weather": 21.88,
+    "nas": 21.41,
+    "security": 0.0,
+    "late_aircraft": 29.54
+  },
+  "FSM": {
+    "carrier": 13.87,
+    "weather": 12.67,
+    "nas": 10.22,
+    "security": 0.0,
+    "late_aircraft": 35.67
+  },
+  "FWA": {
+    "carrier": 30.49,
+    "weather": 7.13,
+    "nas": 17.2,
+    "security": 0.02,
+    "late_aircraft": 29.67
+  },
+  "GCC": {
+    "carrier": 51.63,
+    "weather": 3.61,
+    "nas": 11.68,
+    "security": 0.0,
+    "late_aircraft": 42.73
+  },
+  "GCK": {
+    "carrier": 26.13,
+    "weather": 35.7,
+    "nas": 10.48,
+    "security": 0.0,
+    "late_aircraft": 24.26
+  },
+  "GEG": {
+    "carrier": 32.61,
+    "weather": 7.47,
+    "nas": 11.2,
+    "security": 0.06,
+    "late_aircraft": 27.96
+  },
+  "GFK": {
+    "carrier": 19.41,
+    "weather": 29.59,
+    "nas": 8.71,
+    "security": 0.0,
+    "late_aircraft": 61.02
+  },
+  "GGG": {
+    "carrier": 3.44,
+    "weather": 15.28,
+    "nas": 7.06,
+    "security": 0.0,
+    "late_aircraft": 28.61
+  },
+  "GJT": {
+    "carrier": 31.7,
+    "weather": 8.76,
+    "nas": 9.65,
+    "security": 0.0,
+    "late_aircraft": 37.74
+  },
+  "GNV": {
+    "carrier": 25.66,
+    "weather": 6.88,
+    "nas": 5.29,
+    "security": 0.55,
+    "late_aircraft": 39.23
+  },
+  "GPT": {
+    "carrier": 27.88,
+    "weather": 13.25,
+    "nas": 13.04,
+    "security": 0.0,
+    "late_aircraft": 33.2
+  },
+  "GRB": {
+    "carrier": 32.97,
+    "weather": 6.98,
+    "nas": 17.49,
+    "security": 0.0,
+    "late_aircraft": 33.44
+  },
+  "GRI": {
+    "carrier": 48.51,
+    "weather": 21.13,
+    "nas": 10.79,
+    "security": 1.03,
+    "late_aircraft": 26.56
+  },
+  "GRK": {
+    "carrier": 37.37,
+    "weather": 12.36,
+    "nas": 12.85,
+    "security": 0.09,
+    "late_aircraft": 26.43
+  },
+  "GRR": {
+    "carrier": 18.23,
+    "weather": 12.85,
+    "nas": 19.7,
+    "security": 0.04,
+    "late_aircraft": 29.82
+  },
+  "GSO": {
+    "carrier": 28.0,
+    "weather": 1.42,
+    "nas": 17.95,
+    "security": 0.0,
+    "late_aircraft": 27.57
+  },
+  "GSP": {
+    "carrier": 25.03,
+    "weather": 4.47,
+    "nas": 11.82,
+    "security": 0.0,
+    "late_aircraft": 33.29
+  },
+  "GTF": {
+    "carrier": 30.88,
+    "weather": 22.63,
+    "nas": 9.31,
+    "security": 0.0,
+    "late_aircraft": 31.78
+  },
+  "GTR": {
+    "carrier": 27.86,
+    "weather": 5.28,
+    "nas": 11.81,
+    "security": 0.0,
+    "late_aircraft": 45.7
+  },
+  "GUC": {
+    "carrier": 11.31,
+    "weather": 1.33,
+    "nas": 8.67,
+    "security": 0.0,
+    "late_aircraft": 74.49
+  },
+  "GUM": {
+    "carrier": 33.13,
+    "weather": 0.0,
+    "nas": 1.07,
+    "security": 0.0,
+    "late_aircraft": 28.8
+  },
+  "HDN": {
+    "carrier": 18.7,
+    "weather": 2.02,
+    "nas": 11.96,
+    "security": 0.0,
+    "late_aircraft": 45.1
+  },
+  "HGR": {
+    "carrier": 13.56,
+    "weather": 0.67,
+    "nas": 24.44,
+    "security": 0.0,
+    "late_aircraft": 30.56
+  },
+  "HHH": {
+    "carrier": 0.2,
+    "weather": 3.53,
+    "nas": 2.6,
+    "security": 0.0,
+    "late_aircraft": 39.4
+  },
+  "HIB": {
+    "carrier": 30.98,
+    "weather": 21.57,
+    "nas": 12.07,
+    "security": 0.0,
+    "late_aircraft": 18.8
+  },
+  "HLN": {
+    "carrier": 43.53,
+    "weather": 4.96,
+    "nas": 19.53,
+    "security": 0.0,
+    "late_aircraft": 20.75
+  },
+  "HNL": {
+    "carrier": 25.74,
+    "weather": 2.28,
+    "nas": 2.91,
+    "security": 0.54,
+    "late_aircraft": 23.3
+  },
+  "HOB": {
+    "carrier": 28.27,
+    "weather": 20.0,
+    "nas": 77.55,
+    "security": 0.0,
+    "late_aircraft": 26.36
+  },
+  "HOU": {
+    "carrier": 18.03,
+    "weather": 3.02,
+    "nas": 11.5,
+    "security": 0.19,
+    "late_aircraft": 24.4
+  },
+  "HPN": {
+    "carrier": 28.46,
+    "weather": 12.24,
+    "nas": 12.35,
+    "security": 0.36,
+    "late_aircraft": 31.9
+  },
+  "HRL": {
+    "carrier": 10.0,
+    "weather": 7.02,
+    "nas": 11.83,
+    "security": 0.0,
+    "late_aircraft": 40.52
+  },
+  "HSV": {
+    "carrier": 22.48,
+    "weather": 3.44,
+    "nas": 15.0,
+    "security": 0.0,
+    "late_aircraft": 42.47
+  },
+  "HTS": {
+    "carrier": 33.47,
+    "weather": 5.53,
+    "nas": 16.76,
+    "security": 0.0,
+    "late_aircraft": 49.18
+  },
+  "HVN": {
+    "carrier": 23.33,
+    "weather": 0.0,
+    "nas": 39.56,
+    "security": 0.0,
+    "late_aircraft": 37.33
+  },
+  "HYS": {
+    "carrier": 6.37,
+    "weather": 7.84,
+    "nas": 8.07,
+    "security": 0.0,
+    "late_aircraft": 60.05
+  },
+  "IAD": {
+    "carrier": 27.82,
+    "weather": 4.53,
+    "nas": 20.62,
+    "security": 0.03,
+    "late_aircraft": 22.94
+  },
+  "IAG": {
+    "carrier": 40.31,
+    "weather": 1.86,
+    "nas": 53.08,
+    "security": 0.0,
+    "late_aircraft": 15.81
+  },
+  "IAH": {
+    "carrier": 25.54,
+    "weather": 5.85,
+    "nas": 17.35,
+    "security": 0.03,
+    "late_aircraft": 24.64
+  },
+  "ICT": {
+    "carrier": 31.07,
+    "weather": 8.1,
+    "nas": 18.15,
+    "security": 0.0,
+    "late_aircraft": 36.11
+  },
+  "IDA": {
+    "carrier": 28.3,
+    "weather": 2.55,
+    "nas": 20.04,
+    "security": 0.0,
+    "late_aircraft": 34.49
+  },
+  "IFP": {
+    "carrier": 0.0,
+    "weather": 0.0,
+    "nas": 20.67,
+    "security": 0.0,
+    "late_aircraft": 7.33
+  },
+  "ILG": {
+    "carrier": 31.1,
+    "weather": 3.2,
+    "nas": 13.3,
+    "security": 0.0,
+    "late_aircraft": 34.5
+  },
+  "ILM": {
+    "carrier": 16.79,
+    "weather": 9.45,
+    "nas": 9.92,
+    "security": 0.0,
+    "late_aircraft": 42.53
+  },
+  "IMT": {
+    "carrier": 114.36,
+    "weather": 77.19,
+    "nas": 3.94,
+    "security": 0.0,
+    "late_aircraft": 38.39
+  },
+  "IND": {
+    "carrier": 19.66,
+    "weather": 2.4,
+    "nas": 19.01,
+    "security": 0.01,
+    "late_aircraft": 26.7
+  },
+  "INL": {
+    "carrier": 4.37,
+    "weather": 2.89,
+    "nas": 11.79,
+    "security": 0.0,
+    "late_aircraft": 23.0
+  },
+  "ISN": {
+    "carrier": 18.07,
+    "weather": 11.56,
+    "nas": 13.27,
+    "security": 0.0,
+    "late_aircraft": 28.51
+  },
+  "ISP": {
+    "carrier": 25.1,
+    "weather": 1.6,
+    "nas": 10.91,
+    "security": 0.0,
+    "late_aircraft": 34.4
+  },
+  "ITH": {
+    "carrier": 38.44,
+    "weather": 15.38,
+    "nas": 11.42,
+    "security": 0.0,
+    "late_aircraft": 31.54
+  },
+  "ITO": {
+    "carrier": 13.68,
+    "weather": 1.45,
+    "nas": 3.86,
+    "security": 2.0,
+    "late_aircraft": 26.16
+  },
+  "JAC": {
+    "carrier": 27.41,
+    "weather": 5.77,
+    "nas": 18.15,
+    "security": 0.0,
+    "late_aircraft": 47.59
+  },
+  "JAN": {
+    "carrier": 21.64,
+    "weather": 4.51,
+    "nas": 11.43,
+    "security": 0.98,
+    "late_aircraft": 33.53
+  },
+  "JAX": {
+    "carrier": 24.65,
+    "weather": 3.93,
+    "nas": 16.18,
+    "security": 0.0,
+    "late_aircraft": 34.8
+  },
+  "JFK": {
+    "carrier": 28.23,
+    "weather": 4.7,
+    "nas": 16.18,
+    "security": 0.16,
+    "late_aircraft": 17.69
+  },
+  "JLN": {
+    "carrier": 27.52,
+    "weather": 31.21,
+    "nas": 14.88,
+    "security": 0.0,
+    "late_aircraft": 19.0
+  },
+  "JMS": {
+    "carrier": 24.95,
+    "weather": 2.12,
+    "nas": 7.05,
+    "security": 0.0,
+    "late_aircraft": 52.26
+  },
+  "JNU": {
+    "carrier": 14.79,
+    "weather": 13.58,
+    "nas": 13.88,
+    "security": 0.04,
+    "late_aircraft": 29.37
+  },
+  "JST": {
+    "carrier": 38.38,
+    "weather": 13.0,
+    "nas": 3.46,
+    "security": 0.0,
+    "late_aircraft": 29.85
+  },
+  "KOA": {
+    "carrier": 20.29,
+    "weather": 2.49,
+    "nas": 5.47,
+    "security": 0.19,
+    "late_aircraft": 33.54
+  },
+  "KTN": {
+    "carrier": 7.48,
+    "weather": 0.95,
+    "nas": 8.61,
+    "security": 0.0,
+    "late_aircraft": 49.93
+  },
+  "LAN": {
+    "carrier": 25.91,
+    "weather": 2.9,
+    "nas": 19.38,
+    "security": 0.0,
+    "late_aircraft": 38.47
+  },
+  "LAR": {
+    "carrier": 34.0,
+    "weather": 0.0,
+    "nas": 5.85,
+    "security": 0.0,
+    "late_aircraft": 21.15
+  },
+  "LAS": {
+    "carrier": 18.92,
+    "weather": 1.27,
+    "nas": 12.68,
+    "security": 0.05,
+    "late_aircraft": 30.21
+  },
+  "LAW": {
+    "carrier": 17.15,
+    "weather": 10.2,
+    "nas": 8.78,
+    "security": 0.0,
+    "late_aircraft": 23.73
+  },
+  "LAX": {
+    "carrier": 22.17,
+    "weather": 1.74,
+    "nas": 13.1,
+    "security": 0.09,
+    "late_aircraft": 24.46
+  },
+  "LBB": {
+    "carrier": 18.81,
+    "weather": 7.48,
+    "nas": 14.55,
+    "security": 0.05,
+    "late_aircraft": 34.94
+  },
+  "LBE": {
+    "carrier": 6.72,
+    "weather": 0.2,
+    "nas": 28.12,
+    "security": 0.0,
+    "late_aircraft": 23.1
+  },
+  "LBF": {
+    "carrier": 15.17,
+    "weather": 16.39,
+    "nas": 10.11,
+    "security": 0.0,
+    "late_aircraft": 121.17
+  },
+  "LBL": {
+    "carrier": 32.6,
+    "weather": 0.0,
+    "nas": 9.6,
+    "security": 0.0,
+    "late_aircraft": 24.2
+  },
+  "LCH": {
+    "carrier": 49.83,
+    "weather": 30.48,
+    "nas": 12.12,
+    "security": 0.0,
+    "late_aircraft": 22.04
+  },
+  "LCK": {
+    "carrier": 10.59,
+    "weather": 0.0,
+    "nas": 9.05,
+    "security": 0.0,
+    "late_aircraft": 37.86
+  },
+  "LEX": {
+    "carrier": 21.04,
+    "weather": 7.58,
+    "nas": 18.78,
+    "security": 0.1,
+    "late_aircraft": 30.5
+  },
+  "LFT": {
+    "carrier": 25.46,
+    "weather": 14.98,
+    "nas": 11.51,
+    "security": 0.22,
+    "late_aircraft": 36.64
+  },
+  "LGA": {
+    "carrier": 19.24,
+    "weather": 2.75,
+    "nas": 15.78,
+    "security": 0.15,
+    "late_aircraft": 33.7
+  },
+  "LGB": {
+    "carrier": 16.22,
+    "weather": 2.8,
+    "nas": 16.74,
+    "security": 0.0,
+    "late_aircraft": 28.89
+  },
+  "LIH": {
+    "carrier": 17.13,
+    "weather": 5.69,
+    "nas": 6.48,
+    "security": 0.33,
+    "late_aircraft": 32.07
+  },
+  "LIT": {
+    "carrier": 17.45,
+    "weather": 5.37,
+    "nas": 15.54,
+    "security": 0.05,
+    "late_aircraft": 32.29
+  },
+  "LNK": {
+    "carrier": 44.55,
+    "weather": 11.79,
+    "nas": 12.68,
+    "security": 0.0,
+    "late_aircraft": 27.06
+  },
+  "LRD": {
+    "carrier": 26.27,
+    "weather": 11.59,
+    "nas": 16.95,
+    "security": 0.09,
+    "late_aircraft": 30.11
+  },
+  "LSE": {
+    "carrier": 12.0,
+    "weather": 19.38,
+    "nas": 17.02,
+    "security": 0.0,
+    "late_aircraft": 41.73
+  },
+  "LWB": {
+    "carrier": 56.2,
+    "weather": 67.8,
+    "nas": 6.0,
+    "security": 0.0,
+    "late_aircraft": 19.0
+  },
+  "LWS": {
+    "carrier": 97.09,
+    "weather": 9.32,
+    "nas": 5.14,
+    "security": 0.0,
+    "late_aircraft": 71.41
+  },
+  "LYH": {
+    "carrier": 39.0,
+    "weather": 0.0,
+    "nas": 0.33,
+    "security": 0.0,
+    "late_aircraft": 59.0
+  },
+  "MAF": {
+    "carrier": 23.25,
+    "weather": 5.46,
+    "nas": 14.43,
+    "security": 0.07,
+    "late_aircraft": 32.62
+  },
+  "MBS": {
+    "carrier": 19.68,
+    "weather": 12.75,
+    "nas": 10.08,
+    "security": 0.0,
+    "late_aircraft": 50.74
+  },
+  "MCI": {
+    "carrier": 20.48,
+    "weather": 3.44,
+    "nas": 17.75,
+    "security": 0.07,
+    "late_aircraft": 25.1
+  },
+  "MCO": {
+    "carrier": 23.84,
+    "weather": 1.68,
+    "nas": 15.48,
+    "security": 0.2,
+    "late_aircraft": 28.66
+  },
+  "MCW": {
+    "carrier": 2.62,
+    "weather": 9.25,
+    "nas": 0.0,
+    "security": 0.0,
+    "late_aircraft": 32.38
+  },
+  "MDT": {
+    "carrier": 41.58,
+    "weather": 8.51,
+    "nas": 21.09,
+    "security": 0.0,
+    "late_aircraft": 26.0
+  },
+  "MDW": {
+    "carrier": 19.37,
+    "weather": 2.7,
+    "nas": 9.42,
+    "security": 0.02,
+    "late_aircraft": 23.36
+  },
+  "MEI": {
+    "carrier": 45.67,
+    "weather": 0.0,
+    "nas": 5.33,
+    "security": 0.0,
+    "late_aircraft": 105.04
+  },
+  "MEM": {
+    "carrier": 21.57,
+    "weather": 9.47,
+    "nas": 18.74,
+    "security": 0.02,
+    "late_aircraft": 24.14
+  },
+  "MFE": {
+    "carrier": 39.95,
+    "weather": 9.68,
+    "nas": 11.96,
+    "security": 0.35,
+    "late_aircraft": 34.87
+  },
+  "MFR": {
+    "carrier": 32.0,
+    "weather": 12.55,
+    "nas": 16.37,
+    "security": 0.02,
+    "late_aircraft": 29.58
+  },
+  "MGM": {
+    "carrier": 31.43,
+    "weather": 5.94,
+    "nas": 9.97,
+    "security": 0.0,
+    "late_aircraft": 44.27
+  },
+  "MHK": {
+    "carrier": 19.76,
+    "weather": 9.8,
+    "nas": 15.64,
+    "security": 0.0,
+    "late_aircraft": 33.92
+  },
+  "MHT": {
+    "carrier": 21.63,
+    "weather": 2.12,
+    "nas": 13.82,
+    "security": 0.0,
+    "late_aircraft": 30.56
+  },
+  "MIA": {
+    "carrier": 25.25,
+    "weather": 2.13,
+    "nas": 14.88,
+    "security": 0.31,
+    "late_aircraft": 22.09
+  },
+  "MKE": {
+    "carrier": 23.2,
+    "weather": 9.49,
+    "nas": 18.17,
+    "security": 0.01,
+    "late_aircraft": 26.6
+  },
+  "MKG": {
+    "carrier": 2.97,
+    "weather": 0.06,
+    "nas": 12.72,
+    "security": 0.0,
+    "late_aircraft": 59.09
+  },
+  "MLB": {
+    "carrier": 10.64,
+    "weather": 14.06,
+    "nas": 11.35,
+    "security": 0.0,
+    "late_aircraft": 54.67
+  },
+  "MLI": {
+    "carrier": 35.79,
+    "weather": 13.62,
+    "nas": 19.47,
+    "security": 0.2,
+    "late_aircraft": 25.68
+  },
+  "MLU": {
+    "carrier": 28.29,
+    "weather": 7.55,
+    "nas": 14.47,
+    "security": 0.0,
+    "late_aircraft": 35.21
+  },
+  "MMH": {
+    "carrier": 0.06,
+    "weather": 0.0,
+    "nas": 31.56,
+    "security": 0.0,
+    "late_aircraft": 31.75
+  },
+  "MOB": {
+    "carrier": 13.52,
+    "weather": 8.26,
+    "nas": 12.2,
+    "security": 0.0,
+    "late_aircraft": 34.23
+  },
+  "MOT": {
+    "carrier": 51.73,
+    "weather": 25.37,
+    "nas": 8.26,
+    "security": 0.14,
+    "late_aircraft": 24.39
+  },
+  "MQT": {
+    "carrier": 33.91,
+    "weather": 7.96,
+    "nas": 26.32,
+    "security": 0.0,
+    "late_aircraft": 20.55
+  },
+  "MRY": {
+    "carrier": 21.78,
+    "weather": 1.46,
+    "nas": 12.07,
+    "security": 0.0,
+    "late_aircraft": 51.05
+  },
+  "MSN": {
+    "carrier": 32.56,
+    "weather": 5.0,
+    "nas": 19.17,
+    "security": 0.0,
+    "late_aircraft": 26.01
+  },
+  "MSO": {
+    "carrier": 21.21,
+    "weather": 26.83,
+    "nas": 12.79,
+    "security": 0.02,
+    "late_aircraft": 28.05
+  },
+  "MSP": {
+    "carrier": 26.54,
+    "weather": 9.69,
+    "nas": 18.35,
+    "security": 0.14,
+    "late_aircraft": 14.45
+  },
+  "MSY": {
+    "carrier": 20.66,
+    "weather": 2.03,
+    "nas": 17.61,
+    "security": 0.03,
+    "late_aircraft": 29.81
+  },
+  "MTJ": {
+    "carrier": 16.11,
+    "weather": 1.23,
+    "nas": 14.13,
+    "security": 0.01,
+    "late_aircraft": 45.86
+  },
+  "MYR": {
+    "carrier": 11.79,
+    "weather": 0.66,
+    "nas": 26.95,
+    "security": 0.16,
+    "late_aircraft": 30.84
+  },
+  "OAJ": {
+    "carrier": 33.26,
+    "weather": 0.07,
+    "nas": 7.07,
+    "security": 0.0,
+    "late_aircraft": 55.42
+  },
+  "OAK": {
+    "carrier": 13.85,
+    "weather": 1.76,
+    "nas": 9.19,
+    "security": 0.02,
+    "late_aircraft": 24.0
+  },
+  "OGD": {
+    "carrier": 1.0,
+    "weather": 3.0,
+    "nas": 12.67,
+    "security": 0.0,
+    "late_aircraft": 40.67
+  },
+  "OGG": {
+    "carrier": 21.6,
+    "weather": 1.78,
+    "nas": 5.27,
+    "security": 0.05,
+    "late_aircraft": 23.83
+  },
+  "OGS": {
+    "carrier": 12.5,
+    "weather": 0.0,
+    "nas": 8.0,
+    "security": 0.0,
+    "late_aircraft": 11.5
+  },
+  "OKC": {
+    "carrier": 22.9,
+    "weather": 4.88,
+    "nas": 15.14,
+    "security": 0.08,
+    "late_aircraft": 29.03
+  },
+  "OMA": {
+    "carrier": 24.29,
+    "weather": 6.37,
+    "nas": 17.0,
+    "security": 0.0,
+    "late_aircraft": 27.89
+  },
+  "OME": {
+    "carrier": 4.76,
+    "weather": 2.52,
+    "nas": 3.12,
+    "security": 0.4,
+    "late_aircraft": 31.04
+  },
+  "ONT": {
+    "carrier": 17.47,
+    "weather": 1.88,
+    "nas": 16.62,
+    "security": 0.18,
+    "late_aircraft": 29.6
+  },
+  "ORD": {
+    "carrier": 21.1,
+    "weather": 8.49,
+    "nas": 15.26,
+    "security": 0.02,
+    "late_aircraft": 24.49
+  },
+  "ORF": {
+    "carrier": 25.59,
+    "weather": 3.58,
+    "nas": 17.26,
+    "security": 0.01,
+    "late_aircraft": 30.76
+  },
+  "ORH": {
+    "carrier": 18.28,
+    "weather": 0.0,
+    "nas": 7.54,
+    "security": 0.0,
+    "late_aircraft": 64.26
+  },
+  "OTH": {
+    "carrier": 0.0,
+    "weather": 0.0,
+    "nas": 17.46,
+    "security": 0.0,
+    "late_aircraft": 47.0
+  },
+  "OTZ": {
+    "carrier": 4.46,
+    "weather": 11.33,
+    "nas": 2.42,
+    "security": 0.0,
+    "late_aircraft": 27.75
+  },
+  "OWB": {
+    "carrier": 14.75,
+    "weather": 0.0,
+    "nas": 0.25,
+    "security": 0.0,
+    "late_aircraft": 68.25
+  },
+  "PAE": {
+    "carrier": 15.62,
+    "weather": 1.15,
+    "nas": 18.31,
+    "security": 0.0,
+    "late_aircraft": 10.77
+  },
+  "PAH": {
+    "carrier": 38.84,
+    "weather": 0.0,
+    "nas": 9.08,
+    "security": 0.0,
+    "late_aircraft": 41.6
+  },
+  "PBG": {
+    "carrier": 43.47,
+    "weather": 1.36,
+    "nas": 19.29,
+    "security": 0.0,
+    "late_aircraft": 21.02
+  },
+  "PBI": {
+    "carrier": 21.84,
+    "weather": 1.44,
+    "nas": 18.19,
+    "security": 0.46,
+    "late_aircraft": 31.66
+  },
+  "PDX": {
+    "carrier": 17.93,
+    "weather": 4.86,
+    "nas": 16.81,
+    "security": 0.05,
+    "late_aircraft": 20.64
+  },
+  "PGD": {
+    "carrier": 19.83,
+    "weather": 13.1,
+    "nas": 10.66,
+    "security": 0.0,
+    "late_aircraft": 32.82
+  },
+  "PHF": {
+    "carrier": 19.17,
+    "weather": 0.0,
+    "nas": 8.86,
+    "security": 0.0,
+    "late_aircraft": 31.11
+  },
+  "PHL": {
+    "carrier": 19.74,
+    "weather": 4.96,
+    "nas": 21.69,
+    "security": 0.03,
+    "late_aircraft": 25.95
+  },
+  "PHX": {
+    "carrier": 19.15,
+    "weather": 1.15,
+    "nas": 10.63,
+    "security": 0.12,
+    "late_aircraft": 22.96
+  },
+  "PIA": {
+    "carrier": 25.72,
+    "weather": 11.04,
+    "nas": 14.11,
+    "security": 0.0,
+    "late_aircraft": 34.72
+  },
+  "PIB": {
+    "carrier": 82.36,
+    "weather": 8.72,
+    "nas": 4.4,
+    "security": 0.0,
+    "late_aircraft": 78.24
+  },
+  "PIE": {
+    "carrier": 16.53,
+    "weather": 13.0,
+    "nas": 16.68,
+    "security": 0.0,
+    "late_aircraft": 44.83
+  },
+  "PIH": {
+    "carrier": 54.03,
+    "weather": 44.68,
+    "nas": 8.81,
+    "security": 0.0,
+    "late_aircraft": 29.19
+  },
+  "PIT": {
+    "carrier": 18.32,
+    "weather": 2.36,
+    "nas": 21.15,
+    "security": 0.04,
+    "late_aircraft": 24.13
+  },
+  "PLN": {
+    "carrier": 42.33,
+    "weather": 40.78,
+    "nas": 6.08,
+    "security": 0.0,
+    "late_aircraft": 43.44
+  },
+  "PNS": {
+    "carrier": 21.17,
+    "weather": 10.58,
+    "nas": 14.69,
+    "security": 0.06,
+    "late_aircraft": 43.14
+  },
+  "PPG": {
+    "carrier": 10.3,
+    "weather": 0.0,
+    "nas": 0.0,
+    "security": 0.0,
+    "late_aircraft": 15.1
+  },
+  "PRC": {
+    "carrier": 8.96,
+    "weather": 16.91,
+    "nas": 23.39,
+    "security": 0.0,
+    "late_aircraft": 35.39
+  },
+  "PSC": {
+    "carrier": 36.17,
+    "weather": 19.07,
+    "nas": 12.97,
+    "security": 0.13,
+    "late_aircraft": 36.96
+  },
+  "PSE": {
+    "carrier": 9.11,
+    "weather": 0.0,
+    "nas": 8.17,
+    "security": 4.04,
+    "late_aircraft": 49.3
+  },
+  "PSG": {
+    "carrier": 8.17,
+    "weather": 1.58,
+    "nas": 9.06,
+    "security": 0.0,
+    "late_aircraft": 42.78
+  },
+  "PSM": {
+    "carrier": 6.79,
+    "weather": 82.29,
+    "nas": 9.64,
+    "security": 0.0,
+    "late_aircraft": 34.43
+  },
+  "PSP": {
+    "carrier": 23.6,
+    "weather": 5.07,
+    "nas": 20.74,
+    "security": 0.09,
+    "late_aircraft": 31.89
+  },
+  "PUB": {
+    "carrier": 16.62,
+    "weather": 1.94,
+    "nas": 18.81,
+    "security": 0.0,
+    "late_aircraft": 24.81
+  },
+  "PUW": {
+    "carrier": 29.29,
+    "weather": 8.14,
+    "nas": 6.43,
+    "security": 0.0,
+    "late_aircraft": 17.86
+  },
+  "PVD": {
+    "carrier": 18.85,
+    "weather": 2.78,
+    "nas": 15.68,
+    "security": 0.16,
+    "late_aircraft": 32.83
+  },
+  "PVU": {
+    "carrier": 10.66,
+    "weather": 21.16,
+    "nas": 21.87,
+    "security": 0.0,
+    "late_aircraft": 25.03
+  },
+  "PWM": {
+    "carrier": 26.42,
+    "weather": 7.19,
+    "nas": 19.16,
+    "security": 0.0,
+    "late_aircraft": 34.9
+  },
+  "RAP": {
+    "carrier": 33.11,
+    "weather": 10.86,
+    "nas": 11.09,
+    "security": 0.04,
+    "late_aircraft": 27.57
+  },
+  "RDD": {
+    "carrier": 24.06,
+    "weather": 0.0,
+    "nas": 17.15,
+    "security": 0.0,
+    "late_aircraft": 31.92
+  },
+  "RDM": {
+    "carrier": 31.94,
+    "weather": 28.78,
+    "nas": 21.22,
+    "security": 0.23,
+    "late_aircraft": 25.95
+  },
+  "RDU": {
+    "carrier": 22.73,
+    "weather": 2.47,
+    "nas": 18.15,
+    "security": 0.04,
+    "late_aircraft": 31.8
+  },
+  "RFD": {
+    "carrier": 72.24,
+    "weather": 0.68,
+    "nas": 10.76,
+    "security": 0.0,
+    "late_aircraft": 8.92
+  },
+  "RHI": {
+    "carrier": 19.93,
+    "weather": 20.93,
+    "nas": 11.72,
+    "security": 0.0,
+    "late_aircraft": 21.26
+  },
+  "RIC": {
+    "carrier": 26.7,
+    "weather": 5.53,
+    "nas": 22.42,
+    "security": 0.07,
+    "late_aircraft": 28.25
+  },
+  "RIW": {
+    "carrier": 100.44,
+    "weather": 6.67,
+    "nas": 20.33,
+    "security": 0.0,
+    "late_aircraft": 2.56
+  },
+  "RKS": {
+    "carrier": 26.5,
+    "weather": 16.0,
+    "nas": 14.68,
+    "security": 0.61,
+    "late_aircraft": 29.04
+  },
+  "RNO": {
+    "carrier": 18.19,
+    "weather": 2.11,
+    "nas": 16.57,
+    "security": 0.0,
+    "late_aircraft": 33.93
+  },
+  "ROA": {
+    "carrier": 26.01,
+    "weather": 2.47,
+    "nas": 15.1,
+    "security": 0.0,
+    "late_aircraft": 46.11
+  },
+  "ROC": {
+    "carrier": 23.57,
+    "weather": 2.16,
+    "nas": 16.54,
+    "security": 0.12,
+    "late_aircraft": 33.13
+  },
+  "ROW": {
+    "carrier": 86.21,
+    "weather": 30.79,
+    "nas": 5.74,
+    "security": 0.0,
+    "late_aircraft": 28.5
+  },
+  "RST": {
+    "carrier": 25.23,
+    "weather": 6.12,
+    "nas": 13.39,
+    "security": 0.0,
+    "late_aircraft": 37.53
+  },
+  "RSW": {
+    "carrier": 18.9,
+    "weather": 2.06,
+    "nas": 17.2,
+    "security": 0.01,
+    "late_aircraft": 36.13
+  },
+  "SAF": {
+    "carrier": 40.95,
+    "weather": 26.35,
+    "nas": 12.06,
+    "security": 0.37,
+    "late_aircraft": 24.67
+  },
+  "SAN": {
+    "carrier": 14.19,
+    "weather": 1.66,
+    "nas": 16.26,
+    "security": 0.23,
+    "late_aircraft": 28.64
+  },
+  "SAT": {
+    "carrier": 14.57,
+    "weather": 2.9,
+    "nas": 13.83,
+    "security": 0.05,
+    "late_aircraft": 29.69
+  },
+  "SAV": {
+    "carrier": 18.22,
+    "weather": 4.73,
+    "nas": 17.65,
+    "security": 0.0,
+    "late_aircraft": 37.78
+  },
+  "SBA": {
+    "carrier": 19.56,
+    "weather": 2.01,
+    "nas": 23.37,
+    "security": 0.04,
+    "late_aircraft": 31.95
+  },
+  "SBN": {
+    "carrier": 36.92,
+    "weather": 9.36,
+    "nas": 16.58,
+    "security": 0.02,
+    "late_aircraft": 26.63
+  },
+  "SBP": {
+    "carrier": 14.77,
+    "weather": 2.35,
+    "nas": 18.42,
+    "security": 0.0,
+    "late_aircraft": 35.12
+  },
+  "SCC": {
+    "carrier": 11.84,
+    "weather": 1.92,
+    "nas": 5.68,
+    "security": 0.0,
+    "late_aircraft": 44.32
+  },
+  "SCE": {
+    "carrier": 27.52,
+    "weather": 11.87,
+    "nas": 22.3,
+    "security": 0.0,
+    "late_aircraft": 22.37
+  },
+  "SCK": {
+    "carrier": 10.81,
+    "weather": 5.45,
+    "nas": 15.03,
+    "security": 0.0,
+    "late_aircraft": 36.61
+  },
+  "SDF": {
+    "carrier": 23.44,
+    "weather": 10.1,
+    "nas": 20.11,
+    "security": 0.0,
+    "late_aircraft": 23.13
+  },
+  "SEA": {
+    "carrier": 21.69,
+    "weather": 3.45,
+    "nas": 14.18,
+    "security": 0.1,
+    "late_aircraft": 17.02
+  },
+  "SFB": {
+    "carrier": 32.1,
+    "weather": 5.61,
+    "nas": 9.5,
+    "security": 0.27,
+    "late_aircraft": 26.97
+  },
+  "SFO": {
+    "carrier": 19.39,
+    "weather": 2.0,
+    "nas": 13.46,
+    "security": 0.05,
+    "late_aircraft": 32.29
+  },
+  "SGF": {
+    "carrier": 25.57,
+    "weather": 15.86,
+    "nas": 19.79,
+    "security": 0.05,
+    "late_aircraft": 29.04
+  },
+  "SGU": {
+    "carrier": 37.77,
+    "weather": 2.03,
+    "nas": 6.7,
+    "security": 0.0,
+    "late_aircraft": 30.74
+  },
+  "SHD": {
+    "carrier": 91.29,
+    "weather": 0.0,
+    "nas": 3.0,
+    "security": 0.0,
+    "late_aircraft": 23.71
+  },
+  "SHR": {
+    "carrier": 16.62,
+    "weather": 39.77,
+    "nas": 0.0,
+    "security": 0.0,
+    "late_aircraft": 31.92
+  },
+  "SHV": {
+    "carrier": 35.21,
+    "weather": 8.46,
+    "nas": 11.35,
+    "security": 0.0,
+    "late_aircraft": 34.26
+  },
+  "SIT": {
+    "carrier": 21.59,
+    "weather": 21.0,
+    "nas": 8.92,
+    "security": 0.0,
+    "late_aircraft": 23.73
+  },
+  "SJC": {
+    "carrier": 15.93,
+    "weather": 0.86,
+    "nas": 9.71,
+    "security": 0.51,
+    "late_aircraft": 27.47
+  },
+  "SJT": {
+    "carrier": 5.89,
+    "weather": 30.2,
+    "nas": 10.11,
+    "security": 0.0,
+    "late_aircraft": 34.11
+  },
+  "SJU": {
+    "carrier": 29.69,
+    "weather": 0.6,
+    "nas": 12.51,
+    "security": 0.12,
+    "late_aircraft": 34.01
+  },
+  "SLC": {
+    "carrier": 24.79,
+    "weather": 8.85,
+    "nas": 14.46,
+    "security": 0.04,
+    "late_aircraft": 18.31
+  },
+  "SLN": {
+    "carrier": 22.63,
+    "weather": 16.63,
+    "nas": 16.89,
+    "security": 0.0,
+    "late_aircraft": 44.85
+  },
+  "SMF": {
+    "carrier": 14.2,
+    "weather": 1.81,
+    "nas": 10.5,
+    "security": 0.01,
+    "late_aircraft": 29.12
+  },
+  "SMX": {
+    "carrier": 14.89,
+    "weather": 0.0,
+    "nas": 16.89,
+    "security": 0.0,
+    "late_aircraft": 53.44
+  },
+  "SNA": {
+    "carrier": 14.63,
+    "weather": 2.41,
+    "nas": 16.94,
+    "security": 0.04,
+    "late_aircraft": 26.91
+  },
+  "SPI": {
+    "carrier": 24.64,
+    "weather": 0.91,
+    "nas": 21.72,
+    "security": 0.0,
+    "late_aircraft": 28.95
+  },
+  "SPN": {
+    "carrier": 6.67,
+    "weather": 0.0,
+    "nas": 24.0,
+    "security": 0.0,
+    "late_aircraft": 4.67
+  },
+  "SPS": {
+    "carrier": 22.97,
+    "weather": 12.85,
+    "nas": 9.18,
+    "security": 0.0,
+    "late_aircraft": 22.24
+  },
+  "SRQ": {
+    "carrier": 28.27,
+    "weather": 2.79,
+    "nas": 18.28,
+    "security": 0.22,
+    "late_aircraft": 39.72
+  },
+  "STC": {
+    "carrier": 6.92,
+    "weather": 0.0,
+    "nas": 3.17,
+    "security": 0.0,
+    "late_aircraft": 56.42
+  },
+  "STL": {
+    "carrier": 21.93,
+    "weather": 2.71,
+    "nas": 13.29,
+    "security": 0.06,
+    "late_aircraft": 26.47
+  },
+  "STS": {
+    "carrier": 6.88,
+    "weather": 9.8,
+    "nas": 10.78,
+    "security": 0.0,
+    "late_aircraft": 35.56
+  },
+  "STT": {
+    "carrier": 35.61,
+    "weather": 1.5,
+    "nas": 12.39,
+    "security": 0.01,
+    "late_aircraft": 38.15
+  },
+  "STX": {
+    "carrier": 22.27,
+    "weather": 0.03,
+    "nas": 11.66,
+    "security": 1.05,
+    "late_aircraft": 22.27
+  },
+  "SUN": {
+    "carrier": 41.05,
+    "weather": 11.42,
+    "nas": 9.97,
+    "security": 0.12,
+    "late_aircraft": 32.67
+  },
+  "SUX": {
+    "carrier": 31.93,
+    "weather": 13.47,
+    "nas": 14.4,
+    "security": 0.0,
+    "late_aircraft": 26.7
+  },
+  "SWF": {
+    "carrier": 21.3,
+    "weather": 0.3,
+    "nas": 12.22,
+    "security": 0.0,
+    "late_aircraft": 63.33
+  },
+  "SWO": {
+    "carrier": 92.5,
+    "weather": 30.06,
+    "nas": 9.67,
+    "security": 0.0,
+    "late_aircraft": 13.28
+  },
+  "SYR": {
+    "carrier": 27.18,
+    "weather": 6.41,
+    "nas": 18.87,
+    "security": 0.0,
+    "late_aircraft": 32.33
+  },
+  "TBN": {
+    "carrier": 59.67,
+    "weather": 0.0,
+    "nas": 0.0,
+    "security": 0.0,
+    "late_aircraft": 0.0
+  },
+  "TLH": {
+    "carrier": 30.09,
+    "weather": 4.1,
+    "nas": 9.53,
+    "security": 0.39,
+    "late_aircraft": 40.54
+  },
+  "TOL": {
+    "carrier": 24.58,
+    "weather": 13.09,
+    "nas": 20.3,
+    "security": 0.0,
+    "late_aircraft": 26.19
+  },
+  "TPA": {
+    "carrier": 19.06,
+    "weather": 0.84,
+    "nas": 14.84,
+    "security": 0.04,
+    "late_aircraft": 32.62
+  },
+  "TRI": {
+    "carrier": 33.77,
+    "weather": 9.03,
+    "nas": 7.09,
+    "security": 0.22,
+    "late_aircraft": 29.58
+  },
+  "TTN": {
+    "carrier": 15.86,
+    "weather": 0.64,
+    "nas": 14.11,
+    "security": 0.0,
+    "late_aircraft": 39.81
+  },
+  "TUL": {
+    "carrier": 19.48,
+    "weather": 4.33,
+    "nas": 14.02,
+    "security": 0.01,
+    "late_aircraft": 33.22
+  },
+  "TUS": {
+    "carrier": 16.89,
+    "weather": 7.06,
+    "nas": 15.82,
+    "security": 0.0,
+    "late_aircraft": 27.12
+  },
+  "TVC": {
+    "carrier": 31.05,
+    "weather": 8.35,
+    "nas": 13.19,
+    "security": 0.0,
+    "late_aircraft": 35.23
+  },
+  "TWF": {
+    "carrier": 23.52,
+    "weather": 21.69,
+    "nas": 14.94,
+    "security": 0.0,
+    "late_aircraft": 14.27
+  },
+  "TXK": {
+    "carrier": 38.84,
+    "weather": 42.29,
+    "nas": 7.13,
+    "security": 0.0,
+    "late_aircraft": 15.95
+  },
+  "TYR": {
+    "carrier": 45.33,
+    "weather": 9.58,
+    "nas": 11.13,
+    "security": 0.0,
+    "late_aircraft": 18.88
+  },
+  "TYS": {
+    "carrier": 21.77,
+    "weather": 12.75,
+    "nas": 18.1,
+    "security": 0.25,
+    "late_aircraft": 31.95
+  },
+  "UIN": {
+    "carrier": 1.21,
+    "weather": 7.32,
+    "nas": 20.53,
+    "security": 0.0,
+    "late_aircraft": 46.89
+  },
+  "USA": {
+    "carrier": 8.28,
+    "weather": 0.0,
+    "nas": 20.24,
+    "security": 0.0,
+    "late_aircraft": 29.32
+  },
+  "UST": {
+    "carrier": 0.0,
+    "weather": 11.5,
+    "nas": 12.0,
+    "security": 0.0,
+    "late_aircraft": 18.5
+  },
+  "VCT": {
+    "carrier": 154.38,
+    "weather": 0.0,
+    "nas": 45.62,
+    "security": 0.0,
+    "late_aircraft": 29.88
+  },
+  "VEL": {
+    "carrier": 11.92,
+    "weather": 1.19,
+    "nas": 11.81,
+    "security": 0.0,
+    "late_aircraft": 62.08
+  },
+  "VLD": {
+    "carrier": 49.53,
+    "weather": 40.47,
+    "nas": 9.57,
+    "security": 0.0,
+    "late_aircraft": 28.2
+  },
+  "VPS": {
+    "carrier": 36.99,
+    "weather": 25.93,
+    "nas": 10.45,
+    "security": 0.0,
+    "late_aircraft": 44.23
+  },
+  "WRG": {
+    "carrier": 11.85,
+    "weather": 2.48,
+    "nas": 9.06,
+    "security": 0.0,
+    "late_aircraft": 51.42
+  },
+  "XNA": {
+    "carrier": 18.66,
+    "weather": 17.89,
+    "nas": 17.15,
+    "security": 0.07,
+    "late_aircraft": 34.48
+  },
+  "XWA": {
+    "carrier": 81.94,
+    "weather": 29.56,
+    "nas": 5.36,
+    "security": 0.0,
+    "late_aircraft": 22.86
+  },
+  "YAK": {
+    "carrier": 3.7,
+    "weather": 0.25,
+    "nas": 6.5,
+    "security": 0.0,
+    "late_aircraft": 45.3
+  },
+  "YKM": {
+    "carrier": 0.0,
+    "weather": 46.33,
+    "nas": 3.33,
+    "security": 0.0,
+    "late_aircraft": 29.0
+  },
+  "YUM": {
+    "carrier": 25.25,
+    "weather": 4.93,
+    "nas": 14.98,
+    "security": 0.0,
+    "late_aircraft": 23.47
+  }
+}
