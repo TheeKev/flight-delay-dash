@@ -5,6 +5,7 @@
 <title>Flight Delay Explorer</title>
 
 <script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://unpkg.com/topojson@3"></script>
 
 <style>
 body {
@@ -15,13 +16,18 @@ body {
   display:flex;
 }
 
-/* LEFT GRAPH */
-#graph {
+/* MAP */
+#map {
   flex:1;
   position:relative;
 }
 
-/* RIGHT PANEL */
+svg {
+  width:100%;
+  height:100vh;
+}
+
+/* PANEL */
 #panel {
   width:360px;
   background:#111827;
@@ -39,7 +45,6 @@ body {
 
 #city {
   color:#9ca3af;
-  margin-bottom:8px;
 }
 
 /* VERDICT */
@@ -82,19 +87,15 @@ body {
 .section-title {
   font-size:12px;
   color:#9ca3af;
-  margin-bottom:6px;
 }
 
 /* BARS */
-.bar-row {
-  margin-bottom:10px;
-}
+.bar-row { margin-bottom:10px; }
 
 .bar-label {
   display:flex;
   justify-content:space-between;
   font-size:12px;
-  margin-bottom:4px;
 }
 
 .bar-bg {
@@ -108,7 +109,8 @@ body {
   border-radius:4px;
 }
 
-.tooltip {
+/* TOOLTIP */
+#tooltip {
   position:absolute;
   background:#111827;
   padding:6px;
@@ -121,19 +123,19 @@ body {
 
 <body>
 
-<div id="graph">
-  <svg width="100%" height="100%"></svg>
-  <div class="tooltip" id="tooltip"></div>
+<div id="map">
+  <svg></svg>
+  <div id="tooltip"></div>
 </div>
 
 <div id="panel">
 
   <div>
     <div id="airport">—</div>
-    <div id="city">Select an airport</div>
+    <div id="city">Click an airport</div>
   </div>
 
-  <div id="verdict">Click an airport</div>
+  <div id="verdict">Select an airport</div>
 
   <div class="stats">
     <div class="stat">
@@ -155,64 +157,95 @@ body {
     <div id="bars"></div>
   </div>
 
-  <div id="explain" style="font-size:13px;color:#d1d5db;"></div>
+  <div id="explain" style="font-size:13px;"></div>
 
 </div>
 
 <script>
 
+// scales
 const color = d3.scaleThreshold()
   .domain([0.15,0.25])
   .range(["#34d399","#f59e0b","#ef4444"]);
 
-let breakdownData={};
+const size = d3.scaleSqrt().range([3,12]);
+
+const svg = d3.select("svg");
+const g = svg.append("g");
+const tooltip = d3.select("#tooltip");
+
+const projection = d3.geoAlbersUsa()
+  .translate([window.innerWidth/2, window.innerHeight/2])
+  .scale(1000);
+
+const path = d3.geoPath(projection);
+
+let breakdownData = {};
 
 Promise.all([
+  d3.json("https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json"),
   fetch("/api/network").then(r=>r.json()),
   fetch("/api/breakdown").then(r=>r.json())
-]).then(([network, breakdown])=>{
-  breakdownData=breakdown;
-  draw(network);
-});
+]).then(([us, network, breakdown]) => {
 
-function draw(data){
+  breakdownData = breakdown;
 
-  const svg=d3.select("svg");
-  const g=svg.append("g");
+  size.domain([
+    d3.min(network.nodes,d=>d.total_flights),
+    d3.max(network.nodes,d=>d.total_flights)
+  ]);
 
-  const sim=d3.forceSimulation(data.nodes)
-    .force("link",d3.forceLink(data.edges).id(d=>d.id))
-    .force("charge",d3.forceManyBody().strength(-60))
-    .force("center",d3.forceCenter(400,300))
-    .alphaDecay(0.05);
-
-  setTimeout(()=>sim.stop(),3000);
-
-  const link=g.selectAll("line")
-    .data(data.edges)
-    .join("line")
+  // STATES
+  g.selectAll("path")
+    .data(topojson.feature(us, us.objects.states).features)
+    .join("path")
+    .attr("d", path)
+    .attr("fill","#1f2937")
     .attr("stroke","#374151");
 
-  const node=g.selectAll("circle")
-    .data(data.nodes)
+  // ROUTES
+  g.selectAll("route")
+    .data(network.edges)
+    .join("path")
+    .attr("d", d => {
+      const s = network.nodes.find(n=>n.id===d.source);
+      const t = network.nodes.find(n=>n.id===d.target);
+      if(!s || !t) return;
+
+      const p1 = projection([s.lon,s.lat]);
+      const p2 = projection([t.lon,t.lat]);
+      if(!p1 || !p2) return;
+
+      return `M${p1[0]},${p1[1]} Q ${(p1[0]+p2[0])/2},${(p1[1]+p2[1])/2 - 30} ${p2[0]},${p2[1]}`;
+    })
+    .attr("stroke","#374151")
+    .attr("stroke-width",0.5)
+    .attr("fill","none")
+    .attr("opacity",0.3);
+
+  // AIRPORTS
+  g.selectAll("circle")
+    .data(network.nodes.filter(d=>d.lat && d.lon))
     .join("circle")
-    .attr("r",6)
-    .attr("fill",d=>color(d.pct_delayed))
+    .attr("cx", d => projection([d.lon,d.lat])[0])
+    .attr("cy", d => projection([d.lon,d.lat])[1])
+    .attr("r", d => size(d.total_flights))
+    .attr("fill", d => color(d.pct_delayed))
+    .attr("opacity",0.9)
+
+    .on("mouseover",(e,d)=>{
+      tooltip.style("opacity",1)
+        .html(`${d.id}<br>${(d.pct_delayed*100).toFixed(1)}% delayed`)
+        .style("left",(e.pageX+10)+"px")
+        .style("top",(e.pageY-20)+"px");
+    })
+
+    .on("mouseout",()=>tooltip.style("opacity",0))
+
     .on("click",(e,d)=>updatePanel(d));
+});
 
-  sim.on("tick",()=>{
-    link
-      .attr("x1",d=>d.source.x)
-      .attr("y1",d=>d.source.y)
-      .attr("x2",d=>d.target.x)
-      .attr("y2",d=>d.target.y);
-
-    node
-      .attr("cx",d=>d.x)
-      .attr("cy",d=>d.y);
-  });
-}
-
+// PANEL
 function updatePanel(d){
 
   document.getElementById("airport").textContent=d.id;
@@ -223,9 +256,9 @@ function updatePanel(d){
   document.getElementById("flights").textContent=
     "~"+Math.round(d.total_flights/1000)+"k";
 
-  document.getElementById("rank").textContent="#"+Math.floor(Math.random()*10+1);
+  document.getElementById("rank").textContent="#—";
 
-  // VERDICT
+  // verdict
   const v=document.getElementById("verdict");
 
   if(d.pct_delayed>0.25){
@@ -249,7 +282,7 @@ function drawBars(code){
   const container=document.getElementById("bars");
   container.innerHTML="";
 
-  const bd=breakdownData[code];
+  const bd = breakdownData[code];
   if(!bd) return;
 
   const labels={
@@ -260,14 +293,13 @@ function drawBars(code){
     security:"Security"
   };
 
-  const data=Object.entries(bd)
+  const data = Object.entries(bd)
     .map(([k,v])=>({key:k,label:labels[k],value:v}))
     .sort((a,b)=>b.value-a.value);
 
-  const max=d3.max(data,d=>d.value);
+  const max = d3.max(data,d=>d.value);
 
   data.forEach(d=>{
-
     const width=(d.value/max)*100;
 
     container.innerHTML+=`
@@ -277,24 +309,20 @@ function drawBars(code){
           <span>${d.value.toFixed(1)} min</span>
         </div>
         <div class="bar-bg">
-          <div class="bar-fill" style="
-            width:${width}%;
-            background:#ef4444;
-          "></div>
+          <div class="bar-fill" style="width:${width}%; background:#ef4444;"></div>
         </div>
       </div>
     `;
   });
 
-  // EXPLANATION
   const top=data[0].key;
 
   const explainMap={
-    carrier:"Airline operations are the main source of delays here.",
-    late_aircraft:"Delays mostly come from planes arriving late.",
-    nas:"Congestion in air traffic is the biggest issue.",
-    weather:"Weather is the dominant cause.",
-    security:"Security delays are the main issue."
+    carrier:"Airline operations are the main cause of delays.",
+    late_aircraft:"Late incoming planes cause delays to ripple.",
+    nas:"Air traffic congestion is the main issue.",
+    weather:"Weather disruptions dominate delays.",
+    security:"Security delays are the primary issue."
   };
 
   document.getElementById("explain").innerHTML=
@@ -302,6 +330,5 @@ function drawBars(code){
 }
 
 </script>
-
 </body>
 </html>
