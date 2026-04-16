@@ -16,36 +16,26 @@ body {
   display:flex;
 }
 
-/* MAP */
 #map { flex:1; position:relative; }
 svg { width:100%; height:100vh; }
 
-/* PANEL */
 #panel {
-  width:380px;
+  width:360px;
   background:#0f172a;
   padding:20px;
   display:flex;
   flex-direction:column;
   gap:16px;
-  border-left:1px solid #1f2937;
 }
 
-/* HEADER */
-#airport { font-size:42px; font-weight:700; }
+#airport { font-size:36px; font-weight:700; }
 #city { color:#94a3b8; }
 
-/* VERDICT */
-#verdict {
-  padding:10px;
-  border-radius:8px;
-  font-size:13px;
-}
+#verdict { padding:10px; border-radius:8px; }
 .high { background:#7f1d1d; }
 .medium { background:#78350f; }
 .low { background:#064e3b; }
 
-/* STATS */
 .stats { display:flex; gap:10px; }
 .stat {
   flex:1;
@@ -54,36 +44,19 @@ svg { width:100%; height:100vh; }
   border-radius:8px;
   text-align:center;
 }
-.stat-value {
-  font-family:"Space Mono", monospace;
-  font-size:18px;
-}
-.stat-label { font-size:11px; color:#94a3b8; }
 
-/* BARS */
-.bar { margin-bottom:10px; }
-.bar-bg {
-  background:#1e293b;
-  height:8px;
-  border-radius:4px;
-}
-.bar-fill {
-  height:8px;
-  border-radius:4px;
-  transition:width 0.6s ease;
-}
+.bar-bg { background:#1e293b; height:8px; border-radius:4px; }
+.bar-fill { height:8px; border-radius:4px; transition:width 0.5s; }
 
-/* TOOLTIP */
 #tooltip {
   position:absolute;
   background:#0f172a;
-  padding:8px;
+  padding:6px;
   border-radius:6px;
   font-size:12px;
   opacity:0;
 }
 
-/* ZOOM */
 .zoom-controls {
   position:absolute;
   top:10px;
@@ -94,11 +67,10 @@ svg { width:100%; height:100vh; }
   border:none;
   color:white;
   padding:6px;
-  cursor:pointer;
   margin-bottom:4px;
+  cursor:pointer;
 }
 
-/* LEGEND */
 #legend {
   position:absolute;
   bottom:10px;
@@ -106,7 +78,6 @@ svg { width:100%; height:100vh; }
   background:#1e293b;
   padding:8px;
   border-radius:6px;
-  font-size:12px;
 }
 </style>
 </head>
@@ -130,7 +101,6 @@ svg { width:100%; height:100vh; }
 </div>
 
 <div id="panel">
-
   <div>
     <div id="airport">—</div>
     <div id="city">Click an airport</div>
@@ -139,24 +109,14 @@ svg { width:100%; height:100vh; }
   <div id="verdict">Select an airport</div>
 
   <div class="stats">
-    <div class="stat">
-      <div class="stat-value" id="avg">—</div>
-      <div class="stat-label">AVG DELAY</div>
-    </div>
-    <div class="stat">
-      <div class="stat-value" id="flights">—</div>
-      <div class="stat-label">FLIGHTS</div>
-    </div>
-    <div class="stat">
-      <div class="stat-value" id="rank">#—</div>
-      <div class="stat-label">RANK</div>
-    </div>
+    <div class="stat"><div id="avg">—</div><div>AVG DELAY</div></div>
+    <div class="stat"><div id="flights">—</div><div>FLIGHTS</div></div>
+    <div class="stat"><div id="rank">#—</div><div>RANK</div></div>
   </div>
 
   <div id="bars"></div>
   <div id="explain"></div>
   <div id="alternatives"></div>
-
 </div>
 
 <script>
@@ -168,15 +128,17 @@ const svg = d3.select("svg");
 const g = svg.append("g");
 const tooltip = d3.select("#tooltip");
 
+// ZOOM
 const zoom = d3.zoom()
   .scaleExtent([1,8])
-  .on("zoom", (e)=>g.attr("transform", e.transform));
+  .on("zoom", e => g.attr("transform", e.transform));
 
 svg.call(zoom);
 
 function zoomIn(){ svg.transition().call(zoom.scaleBy,1.5); }
 function zoomOut(){ svg.transition().call(zoom.scaleBy,0.7); }
 
+// PROJECTION
 const projection = d3.geoAlbersUsa()
   .translate([window.innerWidth/2, window.innerHeight/2])
   .scale(1000);
@@ -215,41 +177,61 @@ Promise.all([
       const s = network.nodes.find(n=>n.id===d.source);
       const t = network.nodes.find(n=>n.id===d.target);
       if(!s || !t) return;
+
       const p1 = projection([s.lon,s.lat]);
       const p2 = projection([t.lon,t.lat]);
+
       if(!p1 || !p2) return;
+
       return `M${p1[0]},${p1[1]} L${p2[0]},${p2[1]}`;
     });
 
-  // AIRPORTS
-  const nodes = g.selectAll("circle")
-    .data(network.nodes)
+  // FILTER VALID NODES (FIX)
+  const validNodes = network.nodes.filter(d => {
+    if(!d.lat || !d.lon) return false;
+    const p = projection([d.lon,d.lat]);
+    return p !== null;
+  });
+
+  // AIRPORTS (FIXED)
+  g.selectAll("circle")
+    .data(validNodes)
     .join("circle")
-    .attr("cx", d=>projection([d.lon,d.lat])[0])
-    .attr("cy", d=>projection([d.lon,d.lat])[1])
+    .attr("cx", d => projection([d.lon,d.lat])[0])
+    .attr("cy", d => projection([d.lon,d.lat])[1])
     .attr("r",5)
     .attr("fill", d=>color(d.pct_delayed))
+    .attr("stroke","#0b0f1a")
 
     .on("mouseover",(e,d)=>{
       tooltip.style("opacity",1)
-        .html(`<b>${d.id}</b><br>${d.city}<br>${d.total_flights} flights`)
+        .html(`<b>${d.id}</b><br>${d.city || ""}<br>${d.total_flights} flights`)
         .style("left",(e.pageX+10)+"px")
         .style("top",(e.pageY-20)+"px");
     })
+
     .on("mouseout",()=>tooltip.style("opacity",0))
 
     .on("click",(e,d)=>{
       updatePanel(d);
-      highlightRoutes(d, routes);
+      highlightRoutes(d);
     });
 });
 
-function highlightRoutes(selected, routes){
-  routes.attr("opacity", d =>
-    d.source === selected.id || d.target === selected.id ? 1 : 0.05
-  );
+// ROUTE HIGHLIGHT FIX
+function highlightRoutes(selected){
+  g.selectAll("path")
+    .attr("opacity", d => {
+      if (!d.source) return 0.2;
+
+      const s = typeof d.source === "object" ? d.source.id : d.source;
+      const t = typeof d.target === "object" ? d.target.id : d.target;
+
+      return (s === selected.id || t === selected.id) ? 1 : 0.05;
+    });
 }
 
+// PANEL
 function updatePanel(d){
 
   document.getElementById("airport").textContent = d.id;
@@ -267,7 +249,7 @@ function updatePanel(d){
   const rank = sorted.findIndex(n=>n.id===d.id)+1;
   document.getElementById("rank").textContent = "#"+rank;
 
-  const avg = d3.mean(networkData.nodes, n=>n.pct_delayed);
+  const avg = d3.mean(networkData.nodes,n=>n.pct_delayed);
   const diff = ((d.pct_delayed-avg)*100).toFixed(1);
 
   const v = document.getElementById("verdict");
@@ -313,7 +295,7 @@ function drawBars(code){
     const w = (d.val/max)*100;
 
     container.innerHTML += `
-      <div class="bar">
+      <div>
         <div>${labels[d.key]}</div>
         <div class="bar-bg">
           <div class="bar-fill" style="width:${w}%; background:#3b82f6;"></div>
@@ -323,11 +305,11 @@ function drawBars(code){
   });
 
   const explainMap = {
-    carrier:"Airline operations are the main cause of delays.",
-    late_aircraft:"Late incoming planes create ripple delays.",
-    nas:"Air traffic congestion is the main issue.",
-    weather:"Weather disruptions dominate delays.",
-    security:"Security delays are the main issue."
+    carrier:"Airline operations are the main cause.",
+    late_aircraft:"Late planes cause ripple delays.",
+    nas:"Air traffic congestion dominates.",
+    weather:"Weather disruptions dominate.",
+    security:"Security delays dominate."
   };
 
   document.getElementById("explain").innerHTML =
@@ -335,7 +317,6 @@ function drawBars(code){
 }
 
 function showAlternatives(d){
-
   const better = networkData.nodes
     .filter(n=>n.id!==d.id)
     .sort((a,b)=>a.pct_delayed-b.pct_delayed)
