@@ -9,3 +9,4 @@ Outputs/*.csv
 __pycache__/
 *.pyc
 .venv/
+.vscode/

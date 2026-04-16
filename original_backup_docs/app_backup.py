@@ -44,18 +44,6 @@ except Exception as e:
 
 print("Ready.\n")
 
-
-def _find_route(source_code: str, target_code: str):
-    source_code = source_code.upper()
-    target_code = target_code.upper()
-
-    for edge in EDGES:
-        edge_source = edge.get("source")
-        edge_target = edge.get("target")
-        if edge_source == source_code and edge_target == target_code:
-            return edge
-    return None
-
 # ── Routes ────────────────────────────────────────────────────────────────────
 
 @app.route("/")
@@ -99,18 +87,6 @@ def propagation(code):
         "hub":       code,
         "connected": connected
     })
-
-
-@app.route("/api/route/<source_code>/<target_code>")
-def route_detail(source_code, target_code):
-    """Returns one route record for hover/detail usage."""
-    route = _find_route(source_code, target_code)
-    if route is None:
-        return jsonify({
-            "error": f"Route {source_code.upper()} -> {target_code.upper()} not found"
-        }), 404
-
-    return jsonify(route)
 
 
 @app.route("/api/predict", methods=["POST"])

@@ -8,29 +8,11 @@
 <script src="https://unpkg.com/topojson@3"></script>
 
 <style>
-
-:root {
-  --bg: #d8e2eb;
-  --panel: rgba(255, 255, 255, 0.86);
-  --panel-border: #cdd7e3;
-  --text: #102033;
-  --muted: #5f7186;
-  --route: #7f94aa;
-  --route-active: #4b6580;
-  --state-fill: #eef3f8;
-  --state-stroke: #c7d2df;
-  --card: #f6f9fc;
-  --card-border: #d7e0ea;
-  --tooltip-bg: rgba(255, 255, 255, 0.97);
-  --tooltip-border: #c7d2df;
-  --legend-bg: rgba(255, 255, 255, 0.82);
-}
-
 body {
   margin:0;
   font-family:Inter, sans-serif;
-  background: var(--bg);
-  color: var(--text);
+  background:#0b0f1a;
+  color:#e5e7eb;
   display:flex;
 }
 
@@ -39,47 +21,40 @@ svg { width:100%; height:100vh; }
 
 #panel {
   width:360px;
-  background: var(--panel);
-  border-left: 1px solid var(--panel-border);
+  background:#0f172a;
   padding:20px;
   display:flex;
   flex-direction:column;
   gap:16px;
-  backdrop-filter: blur(12px);
 }
 
 #airport { font-size:36px; font-weight:700; }
-#city { color: var(--muted); }
+#city { color:#94a3b8; }
 
 #verdict { padding:10px; border-radius:8px; }
-.high { background:#fde2e2; color:#991b1b; border:1px solid #f8b4b4; }
-.medium { background:#fff3d6; color:#92400e; border:1px solid #f3d08b; }
-.low { background:#d9f8ea; color:#065f46; border:1px solid #a7e4c4; }
+.high { background:#7f1d1d; }
+.medium { background:#78350f; }
+.low { background:#064e3b; }
 
 .stats { display:flex; gap:10px; }
 .stat {
   flex:1;
-  background: var(--card);
-  border: 1px solid var(--card-border);
+  background:#1e293b;
   padding:10px;
   border-radius:8px;
   text-align:center;
 }
 
-.bar-bg { background:#e6edf4; height:8px; border-radius:4px; overflow:hidden; }
-.bar-fill { height:8px; border-radius:4px; transition:width 0.5s; background:#5b7c99 !important; }
+.bar-bg { background:#1e293b; height:8px; border-radius:4px; }
+.bar-fill { height:8px; border-radius:4px; transition:width 0.5s; }
 
 #tooltip {
   position:absolute;
-  background: var(--tooltip-bg);
-  border: 1px solid var(--tooltip-border);
-  color: var(--text);
-  padding:8px 10px;
-  border-radius:10px;
+  background:#0f172a;
+  padding:6px;
+  border-radius:6px;
   font-size:12px;
-  box-shadow: 0 12px 28px rgba(16, 32, 51, 0.14);
   opacity:0;
-  pointer-events:none;
 }
 
 .zoom-controls {
@@ -88,25 +63,21 @@ svg { width:100%; height:100vh; }
   left:10px;
 }
 .zoom-controls button {
-  background: rgba(255,255,255,0.92);
-  border:1px solid #c7d2df;
-  color: var(--text);
+  background:#1e293b;
+  border:none;
+  color:white;
   padding:6px;
   margin-bottom:4px;
   cursor:pointer;
-  border-radius:6px;
 }
 
 #legend {
   position:absolute;
   bottom:10px;
   left:10px;
-  background: var(--legend-bg);
-  color: var(--text);
-  border: 1px solid #d7e0ea;
+  background:#1e293b;
   padding:8px;
   border-radius:6px;
-  backdrop-filter: blur(10px);
 }
 </style>
 </head>
@@ -123,9 +94,9 @@ svg { width:100%; height:100vh; }
   </div>
 
   <div id="legend">
-    <div><span style="color:#22c55e">●</span> Low delay</div>
-    <div><span style="color:#f59e0b">●</span> Medium delay</div>
-    <div><span style="color:#ef4444">●</span> High delay</div>
+    <div><span style="color:#34d399">●</span> Low</div>
+    <div><span style="color:#f59e0b">●</span> Medium</div>
+    <div><span style="color:#ef4444">●</span> High</div>
   </div>
 </div>
 
@@ -152,6 +123,7 @@ svg { width:100%; height:100vh; }
 
 let networkData = {};
 let breakdownData = {};
+
 const svg = d3.select("svg");
 const g = svg.append("g");
 const tooltip = d3.select("#tooltip");
@@ -175,7 +147,7 @@ const path = d3.geoPath(projection);
 
 const color = d3.scaleThreshold()
   .domain([0.15,0.25])
-  .range(["#2ecc71","#f4b942","#e25555"]);
+  .range(["#34d399","#f59e0b","#ef4444"]);
 
 Promise.all([
   d3.json("https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json"),
@@ -191,19 +163,16 @@ Promise.all([
     .data(topojson.feature(us, us.objects.states).features)
     .join("path")
     .attr("d", path)
-    .attr("fill","var(--state-fill)")
-    .attr("stroke","var(--state-stroke)");
+    .attr("fill","#1e293b")
+    .attr("stroke","#334155");
 
   // ROUTES
-  const routes = g.selectAll("path.route")
+  const routes = g.selectAll("route")
     .data(network.edges)
     .join("path")
-    .attr("class", "route")
-    .attr("stroke","var(--route)")
-    .attr("stroke-linecap", "round")
+    .attr("stroke","#334155")
     .attr("fill","none")
-    .attr("opacity",0.16)
-    .attr("stroke-width", d => Math.max(1, Math.min(3.5, Math.log10((d.flight_count || 1)))))
+    .attr("opacity",0.2)
     .attr("d", d => {
       const s = network.nodes.find(n=>n.id===d.source);
       const t = network.nodes.find(n=>n.id===d.target);
@@ -215,39 +184,6 @@ Promise.all([
       if(!p1 || !p2) return;
 
       return `M${p1[0]},${p1[1]} L${p2[0]},${p2[1]}`;
-    })
-
-    .on("mouseover", (e, d) => {
-      const src = typeof d.source === "object" ? d.source.id : d.source;
-      const dst = typeof d.target === "object" ? d.target.id : d.target;
-
-      tooltip
-        .style("opacity", 1)
-        .html(`
-          <b>${src} → ${dst}</b><br>
-          flights: ${d.flight_count ?? "n/a"}<br>
-          avg delay: ${d.avg_arr_delay ?? "n/a"}m<br>
-          delay rate: ${d.pct_delayed != null ? (d.pct_delayed * 100).toFixed(1) + "%" : "n/a"}
-        `)
-        .style("left", (e.pageX + 12) + "px")
-        .style("top", (e.pageY - 18) + "px");
-
-      routes.attr("opacity", route => {
-        const routeSource = typeof route.source === "object" ? route.source.id : route.source;
-        const routeTarget = typeof route.target === "object" ? route.target.id : route.target;
-        return (routeSource === src && routeTarget === dst) ? 1 : 0.05;
-      });
-    })
-
-    .on("mousemove", (e) => {
-      tooltip
-        .style("left", (e.pageX + 12) + "px")
-        .style("top", (e.pageY - 18) + "px");
-    })
-
-    .on("mouseout", () => {
-      tooltip.style("opacity", 0);
-      routes.attr("opacity", 0.16);
     });
 
   // FILTER VALID NODES (FIX)
@@ -265,13 +201,11 @@ Promise.all([
     .attr("cy", d => projection([d.lon,d.lat])[1])
     .attr("r",5)
     .attr("fill", d=>color(d.pct_delayed))
-    .attr("stroke","#ffffff")
-    .attr("stroke-width",1.2)
+    .attr("stroke","#0b0f1a")
 
     .on("mouseover",(e,d)=>{
-      const flightCount = d.total_flights?.toLocaleString?.() ?? d.total_flights;
       tooltip.style("opacity",1)
-        .html(`<b>${d.id}</b><br>${d.city || ""}<br>${flightCount} flights`)
+        .html(`<b>${d.id}</b><br>${d.city || ""}<br>${d.total_flights} flights`)
         .style("left",(e.pageX+10)+"px")
         .style("top",(e.pageY-20)+"px");
     })
@@ -286,14 +220,14 @@ Promise.all([
 
 // ROUTE HIGHLIGHT FIX
 function highlightRoutes(selected){
-  g.selectAll("path.route")
+  g.selectAll("path")
     .attr("opacity", d => {
-      if (!d.source) return 0.16;
+      if (!d.source) return 0.2;
 
       const s = typeof d.source === "object" ? d.source.id : d.source;
       const t = typeof d.target === "object" ? d.target.id : d.target;
 
-      return (s === selected.id || t === selected.id) ? 1 : 0.045;
+      return (s === selected.id || t === selected.id) ? 1 : 0.05;
     });
 }
 
