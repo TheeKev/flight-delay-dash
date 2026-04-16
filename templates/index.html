@@ -163,13 +163,18 @@ svg {
 
 <script>
 
-// scales
+// ===== GLOBAL DATA =====
+let breakdownData = {};
+let networkData = {};
+
+// ===== SCALES =====
 const color = d3.scaleThreshold()
   .domain([0.15,0.25])
   .range(["#34d399","#f59e0b","#ef4444"]);
 
 const size = d3.scaleSqrt().range([3,12]);
 
+// ===== SVG SETUP =====
 const svg = d3.select("svg");
 const g = svg.append("g");
 const tooltip = d3.select("#tooltip");
@@ -180,20 +185,26 @@ const projection = d3.geoAlbersUsa()
 
 const path = d3.geoPath(projection);
 
-let breakdownData = {};
-
+// ===== LOAD DATA =====
 Promise.all([
   d3.json("https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json"),
   fetch("/api/network").then(r=>r.json()),
   fetch("/api/breakdown").then(r=>r.json())
 ]).then(([us, network, breakdown]) => {
 
+  networkData = network;
   breakdownData = breakdown;
 
   size.domain([
     d3.min(network.nodes,d=>d.total_flights),
     d3.max(network.nodes,d=>d.total_flights)
   ]);
+
+  drawMap(us, network);
+});
+
+// ===== DRAW MAP =====
+function drawMap(us, network){
 
   // STATES
   g.selectAll("path")
@@ -208,8 +219,13 @@ Promise.all([
     .data(network.edges)
     .join("path")
     .attr("d", d => {
-      const s = network.nodes.find(n=>n.id===d.source);
-      const t = network.nodes.find(n=>n.id===d.target);
+
+      const source = typeof d.source === "object" ? d.source.id : d.source;
+      const target = typeof d.target === "object" ? d.target.id : d.target;
+
+      const s = network.nodes.find(n=>n.id===source);
+      const t = network.nodes.find(n=>n.id===target);
+
       if(!s || !t) return;
 
       const p1 = projection([s.lon,s.lat]);
@@ -235,7 +251,7 @@ Promise.all([
 
     .on("mouseover",(e,d)=>{
       tooltip.style("opacity",1)
-        .html(`${d.id}<br>${(d.pct_delayed*100).toFixed(1)}% delayed`)
+        .html(`<strong>${d.id}</strong><br>${(d.pct_delayed*100).toFixed(1)}% delayed`)
         .style("left",(e.pageX+10)+"px")
         .style("top",(e.pageY-20)+"px");
     })
@@ -243,49 +259,58 @@ Promise.all([
     .on("mouseout",()=>tooltip.style("opacity",0))
 
     .on("click",(e,d)=>updatePanel(d));
-});
+}
 
-// PANEL
+// ===== PANEL UPDATE =====
 function updatePanel(d){
 
-  document.getElementById("airport").textContent=d.id;
+  document.getElementById("airport").textContent = d.id;
 
-  document.getElementById("avg").textContent=
+  document.getElementById("city").textContent =
+    d.city || "Unknown location";
+
+  document.getElementById("avg").textContent =
     d.avg_arr_delay.toFixed(1)+" min";
 
-  document.getElementById("flights").textContent=
+  document.getElementById("flights").textContent =
     "~"+Math.round(d.total_flights/1000)+"k";
 
-  document.getElementById("rank").textContent="#—";
+  // ===== REAL RANK =====
+  const sorted = [...networkData.nodes]
+    .sort((a,b)=>b.pct_delayed - a.pct_delayed);
 
-  // verdict
-  const v=document.getElementById("verdict");
+  const rank = sorted.findIndex(n => n.id === d.id) + 1;
+  document.getElementById("rank").textContent = "#" + rank;
 
-  if(d.pct_delayed>0.25){
-    v.className="high";
-    v.innerHTML=`⚠ High delay airport — ${(d.pct_delayed*100).toFixed(1)}% late`;
+  // ===== VERDICT =====
+  const v = document.getElementById("verdict");
+
+  if(d.pct_delayed > 0.25){
+    v.className = "high";
+    v.innerHTML = `⚠ High delay airport — ${(d.pct_delayed*100).toFixed(1)}% late`;
   }
-  else if(d.pct_delayed<0.15){
-    v.className="low";
-    v.innerHTML=`✓ Low delay airport — ${(d.pct_delayed*100).toFixed(1)}% late`;
+  else if(d.pct_delayed < 0.15){
+    v.className = "low";
+    v.innerHTML = `✓ Low delay airport — ${(d.pct_delayed*100).toFixed(1)}% late`;
   }
   else{
-    v.className="medium";
-    v.innerHTML=`Moderate delays — ${(d.pct_delayed*100).toFixed(1)}% late`;
+    v.className = "medium";
+    v.innerHTML = `Moderate delays — ${(d.pct_delayed*100).toFixed(1)}% late`;
   }
 
   drawBars(d.id);
 }
 
+// ===== BAR CHART =====
 function drawBars(code){
 
-  const container=document.getElementById("bars");
-  container.innerHTML="";
+  const container = document.getElementById("bars");
+  container.innerHTML = "";
 
   const bd = breakdownData[code];
   if(!bd) return;
 
-  const labels={
+  const labels = {
     carrier:"Carrier ops",
     late_aircraft:"Late aircraft",
     nas:"Air traffic",
@@ -300,9 +325,9 @@ function drawBars(code){
   const max = d3.max(data,d=>d.value);
 
   data.forEach(d=>{
-    const width=(d.value/max)*100;
+    const width = (d.value/max)*100;
 
-    container.innerHTML+=`
+    container.innerHTML += `
       <div class="bar-row">
         <div class="bar-label">
           <span>${d.label}</span>
@@ -315,9 +340,10 @@ function drawBars(code){
     `;
   });
 
-  const top=data[0].key;
+  // ===== EXPLANATION =====
+  const top = data[0].key;
 
-  const explainMap={
+  const explainMap = {
     carrier:"Airline operations are the main cause of delays.",
     late_aircraft:"Late incoming planes cause delays to ripple.",
     nas:"Air traffic congestion is the main issue.",
@@ -325,10 +351,11 @@ function drawBars(code){
     security:"Security delays are the primary issue."
   };
 
-  document.getElementById("explain").innerHTML=
+  document.getElementById("explain").innerHTML =
     `<strong>In plain terms:</strong> ${explainMap[top]}`;
 }
 
 </script>
+
 </body>
 </html>
