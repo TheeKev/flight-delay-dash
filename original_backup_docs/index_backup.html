@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Flight Delay Explorer</title>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://unpkg.com/topojson@3"></script>
+
+<style>
+body {
+  margin:0;
+  font-family:Inter, sans-serif;
+  background:#0b0f1a;
+  color:#e5e7eb;
+  display:flex;
+}
+
+#map { flex:1; position:relative; }
+svg { width:100%; height:100vh; }
+
+#panel {
+  width:360px;
+  background:#0f172a;
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+#airport { font-size:36px; font-weight:700; }
+#city { color:#94a3b8; }
+
+#verdict { padding:10px; border-radius:8px; }
+.high { background:#7f1d1d; }
+.medium { background:#78350f; }
+.low { background:#064e3b; }
+
+.stats { display:flex; gap:10px; }
+.stat {
+  flex:1;
+  background:#1e293b;
+  padding:10px;
+  border-radius:8px;
+  text-align:center;
+}
+
+.bar-bg { background:#1e293b; height:8px; border-radius:4px; }
+.bar-fill { height:8px; border-radius:4px; transition:width 0.5s; }
+
+#tooltip {
+  position:absolute;
+  background:#0f172a;
+  padding:6px;
+  border-radius:6px;
+  font-size:12px;
+  opacity:0;
+}
+
+.zoom-controls {
+  position:absolute;
+  top:10px;
+  left:10px;
+}
+.zoom-controls button {
+  background:#1e293b;
+  border:none;
+  color:white;
+  padding:6px;
+  margin-bottom:4px;
+  cursor:pointer;
+}
+
+#legend {
+  position:absolute;
+  bottom:10px;
+  left:10px;
+  background:#1e293b;
+  padding:8px;
+  border-radius:6px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="map">
+  <svg></svg>
+  <div id="tooltip"></div>
+
+  <div class="zoom-controls">
+    <button onclick="zoomIn()">+</button>
+    <button onclick="zoomOut()">−</button>
+  </div>
+
+  <div id="legend">
+    <div><span style="color:#34d399">●</span> Low</div>
+    <div><span style="color:#f59e0b">●</span> Medium</div>
+    <div><span style="color:#ef4444">●</span> High</div>
+  </div>
+</div>
+
+<div id="panel">
+  <div>
+    <div id="airport">—</div>
+    <div id="city">Click an airport</div>
+  </div>
+
+  <div id="verdict">Select an airport</div>
+
+  <div class="stats">
+    <div class="stat"><div id="avg">—</div><div>AVG DELAY</div></div>
+    <div class="stat"><div id="flights">—</div><div>FLIGHTS</div></div>
+    <div class="stat"><div id="rank">#—</div><div>RANK</div></div>
+  </div>
+
+  <div id="bars"></div>
+  <div id="explain"></div>
+  <div id="alternatives"></div>
+</div>
+
+<script>
+
+let networkData = {};
+let breakdownData = {};
+
+const svg = d3.select("svg");
+const g = svg.append("g");
+const tooltip = d3.select("#tooltip");
+
+// ZOOM
+const zoom = d3.zoom()
+  .scaleExtent([1,8])
+  .on("zoom", e => g.attr("transform", e.transform));
+
+svg.call(zoom);
+
+function zoomIn(){ svg.transition().call(zoom.scaleBy,1.5); }
+function zoomOut(){ svg.transition().call(zoom.scaleBy,0.7); }
+
+// PROJECTION
+const projection = d3.geoAlbersUsa()
+  .translate([window.innerWidth/2, window.innerHeight/2])
+  .scale(1000);
+
+const path = d3.geoPath(projection);
+
+const color = d3.scaleThreshold()
+  .domain([0.15,0.25])
+  .range(["#34d399","#f59e0b","#ef4444"]);
+
+Promise.all([
+  d3.json("https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json"),
+  fetch("/api/network").then(r=>r.json()),
+  fetch("/api/breakdown").then(r=>r.json())
+]).then(([us, network, breakdown]) => {
+
+  networkData = network;
+  breakdownData = breakdown;
+
+  // STATES
+  g.selectAll("path")
+    .data(topojson.feature(us, us.objects.states).features)
+    .join("path")
+    .attr("d", path)
+    .attr("fill","#1e293b")
+    .attr("stroke","#334155");
+
+  // ROUTES
+  const routes = g.selectAll("route")
+    .data(network.edges)
+    .join("path")
+    .attr("stroke","#334155")
+    .attr("fill","none")
+    .attr("opacity",0.2)
+    .attr("d", d => {
+      const s = network.nodes.find(n=>n.id===d.source);
+      const t = network.nodes.find(n=>n.id===d.target);
+      if(!s || !t) return;
+
+      const p1 = projection([s.lon,s.lat]);
+      const p2 = projection([t.lon,t.lat]);
+
+      if(!p1 || !p2) return;
+
+      return `M${p1[0]},${p1[1]} L${p2[0]},${p2[1]}`;
+    });
+
+  // FILTER VALID NODES (FIX)
+  const validNodes = network.nodes.filter(d => {
+    if(!d.lat || !d.lon) return false;
+    const p = projection([d.lon,d.lat]);
+    return p !== null;
+  });
+
+  // AIRPORTS (FIXED)
+  g.selectAll("circle")
+    .data(validNodes)
+    .join("circle")
+    .attr("cx", d => projection([d.lon,d.lat])[0])
+    .attr("cy", d => projection([d.lon,d.lat])[1])
+    .attr("r",5)
+    .attr("fill", d=>color(d.pct_delayed))
+    .attr("stroke","#0b0f1a")
+
+    .on("mouseover",(e,d)=>{
+      tooltip.style("opacity",1)
+        .html(`<b>${d.id}</b><br>${d.city || ""}<br>${d.total_flights} flights`)
+        .style("left",(e.pageX+10)+"px")
+        .style("top",(e.pageY-20)+"px");
+    })
+
+    .on("mouseout",()=>tooltip.style("opacity",0))
+
+    .on("click",(e,d)=>{
+      updatePanel(d);
+      highlightRoutes(d);
+    });
+});
+
+// ROUTE HIGHLIGHT FIX
+function highlightRoutes(selected){
+  g.selectAll("path")
+    .attr("opacity", d => {
+      if (!d.source) return 0.2;
+
+      const s = typeof d.source === "object" ? d.source.id : d.source;
+      const t = typeof d.target === "object" ? d.target.id : d.target;
+
+      return (s === selected.id || t === selected.id) ? 1 : 0.05;
+    });
+}
+
+// PANEL
+function updatePanel(d){
+
+  document.getElementById("airport").textContent = d.id;
+  document.getElementById("city").textContent = d.city || "Unknown";
+
+  document.getElementById("avg").textContent =
+    d.avg_arr_delay.toFixed(1)+"m";
+
+  document.getElementById("flights").textContent =
+    d.total_flights;
+
+  const sorted = [...networkData.nodes]
+    .sort((a,b)=>b.pct_delayed-a.pct_delayed);
+
+  const rank = sorted.findIndex(n=>n.id===d.id)+1;
+  document.getElementById("rank").textContent = "#"+rank;
+
+  const avg = d3.mean(networkData.nodes,n=>n.pct_delayed);
+  const diff = ((d.pct_delayed-avg)*100).toFixed(1);
+
+  const v = document.getElementById("verdict");
+
+  if(d.pct_delayed>0.25){
+    v.className="high";
+    v.innerHTML=`High delays (${diff}% vs avg)`;
+  } else if(d.pct_delayed<0.15){
+    v.className="low";
+    v.innerHTML=`Low delays (${diff}% vs avg)`;
+  } else {
+    v.className="medium";
+    v.innerHTML=`Moderate delays (${diff}% vs avg)`;
+  }
+
+  drawBars(d.id);
+  showAlternatives(d);
+}
+
+function drawBars(code){
+
+  const bd = breakdownData[code];
+  if(!bd) return;
+
+  const container = document.getElementById("bars");
+  container.innerHTML="";
+
+  const labels = {
+    carrier:"Airline ops",
+    late_aircraft:"Late aircraft",
+    nas:"Air traffic",
+    weather:"Weather",
+    security:"Security"
+  };
+
+  const data = Object.entries(bd)
+    .map(([k,v])=>({key:k,val:v}))
+    .sort((a,b)=>b.val-a.val);
+
+  const max = d3.max(data,d=>d.val);
+
+  data.forEach(d=>{
+    const w = (d.val/max)*100;
+
+    container.innerHTML += `
+      <div>
+        <div>${labels[d.key]}</div>
+        <div class="bar-bg">
+          <div class="bar-fill" style="width:${w}%; background:#3b82f6;"></div>
+        </div>
+      </div>
+    `;
+  });
+
+  const explainMap = {
+    carrier:"Airline operations are the main cause.",
+    late_aircraft:"Late planes cause ripple delays.",
+    nas:"Air traffic congestion dominates.",
+    weather:"Weather disruptions dominate.",
+    security:"Security delays dominate."
+  };
+
+  document.getElementById("explain").innerHTML =
+    `<b>Why delays happen:</b> ${explainMap[data[0].key]}`;
+}
+
+function showAlternatives(d){
+  const better = networkData.nodes
+    .filter(n=>n.id!==d.id)
+    .sort((a,b)=>a.pct_delayed-b.pct_delayed)
+    .slice(0,3);
+
+  document.getElementById("alternatives").innerHTML =
+    "<b>Better alternatives:</b><br>" +
+    better.map(n=>n.id).join(", ");
+}
+
+</script>
+
+</body>
+</html>
