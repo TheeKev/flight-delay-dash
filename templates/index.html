@@ -108,6 +108,52 @@ svg { width:100%; height:100vh; }
   border-radius:6px;
   backdrop-filter: blur(10px);
 }
+
+.route-checker {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.route-checker h3 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.route-checker label {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.route-checker select,
+.route-checker button {
+  width: 100%;
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  padding: 8px;
+  background: #ffffff;
+  color: var(--text);
+}
+
+.route-checker button {
+  cursor: pointer;
+  font-weight: 600;
+  background: #edf3f9;
+}
+
+.route-result {
+  font-size: 12px;
+  color: var(--text);
+  line-height: 1.45;
+}
+
+.route-result.muted {
+  color: var(--muted);
+}
 </style>
 </head>
 
@@ -146,12 +192,27 @@ svg { width:100%; height:100vh; }
   <div id="bars"></div>
   <div id="explain"></div>
   <div id="alternatives"></div>
+
+  <div id="route-checker" class="route-checker">
+    <h3>Route Checker</h3>
+    <label for="route-src">Origin</label>
+    <select id="route-src"></select>
+
+    <label for="route-dst">Destination</label>
+    <select id="route-dst"></select>
+
+    <button id="route-check-btn" type="button">Check route</button>
+    <div id="route-result" class="route-result muted">Choose airports to view route details.</div>
+  </div>
 </div>
 
 <script>
 
 let networkData = {};
 let breakdownData = {};
+let destinationsBySource = new Map();
+let routeSelection = null;
+let selectedRoute = null;
 const svg = d3.select("svg");
 const g = svg.append("g");
 const tooltip = d3.select("#tooltip");
@@ -185,6 +246,7 @@ Promise.all([
 
   networkData = network;
   breakdownData = breakdown;
+  initRouteChecker(network);
 
   // STATES
   g.selectAll("path")
@@ -247,8 +309,14 @@ Promise.all([
 
     .on("mouseout", () => {
       tooltip.style("opacity", 0);
-      routes.attr("opacity", 0.16);
+      if (selectedRoute) {
+        applySelectedRouteHighlight();
+      } else {
+        routes.attr("opacity", 0.16).attr("stroke", "var(--route)");
+      }
     });
+
+  routeSelection = routes;
 
   // FILTER VALID NODES (FIX)
   const validNodes = network.nodes.filter(d => {
@@ -283,6 +351,142 @@ Promise.all([
       highlightRoutes(d);
     });
 });
+
+function initRouteChecker(network) {
+  const srcSelect = document.getElementById("route-src");
+  const dstSelect = document.getElementById("route-dst");
+  const checkBtn = document.getElementById("route-check-btn");
+
+  const airportCodes = [...network.nodes]
+    .map(n => n.id)
+    .filter(Boolean)
+    .sort((a, b) => a.localeCompare(b));
+
+  destinationsBySource = new Map();
+  network.edges.forEach(edge => {
+    const source = typeof edge.source === "object" ? edge.source.id : edge.source;
+    const target = typeof edge.target === "object" ? edge.target.id : edge.target;
+    if (!source || !target) return;
+
+    if (!destinationsBySource.has(source)) {
+      destinationsBySource.set(source, new Set());
+    }
+    destinationsBySource.get(source).add(target);
+  });
+
+  srcSelect.innerHTML = airportCodes
+    .map(code => `<option value="${code}">${code}</option>`)
+    .join("");
+
+  const populateDestinations = (sourceCode) => {
+    const targets = [...(destinationsBySource.get(sourceCode) || new Set())]
+      .sort((a, b) => a.localeCompare(b));
+
+    if (targets.length === 0) {
+      dstSelect.innerHTML = "<option value=''>No outgoing routes</option>";
+      dstSelect.disabled = true;
+      checkBtn.disabled = true;
+      return;
+    }
+
+    dstSelect.disabled = false;
+    checkBtn.disabled = false;
+    dstSelect.innerHTML = targets
+      .map(code => `<option value="${code}">${code}</option>`)
+      .join("");
+  };
+
+  srcSelect.addEventListener("change", () => {
+    populateDestinations(srcSelect.value);
+    setRouteResult("Choose a destination and click Check route.", true);
+  });
+
+  checkBtn.addEventListener("click", async () => {
+    await checkRoute(srcSelect.value, dstSelect.value);
+  });
+
+  if (airportCodes.length > 0) {
+    srcSelect.value = airportCodes[0];
+    populateDestinations(srcSelect.value);
+  }
+}
+
+function setRouteResult(message, muted = false) {
+  const routeResult = document.getElementById("route-result");
+  routeResult.className = muted ? "route-result muted" : "route-result";
+  routeResult.innerHTML = message;
+}
+
+async function checkRoute(sourceCode, targetCode) {
+  if (!sourceCode || !targetCode) {
+    selectedRoute = null;
+    clearRouteHighlight();
+    setRouteResult("Select both origin and destination.", true);
+    return;
+  }
+
+  setRouteResult("Loading route details...", true);
+
+  try {
+    const response = await fetch(`/api/route/${encodeURIComponent(sourceCode)}/${encodeURIComponent(targetCode)}`);
+    const payload = await response.json();
+
+    if (!response.ok) {
+      selectedRoute = null;
+      clearRouteHighlight();
+      setRouteResult(payload.error || "Route lookup failed.", true);
+      return;
+    }
+
+    selectedRoute = {
+      source: sourceCode,
+      target: targetCode
+    };
+    applySelectedRouteHighlight();
+
+    const flightCount = payload.flight_count?.toLocaleString?.() ?? payload.flight_count ?? "n/a";
+    const avgDelay = payload.avg_arr_delay != null ? `${payload.avg_arr_delay}m` : "n/a";
+    const delayRate = payload.pct_delayed != null
+      ? `${(payload.pct_delayed * 100).toFixed(1)}%`
+      : "n/a";
+
+    setRouteResult(
+      `<b>${sourceCode} -> ${targetCode}</b><br>` +
+      `Flights: ${flightCount}<br>` +
+      `Avg delay: ${avgDelay}<br>` +
+      `Delay rate: ${delayRate}`
+    );
+  } catch (err) {
+    selectedRoute = null;
+    clearRouteHighlight();
+    setRouteResult("Could not reach route API.", true);
+  }
+}
+
+function applySelectedRouteHighlight() {
+  if (!routeSelection || !selectedRoute) return;
+
+  routeSelection
+    .attr("opacity", route => {
+      const routeSource = typeof route.source === "object" ? route.source.id : route.source;
+      const routeTarget = typeof route.target === "object" ? route.target.id : route.target;
+      return (routeSource === selectedRoute.source && routeTarget === selectedRoute.target) ? 1 : 0.05;
+    })
+    .attr("stroke", route => {
+      const routeSource = typeof route.source === "object" ? route.source.id : route.source;
+      const routeTarget = typeof route.target === "object" ? route.target.id : route.target;
+      return (routeSource === selectedRoute.source && routeTarget === selectedRoute.target)
+        ? "var(--route-active)"
+        : "var(--route)";
+    });
+}
+
+function clearRouteHighlight() {
+  if (!routeSelection) return;
+  routeSelection
+    .attr("opacity", 0.16)
+    .attr("stroke", "var(--route)");
+}
 
 // ROUTE HIGHLIGHT FIX
 function highlightRoutes(selected){

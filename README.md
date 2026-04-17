@@ -67,6 +67,14 @@ If the model artifact does not load, it is usually due to a version mismatch bet
 - Hovering a flight line now shows `SRC -> DST`, flight count, average delay, and delay rate.
 - Added route lookup endpoint in `app.py`: `GET /api/route/<source_code>/<target_code>`.
 
+### 3) dev_v2 Route Checker (dropdown + map highlight)
+
+- Added a Route Checker section to `templates/index.html` with source/destination dropdowns and a check button.
+- Route Checker calls existing backend endpoint `GET /api/route/<source_code>/<target_code>` and displays route stats.
+- Added selected-route map highlight behavior: the chosen route is emphasized and other routes are dimmed.
+- Existing map hover and airport interactions are preserved.
+- No backend logic change was required for this update (`app.py` unchanged in this step).
+
 ## Backups
 
 - Backend backup: `app_backup.py`
